@@ -1,31 +1,35 @@
-# h3-js
+# frontboat plugins
 
-A Claude Code plugin for [H3](https://h3geo.org/), Uber's hexagonal geospatial indexing system.
+A Claude Code plugin marketplace by [frontboat](https://github.com/frontboat).
 
-## What It Does
+## Plugins
+
+### h3-js
 
 Equips Claude with the h3-js v4 API so it writes correct H3 code.
-
-## Skill
 
 - **h3-js** — Resolution guide, core API reference, common patterns, and GeoJSON interop. The intent is to curate a hardened set of docs that address implementation failures most commonly encountered by LLMs.
 
 As always, this skill does not represent uber/h3 nor does it claim the reverse - when in doubt, check the official source at `https://h3geo.org/`.
 
-Below are instructions to get started with usage and movement; H3 v4 documentation (algorithm internals, tutorials, Observable notebooks, migration guides) as a searchable reference file
-
 ## Installation
 
-### Claude Code
+### Add the marketplace
+
+```bash
+/plugin marketplace add frontboat/h3-skills
+```
+
+### Install a plugin
 
 ```bash
 /plugin install h3-js@frontboat
 ```
 
-Or test locally:
+### Test locally
 
 ```bash
-claude --plugin-dir <path>
+claude --plugin-dir ./plugins/h3-js
 ```
 
 ## Credits

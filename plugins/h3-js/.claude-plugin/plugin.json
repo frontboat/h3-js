@@ -1,6 +1,6 @@
 {
   "name": "h3-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "H3 v4 API reference for Uber's geospatial indexing system.",
   "author": {
     "name": "frontboat",
