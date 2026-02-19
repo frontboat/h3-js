@@ -4,24 +4,28 @@ A Claude Code plugin for [H3](https://h3geo.org/), Uber's hexagonal geospatial i
 
 ## What It Does
 
-Equips Claude with the h3-js v4 API so it writes correct H3 code instead of hallucinating function names.
+Equips Claude with the h3-js v4 API so it writes correct H3 code.
 
 ## Skill
 
-- **h3-js** — Resolution guide, core API reference, common patterns, and GeoJSON interop. Backed by full H3 v4 documentation (algorithm internals, tutorials, Observable notebooks, migration guides) as a searchable reference file
+- **h3-js** — Resolution guide, core API reference, common patterns, and GeoJSON interop. The intent is to curate a hardened set of docs that address implementation failures most commonly encountered by LLMs. 
+
+As always, this skill does not represent uber/h3 nor does it claim the reverse - when in doubt, check the official source at `https://h3geo.org/`. 
+
+Below are instructions to get started with usage and movement; H3 v4 documentation (algorithm internals, tutorials, Observable notebooks, migration guides) as a searchable reference file
 
 ## Installation
 
 ### Claude Code
 
 ```bash
-claude plugins add h3-js
+/plugin install h3-js@frontboat
 ```
 
 Or test locally:
 
 ```bash
-claude --plugin-dir /path/to/h3-skills
+claude --plugin-dir <path>
 ```
 
 ## Credits
