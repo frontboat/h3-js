@@ -1,13 +1,27 @@
 {
   "name": "h3-js",
   "version": "1.0.0",
-  "description": "H3 geospatial indexing skill — API cheat sheet and complete H3 v4 documentation reference for Uber's hexagonal grid system.",
+  "description": "H3 v4 API reference for Uber's hexagonal geospatial indexing system. h3-js function signatures, resolution guide, traversal, regions, directed edges, GeoJSON interop, and common spatial patterns.",
   "author": {
     "name": "frontboat",
+    "email": "frontboat@proton.me",
     "url": "https://github.com/frontboat"
   },
   "homepage": "https://github.com/frontboat/h3-js",
   "repository": "https://github.com/frontboat/h3-js",
   "license": "Apache-2.0",
-  "keywords": ["hex", "map", "h3", "geo", "h3-js", "uber"]
+  "keywords": [
+    "h3",
+    "h3-js",
+    "hexagonal",
+    "geospatial",
+    "indexing",
+    "spatial-analysis",
+    "geojson",
+    "uber",
+    "geo",
+    "map",
+    "hex",
+    "polygon"
+  ]
 }

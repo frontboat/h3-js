@@ -1,14 +1,14 @@
 # h3-js
 
-A Claude Code plugin providing deep expertise in [H3](https://h3geo.org/), Uber's open-source hierarchical hexagonal geospatial indexing system.
+A Claude Code plugin for [H3](https://h3geo.org/), Uber's hexagonal geospatial indexing system.
 
 ## What It Does
 
-Gives Claude comprehensive knowledge of the h3-js v4 API — so it can help you write correct H3 code without hallucinating function names or parameters.
+Equips Claude with the h3-js v4 API so it writes correct H3 code instead of hallucinating function names.
 
 ## Skill
 
-- **h3-js** — API cheat sheet with resolution guide, core API reference, and common patterns — plus the complete H3 v4 documentation (API reference, tutorials, Observable notebooks, algorithm internals, comparisons, and migration guides) as a searchable reference file
+- **h3-js** — Resolution guide, core API reference, common patterns, and GeoJSON interop. Backed by full H3 v4 documentation (algorithm internals, tutorials, Observable notebooks, migration guides) as a searchable reference file
 
 ## Installation
 
