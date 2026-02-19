@@ -1,7 +1,7 @@
 {
   "name": "h3-js",
-  "version": "1.0.1",
-  "description": "H3 v4 API reference for Uber's hexagonal geospatial indexing system. h3-js function signatures, resolution guide, traversal, regions, directed edges, GeoJSON interop, and common spatial patterns.",
+  "version": "1.0.2",
+  "description": "H3 v4 API reference for Uber's geospatial indexing system.",
   "author": {
     "name": "frontboat",
     "email": "frontboat@proton.me",

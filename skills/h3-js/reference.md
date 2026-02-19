@@ -1,10 +1,12 @@
 # === api/directededge ===
 
 ---
+
 id: uniedge
 title: Directed edge functions
 sidebar_label: Directed edges
 slug: /api/uniedge
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -18,17 +20,17 @@ edge from one cell to a neighboring cell.
 Determines whether or not the provided H3 cells are neighbors.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -52,13 +54,13 @@ boolean areNeighborCells(String origin, String destination);
 <TabItem value="javascript">
 
 ```js
-h3.areNeighborCells(origin, destination)
+h3.areNeighborCells(origin, destination);
 ```
 
 ```js live
 function example() {
-  const origin = '85283473fffffff';
-  const destination = '85283477fffffff';
+  const origin = "85283473fffffff";
+  const destination = "85283477fffffff";
   return h3.areNeighborCells(origin, destination);
 }
 ```
@@ -107,24 +109,23 @@ true
 </TabItem>
 </Tabs>
 
-
 ## cellsToDirectedEdge
 
 Provides a directed edge H3 index based on the provided origin and
 destination.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -146,13 +147,13 @@ String cellsToDirectedEdge(String origin, String destination);
 <TabItem value="javascript">
 
 ```js
-h3.cellsToDirectedEdge(h3Index)
+h3.cellsToDirectedEdge(h3Index);
 ```
 
 ```js live
 function example() {
-  const origin = '85283473fffffff';
-  const destination = '85283477fffffff';
+  const origin = "85283473fffffff";
+  const destination = "85283477fffffff";
   return h3.cellsToDirectedEdge(origin, destination);
 }
 ```
@@ -206,17 +207,17 @@ $ h3 cellsToDirectedEdge -o 85283473fffffff -d 85283477fffffff
 Determines if the provided H3Index is a valid unidirectional edge index.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -238,12 +239,12 @@ boolean isValidDirectedEdge(String edgeAddress);
 <TabItem value="javascript">
 
 ```js
-h3.isValidDirectedEdge(edge)
+h3.isValidDirectedEdge(edge);
 ```
 
 ```js live
 function example() {
-  const edge = '115283473fffffff';
+  const edge = "115283473fffffff";
   return h3.isValidDirectedEdge(edge);
 }
 ```
@@ -296,17 +297,17 @@ true
 Provides the origin hexagon from the directed edge H3Index.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -328,12 +329,12 @@ String getDirectedEdgeOrigin(String edgeAddress);
 <TabItem value="javascript">
 
 ```js
-h3.getDirectedEdgeOrigin(h3Index)
+h3.getDirectedEdgeOrigin(h3Index);
 ```
 
 ```js live
 function example() {
-  const edge = '115283473fffffff';
+  const edge = "115283473fffffff";
   return h3.getDirectedEdgeOrigin(edge);
 }
 ```
@@ -386,17 +387,17 @@ $ h3 getDirectedEdgeOrigin -c 115283473fffffff
 Provides the destination hexagon from the directed edge H3Index.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -418,12 +419,12 @@ String getDirectedEdgeDestination(String edgeAddress);
 <TabItem value="javascript">
 
 ```js
-h3.getDirectedEdgeDestination(edge)
+h3.getDirectedEdgeDestination(edge);
 ```
 
 ```js live
 function example() {
-  const edge = '115283473fffffff';
+  const edge = "115283473fffffff";
   return h3.getDirectedEdgeDestination(edge);
 }
 ```
@@ -471,23 +472,22 @@ $ h3 getDirectedEdgeDestination -c 115283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## directedEdgeToCells
 
 Provides the origin-destination pair of cells for the given directed edge.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -512,12 +512,12 @@ List<String> directedEdgeToCells(String edgeAddress);
 <TabItem value="javascript">
 
 ```js
-h3.directedEdgeToCells(edge)
+h3.directedEdgeToCells(edge);
 ```
 
 ```js live
 function example() {
-  const edge = '115283473fffffff';
+  const edge = "115283473fffffff";
   return h3.directedEdgeToCells(edge);
 }
 ```
@@ -570,17 +570,17 @@ $ h3 directedEdgeToCells -c 115283473fffffff
 Provides all of the directed edges from the current cell.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -606,12 +606,12 @@ List<String> originToDirectedEdges(String h3);
 <TabItem value="javascript">
 
 ```js
-h3.originToDirectedEdges(h3Index)
+h3.originToDirectedEdges(h3Index);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.originToDirectedEdges(h);
 }
 ```
@@ -659,24 +659,23 @@ $ h3 originToDirectedEdges -c 85283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## directedEdgeToBoundary
 
 Provides the geographic lat/lng coordinates defining the directed edge.
 Note that this may be more than two points for complex edges.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -698,12 +697,12 @@ List<LatLng> directedEdgeToBoundary(String edgeAddress);
 <TabItem value="javascript">
 
 ```js
-h3.directedEdgeToBoundary(edge, [formatAsGeoJson])
+h3.directedEdgeToBoundary(edge, [formatAsGeoJson]);
 ```
 
 ```js live
 function example() {
-  const edge = '115283473fffffff';
+  const edge = "115283473fffffff";
   return h3.directedEdgeToBoundary(edge);
 }
 ```
@@ -751,25 +750,24 @@ $ h3 directedEdgeToBoundary -c 115283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## reverseDirectedEdge
 
 Returns the directed edge index that represents the same edge in the opposite direction (i.e., with origin and destination cells swapped).
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]}
->
-<TabItem value="c">
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]}
+
+> <TabItem value="c">
 
 ```c
 H3Error reverseDirectedEdge(H3Index edge, H3Index* out);
@@ -789,12 +787,12 @@ String reverseDirectedEdge(String edgeAddress);
 <TabItem value="javascript">
 
 ```js
-h3.reverseDirectedEdge(edge)
+h3.reverseDirectedEdge(edge);
 ```
 
 ```js live
 function example() {
-  const edge = '115283473fffffff';
+  const edge = "115283473fffffff";
   return h3.reverseDirectedEdge(edge);
 }
 ```
@@ -842,14 +840,15 @@ $ h3 reverseDirectedEdge -e 115283473fffffff
 </TabItem>
 </Tabs>
 
-
 # === api/hierarchy ===
 
 ---
+
 id: hierarchy
 title: Hierarchical grid functions
 sidebar_label: Hierarchy
 slug: /api/hierarchy
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -866,17 +865,17 @@ the provided resolution. If the input cell has resolution `r`, then
 `parentRes = r - 2` would give the grandparent, and so on.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -898,12 +897,12 @@ String cellToParentAddress(String cellAddress, int parentRes);
 <TabItem value="javascript">
 
 ```js
-h3.cellToParent(cell, parentRes)
+h3.cellToParent(cell, parentRes);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   return h3.cellToParent(cell, 4);
 }
 ```
@@ -955,24 +954,23 @@ $ h3 cellToParent -c 85283473fffffff -r 4
 </TabItem>
 </Tabs>
 
-
 ## cellToChildren
 
 Provides the children (descendant) cells of `cell` at
 resolution `childRes`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -996,12 +994,12 @@ List<String> cellToChildren(String cellAddress, int childRes);
 <TabItem value="javascript">
 
 ```js
-h3.cellToChildren(cell, childRes)
+h3.cellToChildren(cell, childRes);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   return h3.cellToChildren(cell, 6);
 }
 ```
@@ -1053,23 +1051,22 @@ $ h3 cellToChildren -c 85283473fffffff -r 6
 </TabItem>
 </Tabs>
 
-
 ## cellToChildrenSize
 
 Provides the number of children at a given resolution of the given cell.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1093,12 +1090,12 @@ long cellToChildrenSize(String cellAddress, int childRes);
 <TabItem value="javascript">
 
 ```js
-h3.cellToChildrenSize(cell, childRes)
+h3.cellToChildrenSize(cell, childRes);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   return h3.cellToChildrenSize(cell, 6);
 }
 ```
@@ -1151,23 +1148,22 @@ $ h3 cellToChildrenSize -c 85283473fffffff -r 6
 </TabItem>
 </Tabs>
 
-
 ## cellToCenterChild
 
 Provides the center child (finer) cell contained by `cell` at resolution `childRes`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1176,7 +1172,6 @@ H3Error cellToCenterChild(H3Index cell, int childRes, H3Index *child);
 ```
 
 Returns 0 (`E_SUCCESS`) on success.
-
 
 </TabItem>
 <TabItem value="java">
@@ -1190,12 +1185,12 @@ String cellToCenterChild(String cellAddress, int childRes);
 <TabItem value="javascript">
 
 ```js
-h3.cellToCenterChild(cell, childRes)
+h3.cellToCenterChild(cell, childRes);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   return h3.cellToCenterChild(cell, 7);
 }
 ```
@@ -1247,7 +1242,6 @@ $ h3 cellToCenterChild -c 85283473fffffff -r 7
 </TabItem>
 </Tabs>
 
-
 ## cellToChildPos
 
 Provides the position of the child cell within an ordered list of all children of the cell's parent at the specified resolution `parentRes`.
@@ -1255,17 +1249,17 @@ The order of the ordered list is the same as that returned by `cellToChildren`.
 This is the complement of `childPosToCell`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1287,12 +1281,12 @@ long cellToChildPos(String childAddress, int parentRes);
 <TabItem value="javascript">
 
 ```js
-h3.cellToChildPos(child, parentRes)
+h3.cellToChildPos(child, parentRes);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   return h3.cellToChildPos(cell, 3);
 }
 ```
@@ -1340,7 +1334,6 @@ $ h3 cellToChildPos -c 85283473fffffff -r 3
 </TabItem>
 </Tabs>
 
-
 ## childPosToCell
 
 Provides the child cell at a given position within an ordered list of all children of `parent` at the specified resolution `childRes`.
@@ -1348,17 +1341,17 @@ The order of the ordered list is the same as that returned by `cellToChildren`.
 This is the complement of `cellToChildPos`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1367,7 +1360,6 @@ H3Error childPosToCell(int64_t childPos, H3Index parent, int childRes, H3Index *
 ```
 
 Returns 0 (`E_SUCCESS`) on success.
-
 
 </TabItem>
 <TabItem value="java">
@@ -1386,7 +1378,7 @@ h3.childPosToCell(childPos, parent, childRes);
 
 ```js live
 function example() {
-  const parent = '85283473fffffff';
+  const parent = "85283473fffffff";
   const childPos = 42;
   return h3.childPosToCell(childPos, parent, 7);
 }
@@ -1437,7 +1429,6 @@ $ h3 childPosToCell -p 42 -c 85283473fffffff -r 7
 </TabItem>
 </Tabs>
 
-
 ## compactCells
 
 Compacts a collection of H3 cells by recursively replacing children cells
@@ -1445,17 +1436,17 @@ with their parents if all children are present.
 Input cells must all share the same resolution.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1480,12 +1471,12 @@ List<String> compactCellAddress(Collection<String> cells);
 <TabItem value="javascript">
 
 ```js
-h3.compactCells(cells)
+h3.compactCells(cells);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   const nearby = h3.gridDisk(cell, 4);
   return h3.compactCells(nearby);
 }
@@ -1541,17 +1532,17 @@ Uncompacts the set `compactedSet` of indexes to the resolution `res`.
 `h3Set` must be at least of size `uncompactCellsSize(compactedSet, numHexes, res)`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1573,12 +1564,12 @@ List<String> uncompactCellAddress(Collection<String> cells, int res);
 <TabItem value="javascript">
 
 ```js
-h3.uncompactCells(cells, res)
+h3.uncompactCells(cells, res);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   const nearby = h3.gridDisk(cell, 4);
   const compacted = h3.compactCells(nearby);
   return h3.uncompactCells(compacted, 5);
@@ -1630,24 +1621,23 @@ $ h3 uncompactCells -r 5 -c 85283447fffffff,8528340ffffffff,8528340bfffffff,8528
 </TabItem>
 </Tabs>
 
-
 ## uncompactCellsSize
 
 Provides the total resulting number of cells if uncompacting a cell set to
 a given resolution.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1716,14 +1706,15 @@ This function exists for memory management and is not exposed.
 </TabItem>
 </Tabs>
 
-
 # === api/indexing ===
 
 ---
+
 id: indexing
 title: Indexing functions
 sidebar_label: Indexing
 slug: /api/indexing
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -1741,17 +1732,17 @@ For more information, see the
 [algorithm description](../core-library/latLngToCellDesc).
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1773,7 +1764,7 @@ String latLngToCellAddress(double lat, double lng, int res);
 <TabItem value="javascript">
 
 ```js
-h3.latLngToCell(lat, lng, res)
+h3.latLngToCell(lat, lng, res);
 ```
 
 ```js live
@@ -1846,17 +1837,17 @@ projection within the icosahedron face it resides on and its
 distance from the center of the icosahedron face.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1878,12 +1869,12 @@ LatLng cellToLatLng(String cellAddress);
 <TabItem value="javascript">
 
 ```js
-h3.cellToLatLng(cell)
+h3.cellToLatLng(cell);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   return h3.cellToLatLng(cell);
 }
 ```
@@ -1908,9 +1899,11 @@ h3.CellToLatLng(cell)
 ```sql
 h3_cell_to_latlng(cell)
 ```
+
 ```sql
 h3_cell_to_lat(cell)
 ```
+
 ```sql
 h3_cell_to_lng(cell)
 ```
@@ -1937,7 +1930,6 @@ $ h3 cellToLatLng -c 85283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## cellToBoundary
 
 Finds the boundary of the cell.
@@ -1945,17 +1937,17 @@ For more information, see the
 [algorithm description](../core-library/cellToBoundaryDesc).
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -1977,12 +1969,12 @@ List<LatLng> cellToBoundary(String cellAddress);
 <TabItem value="javascript">
 
 ```js
-h3.cellToBoundary(cell, [formatAsGeoJson])
+h3.cellToBoundary(cell, [formatAsGeoJson]);
 ```
 
 ```js live
 function example() {
-  const cell = '85283473fffffff';
+  const cell = "85283473fffffff";
   return h3.cellToBoundary(cell);
 }
 ```
@@ -2011,6 +2003,7 @@ cell.Boundary()
 ```sql
 h3_cell_to_boundary_wkt(cell)
 ```
+
 ```sql
 h3_cell_to_boundary_wkb(cell)
 ```
@@ -2037,14 +2030,15 @@ $ h3 cellToBoundary -c 85283473fffffff
 </TabItem>
 </Tabs>
 
-
 # === api/inspection ===
 
 ---
+
 id: inspection
 title: Index inspection functions
 sidebar_label: Inspection
 slug: /api/inspection
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -2058,17 +2052,17 @@ Returns the resolution of the index.
 (Works for cells, edges, and vertexes.)
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2088,12 +2082,12 @@ int getResolution(String h3Address);
 <TabItem value="javascript">
 
 ```js
-h3.getResolution(h)
+h3.getResolution(h);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.getResolution(h);
 }
 ```
@@ -2140,24 +2134,23 @@ $ h3 getResolution -c 85283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## getBaseCellNumber
 
 Returns the base cell number of the index.
 (Works for cells, edges, and vertexes.)
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2177,12 +2170,12 @@ int getBaseCellNumber(String h3Address);
 <TabItem value="javascript">
 
 ```js
-h3.getBaseCellNumber(h)
+h3.getBaseCellNumber(h);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.getBaseCellNumber(h);
 }
 ```
@@ -2235,17 +2228,17 @@ Returns an [indexing digit](https://h3geo.org/docs/library/index/cell) of the in
 Works for cells, edges and vertexes.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    // {label: 'Java', value: 'java'},
-    // {label: 'JavaScript (Live)', value: 'javascript'},
-    // {label: 'Python', value: 'python'},
-    // {label: 'Go', value: 'go'},
-    // {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+// {label: 'Java', value: 'java'},
+// {label: 'JavaScript (Live)', value: 'javascript'},
+// {label: 'Python', value: 'python'},
+// {label: 'Go', value: 'go'},
+// {label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2265,12 +2258,12 @@ int getIndexDigit(String h3Address, int res);
 <TabItem value="javascript">
 
 ```js
-h3.getIndexDigit(h, res)
+h3.getIndexDigit(h, res);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   const res = 2;
   return h3.getIndexDigit(h, res);
 }
@@ -2331,17 +2324,17 @@ This is the inverse operation of `getResolution`, `getBaseCellNumber`, and `getI
 Only allows for constructing valid H3 cells, and will return an error if the provided components would create an invalid cell.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2355,6 +2348,7 @@ H3Error constructCell(int res, int baseCellNumber, const int *digits, H3Index *o
 - `out`: Output parameter for the constructed cell
 
 Returns 0 (`E_SUCCESS`) on success. Returns an error code on failure:
+
 - `E_RES_DOMAIN`: Invalid resolution (must be 0-15)
 - `E_BASE_CELL_DOMAIN`: Invalid base cell number (must be 0-121)
 - `E_DIGIT_DOMAIN`: Invalid digit value (must be 0-6)
@@ -2374,8 +2368,8 @@ String constructCellAddress(int baseCellNumber, List<Integer> digits, int res);
 <TabItem value="javascript">
 
 ```js
-h3.constructCell(baseCellNumber, digits)
-h3.constructCell(baseCellNumber, digits, res)
+h3.constructCell(baseCellNumber, digits);
+h3.constructCell(baseCellNumber, digits, res);
 ```
 
 ```js live
@@ -2448,17 +2442,17 @@ When constructing a cell from a pentagon base cell, digit `1` (K_AXES_DIGIT) is 
 Converts the string representation to `H3Index` (`uint64_t`) representation.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2514,7 +2508,6 @@ The H3 CLI supports only the string representation of an H3 index.
 
 :::
 
-
 </TabItem>
 </Tabs>
 
@@ -2523,17 +2516,17 @@ The H3 CLI supports only the string representation of an H3 index.
 Converts the `H3Index` representation of the index to the string representation.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2593,24 +2586,22 @@ The H3 CLI supports only the string representation of an H3 index.
 </TabItem>
 </Tabs>
 
-
-
 ## isValidCell
 
 Returns non-zero if this is a valid H3 cell index.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2630,12 +2621,12 @@ boolean isValidCell(String h3Address);
 <TabItem value="javascript">
 
 ```js
-h3.isValidCell(h)
+h3.isValidCell(h);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.isValidCell(h);
 }
 ```
@@ -2683,24 +2674,23 @@ true
 </TabItem>
 </Tabs>
 
-
 ## isValidIndex
 
 Returns non-zero if this is a valid H3 index for any mode (cell, directed edge, or vertex).
 That is, this returns true if any of the functions `isValidCell`, `isValidDirectedEdge`, or `isValidVertex` would return true.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2755,23 +2745,22 @@ h3_is_valid_index(h)
 </TabItem>
 </Tabs>
 
-
 ## isResClassIII
 
 Returns non-zero if this index has a resolution with Class III orientation.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2791,12 +2780,12 @@ boolean isResClassIII(String h3Address);
 <TabItem value="javascript">
 
 ```js
-h3.isResClassIII(h)
+h3.isResClassIII(h);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.isResClassIII(h);
 }
 ```
@@ -2844,23 +2833,22 @@ true
 </TabItem>
 </Tabs>
 
-
 ## isPentagon
 
 Returns non-zero if this index represents a pentagonal cell.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2880,12 +2868,12 @@ boolean isPentagon(String h3Address);
 <TabItem value="javascript">
 
 ```js
-h3.isPentagon(h)
+h3.isPentagon(h);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.isPentagon(h);
 }
 ```
@@ -2933,24 +2921,23 @@ false
 </TabItem>
 </Tabs>
 
-
 ## getIcosahedronFaces
 
 Find all icosahedron faces intersected by a given H3 cell.
 Faces are represented as integers from 0-19, inclusive.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -2976,12 +2963,12 @@ Collection<Integer> getIcosahedronFaces(String h3Address);
 <TabItem value="javascript">
 
 ```js
-h3.getIcosahedronFaces(h)
+h3.getIcosahedronFaces(h);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.getIcosahedronFaces(h);
 }
 ```
@@ -3025,6 +3012,7 @@ H3 4.1.0
 $ h3 getIcosahedronFaces -c 85283473fffffff
 [7]
 ```
+
 </TabItem>
 </Tabs>
 
@@ -3033,17 +3021,17 @@ $ h3 getIcosahedronFaces -c 85283473fffffff
 Returns the maximum number of icosahedron faces the given H3 index may intersect.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3110,14 +3098,15 @@ This function exists for memory management and is not exposed.
 </TabItem>
 </Tabs>
 
-
 # === api/misc ===
 
 ---
+
 id: misc
 title: Miscellaneous H3 functions
 sidebar_label: Miscellaneous
 slug: /api/misc
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -3130,17 +3119,17 @@ These functions include descriptions of the H3 grid system.
 Converts degrees to radians.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3161,7 +3150,7 @@ Use `java.lang.Math.toRadians(double degrees)` instead.
 <TabItem value="javascript">
 
 ```js
-h3.degsToRads(degrees)
+h3.degsToRads(degrees);
 ```
 
 ```js live
@@ -3222,17 +3211,17 @@ $ h3 degsToRads -d 180
 Converts radians to degrees.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3253,7 +3242,7 @@ Use `java.lang.Math.toDegrees(double radians)` instead.
 <TabItem value="javascript">
 
 ```js
-h3.radsToDegs(h)
+h3.radsToDegs(h);
 ```
 
 ```js live
@@ -3315,17 +3304,17 @@ Average hexagon area in square kilometers at the given resolution.
 Excludes pentagons.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3344,7 +3333,7 @@ double getHexagonAreaAvg(int res, AreaUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.getHexagonAreaAvg(res, h3.UNITS.km2)
+h3.getHexagonAreaAvg(res, h3.UNITS.km2);
 ```
 
 ```js live
@@ -3402,17 +3391,17 @@ Average hexagon area in square meters at the given resolution.
 Excludes pentagons.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3431,7 +3420,7 @@ double getHexagonAreaAvg(int res, AreaUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.getHexagonAreaAvg(res, h3.UNITS.m2)
+h3.getHexagonAreaAvg(res, h3.UNITS.m2);
 ```
 
 ```js live
@@ -3483,23 +3472,22 @@ $ h3 getHexagonAreaAvgM2 -r 5
 </TabItem>
 </Tabs>
 
-
 ## cellAreaRads2
 
 Exact area of specific cell in square radians.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3519,12 +3507,12 @@ int cellArea(String h3Address, AreaUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.cellArea(h, h3.UNITS.rads2)
+h3.cellArea(h, h3.UNITS.rads2);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.cellArea(h, h3.UNITS.rads2);
 }
 ```
@@ -3576,17 +3564,17 @@ $ h3 cellAreaRads2 -c 85283473fffffff
 Exact area of specific cell in square kilometers.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3606,12 +3594,12 @@ int cellArea(String h3Address, AreaUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.cellArea(h, h3.UNITS.km2)
+h3.cellArea(h, h3.UNITS.km2);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.cellArea(h, h3.UNITS.km2);
 }
 ```
@@ -3663,17 +3651,17 @@ $ h3 cellAreaKm2 -c 85283473fffffff
 Exact area of specific cell in square meters.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3693,12 +3681,12 @@ int cellArea(String h3Address, AreaUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.cellArea(h, h3.UNITS.m2)
+h3.cellArea(h, h3.UNITS.m2);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.cellArea(h, h3.UNITS.m2);
 }
 ```
@@ -3751,17 +3739,17 @@ Average hexagon edge length in kilometers at the given resolution.
 Excludes pentagons.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3780,7 +3768,7 @@ double getHexagonEdgeLengthAvg(int res, LengthUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.getHexagonEdgeLengthAvg(res, h3.UNITS.km)
+h3.getHexagonEdgeLengthAvg(res, h3.UNITS.km);
 ```
 
 ```js live
@@ -3832,24 +3820,23 @@ $ h3 getHexagonEdgeLengthAvgKm -r 5
 </TabItem>
 </Tabs>
 
-
 ## getHexagonEdgeLengthAvgM
 
 Average hexagon edge length in meters at the given resolution.
 Excludes pentagons.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3868,7 +3855,7 @@ double getHexagonEdgeLengthAvg(int res, LengthUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.getHexagonEdgeLengthAvg(res, h3.UNITS.m)
+h3.getHexagonEdgeLengthAvg(res, h3.UNITS.m);
 ```
 
 ```js live
@@ -3920,23 +3907,22 @@ $ h3 getHexagonEdgeLengthAvgM -r 5
 </TabItem>
 </Tabs>
 
-
 ## edgeLengthKm
 
 Exact edge length of specific unidirectional edge in kilometers.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -3956,12 +3942,12 @@ double edgeLength(String h3Address, LengthUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.edgeLength(h3, h3.UNITS.km)
+h3.edgeLength(h3, h3.UNITS.km);
 ```
 
 ```js live
 function example() {
-  const h = '115283473fffffff';
+  const h = "115283473fffffff";
   return h3.edgeLength(h, h3.UNITS.km);
 }
 ```
@@ -4008,23 +3994,22 @@ $ h3 edgeLengthKm -c 115283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## edgeLengthM
 
 Exact edge length of specific unidirectional edge in meters.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4044,12 +4029,12 @@ double edgeLength(String h3Address, LengthUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.edgeLength(h3, h3.UNITS.m)
+h3.edgeLength(h3, h3.UNITS.m);
 ```
 
 ```js live
 function example() {
-  const h = '115283473fffffff';
+  const h = "115283473fffffff";
   return h3.edgeLength(h, h3.UNITS.m);
 }
 ```
@@ -4096,23 +4081,22 @@ $ h3 edgeLengthM -c 115283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## edgeLengthRads
 
 Exact edge length of specific unidirectional edge in radians.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4132,12 +4116,12 @@ double edgeLength(String h3Address, LengthUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.edgeLength(h3, h3.UNITS.rads)
+h3.edgeLength(h3, h3.UNITS.rads);
 ```
 
 ```js live
 function example() {
-  const h = '115283473fffffff';
+  const h = "115283473fffffff";
   return h3.edgeLength(h, h3.UNITS.rads);
 }
 ```
@@ -4184,23 +4168,22 @@ $ h3 edgeLengthRads -c 115283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## getNumCells
 
 Number of unique H3 indexes at the given resolution.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4219,7 +4202,7 @@ long getNumCells(int res);
 <TabItem value="javascript">
 
 ```js
-h3.getNumCells(res)
+h3.getNumCells(res);
 ```
 
 ```js live
@@ -4271,7 +4254,6 @@ $ h3 getNumCells -r 5
 </TabItem>
 </Tabs>
 
-
 ## getRes0Cells
 
 Provide all the resolution `0` H3 cells.
@@ -4280,17 +4262,17 @@ the parents/ancestors of all other cells in the H3 grid system.
 The returned cells correspond to the 122 base cells.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4312,7 +4294,7 @@ Collection<String> getRes0CellAddresses();
 <TabItem value="javascript">
 
 ```js
-h3.getRes0Cells()
+h3.getRes0Cells();
 ```
 
 ```js live
@@ -4341,6 +4323,7 @@ h3.Res0Cells()
 ```sql
 h3_get_res0_cells()
 ```
+
 ```sql
 h3_get_res0_cells_string()
 ```
@@ -4362,26 +4345,26 @@ H3 4.1.0
 $ h3 getRes0Cells
 [ "8001fffffffffff", "8003fffffffffff", "8005fffffffffff", "8007fffffffffff", "8009fffffffffff", "800bfffffffffff", "800dfffffffffff", "800ffffffffffff", "8011fffffffffff", "8013fffffffffff", "8015fffffffffff", "8017fffffffffff", "8019fffffffffff", "801bfffffffffff", "801dfffffffffff", "801ffffffffffff", "8021fffffffffff", "8023fffffffffff", "8025fffffffffff", "8027fffffffffff", "8029fffffffffff", "802bfffffffffff", "802dfffffffffff", "802ffffffffffff", "8031fffffffffff", "8033fffffffffff", "8035fffffffffff", "8037fffffffffff", "8039fffffffffff", "803bfffffffffff", "803dfffffffffff", "803ffffffffffff", "8041fffffffffff", "8043fffffffffff", "8045fffffffffff", "8047fffffffffff", "8049fffffffffff", "804bfffffffffff", "804dfffffffffff", "804ffffffffffff", "8051fffffffffff", "8053fffffffffff", "8055fffffffffff", "8057fffffffffff", "8059fffffffffff", "805bfffffffffff", "805dfffffffffff", "805ffffffffffff", "8061fffffffffff", "8063fffffffffff", "8065fffffffffff", "8067fffffffffff", "8069fffffffffff", "806bfffffffffff", "806dfffffffffff", "806ffffffffffff", "8071fffffffffff", "8073fffffffffff", "8075fffffffffff", "8077fffffffffff", "8079fffffffffff", "807bfffffffffff", "807dfffffffffff", "807ffffffffffff", "8081fffffffffff", "8083fffffffffff", "8085fffffffffff", "8087fffffffffff", "8089fffffffffff", "808bfffffffffff", "808dfffffffffff", "808ffffffffffff", "8091fffffffffff", "8093fffffffffff", "8095fffffffffff", "8097fffffffffff", "8099fffffffffff", "809bfffffffffff", "809dfffffffffff", "809ffffffffffff", "80a1fffffffffff", "80a3fffffffffff", "80a5fffffffffff", "80a7fffffffffff", "80a9fffffffffff", "80abfffffffffff", "80adfffffffffff", "80affffffffffff", "80b1fffffffffff", "80b3fffffffffff", "80b5fffffffffff", "80b7fffffffffff", "80b9fffffffffff", "80bbfffffffffff", "80bdfffffffffff", "80bffffffffffff", "80c1fffffffffff", "80c3fffffffffff", "80c5fffffffffff", "80c7fffffffffff", "80c9fffffffffff", "80cbfffffffffff", "80cdfffffffffff", "80cffffffffffff", "80d1fffffffffff", "80d3fffffffffff", "80d5fffffffffff", "80d7fffffffffff", "80d9fffffffffff", "80dbfffffffffff", "80ddfffffffffff", "80dffffffffffff", "80e1fffffffffff", "80e3fffffffffff", "80e5fffffffffff", "80e7fffffffffff", "80e9fffffffffff", "80ebfffffffffff", "80edfffffffffff", "80effffffffffff", "80f1fffffffffff", "80f3fffffffffff" ]
 ```
+
 </TabItem>
 </Tabs>
-
 
 ## res0CellCount
 
 Number of resolution `0` H3 indexes, which is defined as 122.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4446,24 +4429,23 @@ This function exists for memory management and is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## getPentagons
 
 All the pentagon H3 cells at the specified resolution.
 There are 12 pentagons at each resolution.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4487,7 +4469,7 @@ Collection<String> h3.getPentagonsAddresses(int res);
 <TabItem value="javascript">
 
 ```js
-h3.getPentagons(res)
+h3.getPentagons(res);
 ```
 
 ```js live
@@ -4517,6 +4499,7 @@ h3.Pentagons(res)
 ```sql
 h3_get_pentagons(res)
 ```
+
 ```sql
 h3_get_pentagons_string(res)
 ```
@@ -4549,17 +4532,17 @@ Number of pentagon H3 cells per resolution.
 This is always 12, but provided as a convenience.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4630,24 +4613,23 @@ $ h3 pentagonCount
 </TabItem>
 </Tabs>
 
-
 ## greatCircleDistanceKm
 
 Gives the "great circle" or "haversine" distance between pairs of
 LatLng points (lat/lng pairs) in kilometers.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4666,14 +4648,14 @@ double greatCircleDistance(LatLng point1, LatLng point2, LengthUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.greatCircleDistance(point1, point2, h3.UNITS.km)
+h3.greatCircleDistance(point1, point2, h3.UNITS.km);
 ```
 
 ```js live
 function example() {
   const point1 = [-10, 0];
   const point2 = [10, 0];
-  return h3.greatCircleDistance(point1, point2, h3.UNITS.km)
+  return h3.greatCircleDistance(point1, point2, h3.UNITS.km);
 }
 ```
 
@@ -4726,17 +4708,17 @@ Gives the "great circle" or "haversine" distance between pairs of
 LatLng points (lat/lng pairs) in meters.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4809,24 +4791,23 @@ $ h3 greatCircleDistanceM -c "[[-10, 0], [10, 0]]"
 </TabItem>
 </Tabs>
 
-
 ## greatCircleDistanceRads
 
 Gives the "great circle" or "haversine" distance between pairs of
 LatLng points (lat/lng pairs) in radians.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4845,14 +4826,14 @@ double greatCircleDistance(LatLng point1, LatLng point2, LengthUnit unit);
 <TabItem value="javascript">
 
 ```js
-h3.greatCircleDistance(point1, point2, h3.UNITS.rads)
+h3.greatCircleDistance(point1, point2, h3.UNITS.rads);
 ```
 
 ```js live
 function example() {
   const point1 = [-10, 0];
   const point2 = [10, 0];
-  return h3.greatCircleDistance(point1, point2, h3.UNITS.rads)
+  return h3.greatCircleDistance(point1, point2, h3.UNITS.rads);
 }
 ```
 
@@ -4899,19 +4880,18 @@ $ h3 greatCircleDistanceRads -c "[[-10, 0], [10, 0]]"
 </TabItem>
 </Tabs>
 
-
 ## describeH3Error
 
 Provides a human-readable description of an H3Error error code.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -4934,7 +4914,7 @@ Just read the `.message` property from the caught error, instead.
 
 ```js live
 function example() {
-  let errorMessage = ""
+  let errorMessage = "";
   try {
     h3.cellToChildrenSize("asdf", 9);
   } catch (e) {
@@ -4965,14 +4945,15 @@ Cell argument was not valid
 </TabItem>
 </Tabs>
 
-
 # === api/regions ===
 
 ---
+
 id: regions
 title: Region functions
 sidebar_label: Regions
 slug: /api/regions
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -4992,17 +4973,17 @@ of polygons (covering an area without overlaps) will result in
 a partitioning of H3 cells.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5027,18 +5008,18 @@ List<String> polygonToCellAddresses(List<LatLng> points, List<List<LatLng>> hole
 <TabItem value="javascript">
 
 ```js
-h3.polygonToCells(polygon, res, isGeoJson)
+h3.polygonToCells(polygon, res, isGeoJson);
 ```
 
 ```js live
 function example() {
-    const polygon = [
-        [37.813318999983238, -122.4089866999972145],
-        [37.7198061999978478, -122.3544736999993603],
-        [37.8151571999998453, -122.4798767000009008]
-    ];
-    const res = 7;
-    return h3.polygonToCells(polygon, res);
+  const polygon = [
+    [37.813318999983238, -122.4089866999972145],
+    [37.7198061999978478, -122.3544736999993603],
+    [37.8151571999998453, -122.4798767000009008],
+  ];
+  const res = 7;
+  return h3.polygonToCells(polygon, res);
 }
 ```
 
@@ -5061,18 +5042,22 @@ For more info, see the [`h3-py` docs](https://uber.github.io/h3-py/api_quick.htm
 ```go
 h3.PolygonToCells(polygon, res)
 ```
+
 </TabItem>
 <TabItem value="duckdb">
 
 ```sql
 h3_polygon_wkt_to_cells(wkt, res)
 ```
+
 ```sql
 h3_polygon_wkt_to_cells_string(wkt, res)
 ```
+
 ```sql
 h3_polygon_wkb_to_cells(wkb, res)
 ```
+
 ```sql
 h3_polygon_wkb_to_cells_string(wkb, res)
 ```
@@ -5101,24 +5086,23 @@ $ h3 polygonToCells -r 7 -p "[[37.813318999983238, -122.4089866999972145], [37.7
 </TabItem>
 </Tabs>
 
-
 ## maxPolygonToCellsSize
 
 Provides an upper bound on the number of cells needed for memory allocation
 purposes when computing `polygonToCells` on the given GeoJSON-like data structure.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5208,17 +5192,17 @@ new algorithm which supports center-based, fully-contained, and
 overlapping containment modes.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5233,12 +5217,12 @@ zeroed memory, and fills it with the covering cells.
 
 The valid values for `flags` are:
 
-| Enum name | Integer value | Description
-| --------- | ------------- | -----------
-| `CONTAINMENT_CENTER` | 0 | Cell center is contained in the shape
-| `CONTAINMENT_FULL` | 1 | Cell is fully contained in the shape
-| `CONTAINMENT_OVERLAPPING` | 2 | Cell overlaps the shape at any point
-| `CONTAINMENT_OVERLAPPING_BBOX` | 3 | Cell bounding box overlaps shape
+| Enum name                      | Integer value | Description                           |
+| ------------------------------ | ------------- | ------------------------------------- |
+| `CONTAINMENT_CENTER`           | 0             | Cell center is contained in the shape |
+| `CONTAINMENT_FULL`             | 1             | Cell is fully contained in the shape  |
+| `CONTAINMENT_OVERLAPPING`      | 2             | Cell overlaps the shape at any point  |
+| `CONTAINMENT_OVERLAPPING_BBOX` | 3             | Cell bounding box overlaps shape      |
 
 Returns 0 (`E_SUCCESS`) on success.
 
@@ -5252,40 +5236,44 @@ List<String> polygonToCellExperimentalAddresses(List<LatLng> points, List<List<L
 
 The valid values for `flags` are:
 
-| Enum name | Description
-| --------- | -----------
-| `PolygonToCellsFlags.containment_center` | Cell center is contained in the shape
-| `PolygonToCellsFlags.containment_full` | Cell is fully contained in the shape
-| `PolygonToCellsFlags.containment_overlapping` | Cell overlaps the shape at any point
-| `PolygonToCellsFlags.containment_overlapping_bbox` | Cell bounding box overlaps shape
+| Enum name                                          | Description                           |
+| -------------------------------------------------- | ------------------------------------- |
+| `PolygonToCellsFlags.containment_center`           | Cell center is contained in the shape |
+| `PolygonToCellsFlags.containment_full`             | Cell is fully contained in the shape  |
+| `PolygonToCellsFlags.containment_overlapping`      | Cell overlaps the shape at any point  |
+| `PolygonToCellsFlags.containment_overlapping_bbox` | Cell bounding box overlaps shape      |
 
 </TabItem>
 <TabItem value="javascript">
 
 ```js
-h3.polygonToCellsExperimental(polygon, res, flags, isGeoJson)
+h3.polygonToCellsExperimental(polygon, res, flags, isGeoJson);
 ```
 
 ```js live
 function example() {
-    const polygon = [
-        [37.813318999983238, -122.4089866999972145],
-        [37.7198061999978478, -122.3544736999993603],
-        [37.8151571999998453, -122.4798767000009008]
-    ];
-    const res = 7;
-    return h3.polygonToCellsExperimental(polygon, res, h3.POLYGON_TO_CELLS_FLAGS.containmentOverlapping);
+  const polygon = [
+    [37.813318999983238, -122.4089866999972145],
+    [37.7198061999978478, -122.3544736999993603],
+    [37.8151571999998453, -122.4798767000009008],
+  ];
+  const res = 7;
+  return h3.polygonToCellsExperimental(
+    polygon,
+    res,
+    h3.POLYGON_TO_CELLS_FLAGS.containmentOverlapping,
+  );
 }
 ```
 
 The valid values for `flags` are:
 
-| Enum name | Description
-| --------- | -----------
-| `POLYGON_TO_CELLS_FLAGS.containment_center` | Cell center is contained in the shape
-| `POLYGON_TO_CELLS_FLAGS.containment_full` | Cell is fully contained in the shape
-| `POLYGON_TO_CELLS_FLAGS.containment_overlapping` | Cell overlaps the shape at any point
-| `POLYGON_TO_CELLS_FLAGS.containment_overlapping_bbox` | Cell bounding box overlaps shape
+| Enum name                                             | Description                           |
+| ----------------------------------------------------- | ------------------------------------- |
+| `POLYGON_TO_CELLS_FLAGS.containment_center`           | Cell center is contained in the shape |
+| `POLYGON_TO_CELLS_FLAGS.containment_full`             | Cell is fully contained in the shape  |
+| `POLYGON_TO_CELLS_FLAGS.containment_overlapping`      | Cell overlaps the shape at any point  |
+| `POLYGON_TO_CELLS_FLAGS.containment_overlapping_bbox` | Cell bounding box overlaps shape      |
 
 </TabItem>
 <TabItem value="python">
@@ -5300,12 +5288,12 @@ For more info, see the [`h3-py` docs](https://uber.github.io/h3-py/api_quick.htm
 
 The valid values for `contain` are:
 
-| String value | Description
-| ------------ | -----------
-| `center` | Cell center is contained in the shape (default)
-| `full` | Cell is fully contained in the shape
-| `overlap` | Cell overlaps the shape at any point
-| `bbox_overlap` | Cell bounding box overlaps shape
+| String value   | Description                                     |
+| -------------- | ----------------------------------------------- |
+| `center`       | Cell center is contained in the shape (default) |
+| `full`         | Cell is fully contained in the shape            |
+| `overlap`      | Cell overlaps the shape at any point            |
+| `bbox_overlap` | Cell bounding box overlaps shape                |
 
 </TabItem>
 <TabItem value="go">
@@ -5316,12 +5304,12 @@ h3.PolygonToCellsExperimental(polygon, res, containmentMode, maxNumCellsReturn)
 
 The valid values for `containmentMode` are:
 
-| Enum name | Description
-| --------- | -----------
-| `h3.ContainmentCenter` | Cell center is contained in the shape
-| `h3.ContainmentFull` | Cell is fully contained in the shape
-| `h3.ContainmentOverlapping` | Cell overlaps the shape at any point
-| `h3.ContainmentOverlappingBbox` | Cell bounding box overlaps shape
+| Enum name                       | Description                           |
+| ------------------------------- | ------------------------------------- |
+| `h3.ContainmentCenter`          | Cell center is contained in the shape |
+| `h3.ContainmentFull`            | Cell is fully contained in the shape  |
+| `h3.ContainmentOverlapping`     | Cell overlaps the shape at any point  |
+| `h3.ContainmentOverlappingBbox` | Cell bounding box overlaps shape      |
 
 </TabItem>
 <TabItem value="duckdb">
@@ -5329,24 +5317,27 @@ The valid values for `containmentMode` are:
 ```sql
 h3_polygon_wkt_to_cells_experimental(wkt, res, 'overlap')
 ```
+
 ```sql
 h3_polygon_wkt_to_cells_experimental_string(wkt, res, 'overlap')
 ```
+
 ```sql
 h3_polygon_wkb_to_cells_experimental(wkb, res, 'overlap')
 ```
+
 ```sql
 h3_polygon_wkb_to_cells_experimental_string(wkb, res, 'overlap')
 ```
 
 The valid values for the third `contain` argument are:
 
-| String value | Description
-| ------------ | -----------
-| `center` | Cell center is contained in the shape (default)
-| `full` | Cell is fully contained in the shape
-| `overlap` | Cell overlaps the shape at any point
-| `bbox_overlap` | Cell bounding box overlaps shape
+| String value   | Description                                     |
+| -------------- | ----------------------------------------------- |
+| `center`       | Cell center is contained in the shape (default) |
+| `full`         | Cell is fully contained in the shape            |
+| `overlap`      | Cell overlaps the shape at any point            |
+| `bbox_overlap` | Cell bounding box overlaps shape                |
 
 </TabItem>
 <TabItem value="shell">
@@ -5356,24 +5347,23 @@ This function is not exposed in the CLI bindings.
 </TabItem>
 </Tabs>
 
-
 ## maxPolygonToCellsSizeExperimental
 
 Provides an upper bound on the number of cells needed for memory allocation
 purposes when computing `polygonToCellsExperimental` on the given GeoJSON-like data structure.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5436,7 +5426,6 @@ This function is not exposed in the CLI bindings.
 </TabItem>
 </Tabs>
 
-
 ## cellsToLinkedMultiPolygon / cellsToMultiPolygon
 
 Create a GeoJSON-like multi-polygon describing the outline(s) of a set of cells.
@@ -5449,17 +5438,17 @@ or multiple resolutions are present, and the algorithm may produce
 unexpected or invalid output.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5485,13 +5474,13 @@ List<List<List<LatLng>>> cellAddressesToMultiPolygon(Collection<String> h3Addres
 <TabItem value="javascript">
 
 ```js
-h3.cellsToMultiPolygon(cells, geoJson)
+h3.cellsToMultiPolygon(cells, geoJson);
 ```
 
 ```js live
 function example() {
-    const cells = ['872830828ffffff', '87283082effffff'];
-    return h3.cellsToMultiPolygon(cells, true);
+  const cells = ["872830828ffffff", "87283082effffff"];
+  return h3.cellsToMultiPolygon(cells, true);
 }
 ```
 
@@ -5503,6 +5492,7 @@ h3.cells_to_h3shape(cells, *, tight=True)
 ```
 
 Returns an `H3Shape` object:
+
 - If `tight=True`, returns `LatLngPoly` if possible, otherwise `LatLngMultiPoly`.
 - If `tight=False`, always returns a `LatLngMultiPoly`.
 
@@ -5522,6 +5512,7 @@ h3.CellsToMultiPolygon(cells)
 ```sql
 h3_cells_to_multi_polygon_wkt(cells)
 ```
+
 ```sql
 h3_cells_to_multi_polygon_wkb(cells)
 ```
@@ -5549,25 +5540,23 @@ $ h3 cellsToMultiPolygon -c 872830828ffffff,87283082effffff
 </TabItem>
 </Tabs>
 
-
-
 ## destroyLinkedMultiPolygon
 
 Free all allocated memory for a linked geo structure. The caller is
 responsible for freeing memory allocated to the input polygon struct.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5632,14 +5621,15 @@ This function exists for memory management and is not exposed.
 </TabItem>
 </Tabs>
 
-
 # === api/traversal ===
 
 ---
+
 id: traversal
 title: Grid traversal functions
 sidebar_label: Traversal
 slug: /api/traversal
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -5650,7 +5640,7 @@ and determining how to traverse the grid from one cell to another.
 
 ## gridDistance
 
-Provides the *grid distance* between two cells, which is
+Provides the _grid distance_ between two cells, which is
 defined as the minimum number of "hops" needed across adjacent cells to get
 from one cell to the other.
 
@@ -5663,17 +5653,17 @@ Note that finding the grid distance may fail for a few reasons:
 This is the same set of limitations as the local IJ coordinate space functions.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5695,13 +5685,13 @@ long gridDistance(String a, String b) throws DistanceUndefinedException;
 <TabItem value="javascript">
 
 ```js
-h3.gridDistance(a, b)
+h3.gridDistance(a, b);
 ```
 
 ```js live
 function example() {
-  const start = '85283473fffffff';
-  const end = '8528342bfffffff';
+  const start = "85283473fffffff";
+  const end = "8528342bfffffff";
   return h3.gridDistance(start, end);
 }
 ```
@@ -5749,27 +5739,26 @@ $ h3 gridDistance -o 85283473fffffff -d 8528342bfffffff
 </TabItem>
 </Tabs>
 
-
 ## gridRing
 
-Produces the "hollow ring" of cells which are *exactly* grid distance `k`
+Produces the "hollow ring" of cells which are _exactly_ grid distance `k`
 from the origin cell.
 
 If pentagon distortion is encountered, this function will use a more memory-intensive
 approach than `gridRingUnsafe` in order to compute the ring.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5795,12 +5784,12 @@ List<String> gridRing(String h3Address, int k);
 <TabItem value="javascript">
 
 ```js
-h3.gridRing(h3Index, k)
+h3.gridRing(h3Index, k);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   const k = 1;
   return h3.gridRing(h, k);
 }
@@ -5850,26 +5839,25 @@ $ h3 gridRing -k 1 -c 85283473fffffff
 </TabItem>
 </Tabs>
 
-
 ## gridRingUnsafe
 
-Produces the "hollow ring" of cells which are *exactly* grid distance `k`
+Produces the "hollow ring" of cells which are _exactly_ grid distance `k`
 from the origin cell.
 
 This function may fail if pentagonal distortion is encountered.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -5879,7 +5867,6 @@ H3Error gridRingUnsafe(H3Index origin, int k, H3Index* out);
 
 The caller should allocate memory for the maximum size of the ring, which is
 given by `maxGridRingSize`.
-
 
 Returns 0 (`E_SUCCESS`) if no pentagonal distortion was encountered.
 
@@ -5895,12 +5882,12 @@ List<String> gridRingUnsafe(String h3Address, int k) throws PentagonEncounteredE
 <TabItem value="javascript">
 
 ```js
-h3.gridRingUnsafe(h3Index, k)
+h3.gridRingUnsafe(h3Index, k);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   const k = 1;
   return h3.gridRingUnsafe(h, k);
 }
@@ -5941,31 +5928,29 @@ This function is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## maxGridRingSize
 
-This function provides the maximum number of cells in the grid that are *exactly*
+This function provides the maximum number of cells in the grid that are _exactly_
 grid distance `k` away from an origin, which is `6*k` if `k > 0` and `1` if `k == 0`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
 ```c
 H3Error maxGridRingSize(int k, int64_t* out);
 ```
-
 
 Returns 0 (`E_SUCCESS`) if no pentagonal distortion was encountered.
 
@@ -6026,26 +6011,25 @@ This function exists for memory management and is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## gridDisk
 
-Produces the "filled-in disk" of cells which are *at most* grid distance `k`
+Produces the "filled-in disk" of cells which are _at most_ grid distance `k`
 from the origin cell.
 
 Output order is not guaranteed.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6070,12 +6054,12 @@ List<String> gridDisk(String origin, int k);
 <TabItem value="javascript">
 
 ```js
-h3.gridDisk(origin, k)
+h3.gridDisk(origin, k);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   const k = 5;
   return h3.gridDisk(h, k);
 }
@@ -6130,17 +6114,17 @@ $ h3 gridDisk -k 5 -c 85283473fffffff
 Maximum number of cells that can result from the `gridDisk` function for a given `k`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6207,7 +6191,6 @@ This function exists for memory management and is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## gridDiskDistances
 
 Produces the same set of cells as `gridDisk`, but along with each cell's
@@ -6216,17 +6199,17 @@ grid distance from the origin cell.
 Output order is not guaranteed.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6251,12 +6234,12 @@ List<List<String>> gridDiskDistances(String origin, int k);
 <TabItem value="javascript">
 
 ```js
-h3.gridDiskDistances(origin, k)
+h3.gridDiskDistances(origin, k);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   const k = 5;
   return h3.gridDiskDistances(h, k);
 }
@@ -6317,17 +6300,17 @@ encountered. In this case, the output in the `out` array is undefined.
 Users can fall back to calling the slower but more robust `gridDiskDistances`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6336,7 +6319,7 @@ H3Error gridDiskUnsafe(H3Index origin, int k, H3Index* out);
 ```
 
 Output is placed in the provided array in order of increasing distance from
-the origin. 
+the origin.
 The provided array must be of size `maxGridDiskSize(k)`.
 
 Returns 0 (`E_SUCCESS`) if no pentagonal distortion is encountered.
@@ -6395,7 +6378,6 @@ This function is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## gridDiskDistancesUnsafe
 
 `gridDiskDistancesUnsafe` produces indexes within `k` distance of the origin index.
@@ -6407,17 +6389,17 @@ the origin. The distances in hexagons is placed in the distances array at
 the same offset. The provided array must be of size `maxGridDiskSize(k)`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6482,7 +6464,6 @@ This function is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## gridDiskDistancesSafe
 
 `gridDiskDistancesSafe` produces indexes within `k` distance of the origin index.
@@ -6492,17 +6473,17 @@ the origin. The distances in hexagons is placed in the distances array at
 the same offset. The provided array must be of size `maxGridDiskSize(k)`.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6567,7 +6548,6 @@ This function is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## gridDisksUnsafe
 
 `gridDisksUnsafe` takes an array of input cells and a max `k` and returns an
@@ -6575,17 +6555,17 @@ array of cells sorted first by the original cell indices and then by the
 grid ring (0 to max), with no guaranteed sorting within each grid ring group.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6652,7 +6632,6 @@ This function is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## gridPathCells
 
 Given two H3 cells, return a minimal-length contiguous path of cells
@@ -6663,26 +6642,26 @@ the cells are on opposite sides of a pentagon.
 
 Notes:
 
- * The output of this function should not be considered stable
-   across library versions. The only guarantees are
-   that the path length will be `gridDistance(start, end) + 1` and that
-   every cell in the path will be a neighbor of the preceding cell.
+- The output of this function should not be considered stable
+  across library versions. The only guarantees are
+  that the path length will be `gridDistance(start, end) + 1` and that
+  every cell in the path will be a neighbor of the preceding cell.
 
- * Paths exist in the H3 grid of cells, and may not align closely with either
-   Cartesian lines or great arcs.
+- Paths exist in the H3 grid of cells, and may not align closely with either
+  Cartesian lines or great arcs.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6704,13 +6683,13 @@ List<String> gridPathCells(String startAddress, String endAddress) throws LineUn
 <TabItem value="javascript">
 
 ```js
-h3.gridPathCells(start, end)
+h3.gridPathCells(start, end);
 ```
 
 ```js live
 function example() {
-  const start = '85283473fffffff';
-  const end = '8528342bfffffff';
+  const start = "85283473fffffff";
+  const end = "8528342bfffffff";
   return h3.gridPathCells(start, end);
 }
 ```
@@ -6765,17 +6744,17 @@ Number of cells in a grid path from the start cell to the end cell,
 to be used for allocating memory.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6842,7 +6821,6 @@ This function exists for memory management and is not exposed.
 </TabItem>
 </Tabs>
 
-
 ## cellToLocalIj
 
 Produces local IJ coordinates for an H3 cell anchored by an origin.
@@ -6853,17 +6831,17 @@ This function's output is not guaranteed to be compatible across different
 versions of H3.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6885,14 +6863,14 @@ CoordIJ cellToLocalIj(String originAddress, String h3Address) throws PentagonEnc
 <TabItem value="javascript">
 
 ```js
-h3.cellToLocalIj(origin, h3)
+h3.cellToLocalIj(origin, h3);
 ```
 
 ```js live
 function example() {
-  const origin = '85283473fffffff';
-  const h = '8528342bfffffff';
-  const {i, j} = h3.cellToLocalIj(origin, h);
+  const origin = "85283473fffffff";
+  const h = "8528342bfffffff";
+  const { i, j } = h3.cellToLocalIj(origin, h);
   return [i, j];
 }
 ```
@@ -6951,17 +6929,17 @@ This function's output is not guaranteed to be compatible across different
 versions of H3.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -6983,13 +6961,13 @@ String localIjToCell(String originAddress, CoordIJ ij) throws LocalIjUndefinedEx
 <TabItem value="javascript">
 
 ```js
-h3.localIjToCell(origin, coords)
+h3.localIjToCell(origin, coords);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
-  const coords = {i: 0, j: 0};
+  const h = "85283473fffffff";
+  const coords = { i: 0, j: 0 };
   return h3.localIjToCell(h, coords);
 }
 ```
@@ -7039,14 +7017,15 @@ $ h3 localIjToCell -o 85283473fffffff -i 0 -j 0
 </TabItem>
 </Tabs>
 
-
 # === api/vertex ===
 
 ---
+
 id: vertex
 title: Vertex functions
 sidebar_label: Vertexes
 slug: /api/vertex
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -7061,17 +7040,17 @@ Valid vertex numbers are between 0 and 5 (inclusive)
 for hexagonal cells, and 0 and 4 (inclusive) for pentagonal cells.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -7093,12 +7072,12 @@ String cellToVertex(String origin, int vertexNum);
 <TabItem value="javascript">
 
 ```js
-h3.cellToVertex(origin, vertexNum)
+h3.cellToVertex(origin, vertexNum);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   const vertexNum = 2;
   return h3.cellToVertex(h, vertexNum);
 }
@@ -7153,17 +7132,17 @@ $ h3 cellToVertex -v 2 -c 85283473fffffff
 Returns the indexes for all vertexes of the given cell.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Go', value: 'go'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Go', value: 'go'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -7189,12 +7168,12 @@ List<String> cellToVertexes(String origin);
 <TabItem value="javascript">
 
 ```js
-h3.cellToVertexes(origin)
+h3.cellToVertexes(origin);
 ```
 
 ```js live
 function example() {
-  const h = '85283473fffffff';
+  const h = "85283473fffffff";
   return h3.cellToVertexes(h);
 }
 ```
@@ -7247,17 +7226,17 @@ $ h3 cellToVertexes -c 85283473fffffff
 Returns the latitude and longitude coordinates of the given vertex.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -7279,12 +7258,12 @@ LatLng vertexToLatLng(String vertex);
 <TabItem value="javascript">
 
 ```js
-h3.vertexToLatLng(vertex)
+h3.vertexToLatLng(vertex);
 ```
 
 ```js live
 function example() {
-  const h = '255283463fffffff';
+  const h = "255283463fffffff";
   return h3.vertexToLatLng(h);
 }
 ```
@@ -7337,17 +7316,17 @@ $ h3 vertexToLatLng -c 255283463fffffff
 Determines if the given H3 index represents a valid H3 vertex.
 
 <Tabs
-  groupId="language"
-  defaultValue="c"
-  values={[
-    {label: 'C', value: 'c'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript (Live)', value: 'javascript'},
-    {label: 'Python', value: 'python'},
-    {label: 'Go', value: 'go'},
-    {label: 'DuckDB', value: 'duckdb'},
-    {label: 'Shell', value: 'shell'},
-  ]
+groupId="language"
+defaultValue="c"
+values={[
+{label: 'C', value: 'c'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript (Live)', value: 'javascript'},
+{label: 'Python', value: 'python'},
+{label: 'Go', value: 'go'},
+{label: 'DuckDB', value: 'duckdb'},
+{label: 'Shell', value: 'shell'},
+]
 }>
 <TabItem value="c">
 
@@ -7369,12 +7348,12 @@ boolean isValidVertex(String vertex);
 <TabItem value="javascript">
 
 ```js
-h3.isValidVertex(vertex)
+h3.isValidVertex(vertex);
 ```
 
 ```js live
 function example() {
-  const h = '255283463fffffff';
+  const h = "255283463fffffff";
   return h3.isValidVertex(h);
 }
 ```
@@ -7422,14 +7401,15 @@ true
 </TabItem>
 </Tabs>
 
-
 # === community/applications ===
 
 ---
+
 id: applications
 title: Applications Using H3
 sidebar_label: Applications Using H3
 slug: /community/applications
+
 ---
 
 The following applications use H3. Contributions to this list are welcome, please feel free to open a [pull request](https://github.com/uber/h3/tree/master/website/docs/community/applications.md).
@@ -7440,14 +7420,15 @@ The following applications use H3. Contributions to this list are welcome, pleas
 - [pydeck](https://deckgl.readthedocs.io/) - High-scale spatial rendering in Python, powered by deck.gl
 - [h3-viewer](https://h3.chotard.com/) - Debugging tool to visualise h3 on mercator projection, powered by deck.gl
 
-
 # === community/bindings ===
 
 ---
+
 id: bindings
 title: Bindings
 sidebar_label: Bindings
 slug: /community/bindings
+
 ---
 
 As a C library, bindings can be made to call H3 functions from different programming languages. This page lists different bindings currently available. Contributions to this list are welcome, please feel free to open a [pull request](https://github.com/uber/h3/tree/master/website/docs/community/bindings.md).
@@ -7474,11 +7455,11 @@ As a C library, bindings can be made to call H3 functions from different program
 
 - [Functions for Working with H3 Indexes](https://clickhouse.tech/docs/en/sql-reference/functions/geo/h3/)
 
-## Clojure 
+## Clojure
 
 - [Factual/geo](https://github.com/Factual/geo)
 
-## Dart 
+## Dart
 
 - [festelo/h3_flutter](https://github.com/festelo/h3_flutter)
 - [codewithsam110g/h3_flutter_plus](https://github.com/codewithsam110g/h3_flutter_bindings)
@@ -7588,17 +7569,19 @@ As a C library, bindings can be made to call H3 functions from different program
 - [kevinschaich/h3-pyspark](https://github.com/kevinschaich/h3-pyspark) (3.x)
 
 ## Swift
+
 - [JeremyEspresso/swift-h3](https://github.com/JeremyEspresso/swift-h3) (4.x)
 - [pawelmajcher/SwiftyH3](https://github.com/pawelmajcher/SwiftyH3) (4.x)
-
 
 # === community/libraries ===
 
 ---
+
 id: libraries
 title: Libraries Using H3
 sidebar_label: Libraries Using H3
 slug: /community/libraries
+
 ---
 
 The following libraries use H3 via one of its bindings. Contributions to this list are welcome, please feel free to open a [pull request](https://github.com/uber/h3/tree/master/website/docs/community/libraries.md).
@@ -7615,14 +7598,15 @@ The following libraries use H3 via one of its bindings. Contributions to this li
 
 - [nmandery/h3ron](https://github.com/nmandery/h3ron) - Raster to H3 conversion, smoothing of linked polygons.
 
-
 # === community/tutorials ===
 
 ---
+
 id: tutorials
 title: Learning Resources
 sidebar_label: Learning Resources
 slug: /community/tutorials
+
 ---
 
 This page lists further learning materials and code walkthroughs for the H3 library and bindings. Contributions to this list are welcome, please feel free to open a [pull request](https://github.com/uber/h3/tree/master/website/docs/community/tutorials.md).
@@ -7657,14 +7641,15 @@ This page lists further learning materials and code walkthroughs for the H3 libr
 - [Unified Data Layers (IPython Notebook)](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/unified_data_layers.ipynb)
 - [H3 API examples on Urban Analytics (IPython Notebook)](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/urban_analytics.ipynb)
 
-
 # === comparisons/admin ===
 
 ---
+
 id: admin
 title: Admin Boundaries
 sidebar_label: Admin Boundaries
 slug: /comparisons/admin
+
 ---
 
 Administrative boundaries, such as ZIP Codes and Census Blocks in the United States, can be used for aggregating and analyzing data. These boundaries have a number of drawbacks for aggregating data. These are primarily related to not having a comparable spatial unit of analysis, being unable to spatially relate data, and being unrelated to the data being analyzed.
@@ -7687,14 +7672,15 @@ The varying size of partitions means the center of a partition may be unrelated 
 
 ZIP Codes on the left, H3 on the right. Data: [New York City 2015 Street Tree Census](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh)
 
-
 # === comparisons/geohash ===
 
 ---
+
 id: geohash
 title: Geohash
 sidebar_label: Geohash
 slug: /comparisons/geohash
+
 ---
 
 [Geohash](https://en.wikipedia.org/wiki/Geohash) is a system for encoding locations using a string of characters, creating a hierarchical, square grid system (a quadtree).
@@ -7715,14 +7701,15 @@ H3 cell indexes are designed to be 64 bit integers, which can be rendered and tr
 
 Geohash on the left, H3 on the right. Data: [San Francisco Street Tree List](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)
 
-
 # === comparisons/hexbin ===
 
 ---
+
 id: hexbin
 title: Hexbin
 sidebar_label: Hexbin
 slug: /comparisons/hexbin
+
 ---
 
 Hexbinning is the process of taking coordinates and binning them into hexagonal cells in analytics or mapping software. The size of the hexagons is configurable, and the hexagons can align with the map projection being used.
@@ -7739,28 +7726,30 @@ Hexbins are also limited by the projection system they are created on top of. Th
 
 Hexbins on the left, H3 on the right. Data: [San Francisco Street Tree List](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)
 
-
 # === comparisons/placekey ===
 
 ---
+
 id: placekey
 title: Placekey
 sidebar_label: Placekey
 slug: /comparisons/placekey
+
 ---
 
 [Placekey](https://www.placekey.io/) is a system for encoding points of interest (POIs), and incorporates H3 in its POI identifier.
 
 For example, the Placekey for the Ferry Building in San Francisco, `zzw-22y@5vg-7gt-qzz`, contains a What Part (`zzw-22y`) encoding a specific POI, and a Where Part (`5vg-7gt-qzz`) encoding where that POI is. The Where Part is an H3 cell index at resolution 10, using an alternate string encoding. The example Where Part represents the H3 index `8a283082a677fff`. Placekey Where Parts can be losslessly converted to and from their equivalent H3 indexes.
 
-
 # === comparisons/s2 ===
 
 ---
+
 id: s2
 title: S2
 sidebar_label: S2
 slug: /comparisons/s2
+
 ---
 
 [S2](https://s2geometry.io/), like H3, implements an open source, hierarchical, discrete, and global grid system. The systems share a number of similarities, including the use of 64 bit integers as cell indexes, making it very efficient to use both of them in big data systems.
@@ -7775,7 +7764,7 @@ Hexagons have only one class of neighbor, that they share an edge with. This mak
 
 ## Subdivision
 
-S2 uses an *aperture 4* system where each cell is subdivided into 4 finer, child cells. Squares subdivide exactly into 4 child squares. This means that when indexing a point to an S2 cell, and then truncating to the parent S2 cell, there is no possibility that the point is not contained in the bounds of the parent cell.
+S2 uses an _aperture 4_ system where each cell is subdivided into 4 finer, child cells. Squares subdivide exactly into 4 child squares. This means that when indexing a point to an S2 cell, and then truncating to the parent S2 cell, there is no possibility that the point is not contained in the bounds of the parent cell.
 
 This differs from H3 where the same operation is approximate. This is the case because hexagons do not exactly subdivide into 7 child hexagons.
 
@@ -7787,7 +7776,7 @@ H3 cells have the same non-alignment with the map projection, but in our experie
 
 ## Links
 
-* [Geometry on the Sphere: Google's S2 Library](https://docs.google.com/presentation/d/1Hl4KapfAENAOf4gv-pSngKwvS_jwNVHRPZTTDzXXn6Q/edit)
+- [Geometry on the Sphere: Google's S2 Library](https://docs.google.com/presentation/d/1Hl4KapfAENAOf4gv-pSngKwvS_jwNVHRPZTTDzXXn6Q/edit)
 
 ## S2 vs H3 Comparison
 
@@ -7795,63 +7784,67 @@ H3 cells have the same non-alignment with the map projection, but in our experie
 
 S2 on the left, H3 on the right. Data: [San Francisco Street Tree List](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)
 
-
 # === core-library/cellToBoundaryDesc ===
 
 ---
+
 id: cellToBoundaryDesc
 title: Generate the cell boundary in latitude/longitude coordinates of an H3Index cell
 sidebar_label: Generate the cell boundary in latitude/longitude coordinates of an H3Index cell
 slug: /core-library/cellToBoundaryDesc
+
 ---
 
 This operation is performed by function `cellToBoundary`. See the comments in the function source code for more detail.
 
 The conversion is performed as a series of coordinate system conversions described below. See the page [Coordinate Systems used by the H3 Core Library](/docs/core-library/coordsystems) for more information on each of these coordinate systems.
 
-1. We note that the cell vertices are the center points of cells in an aperture 3 grid one resolution finer than the cell resolution, which we term a *substrate* grid. We precalculate the substrate *ijk* coordinates of a cell with *ijk* coordinates (0,0,0), adding additional aperture 3 and aperture 7 (if required, by Class III cell grid) substrate grid resolutions as required to transform the vertex coordinates into a Class II substrate grid.
+1. We note that the cell vertices are the center points of cells in an aperture 3 grid one resolution finer than the cell resolution, which we term a _substrate_ grid. We precalculate the substrate _ijk_ coordinates of a cell with _ijk_ coordinates (0,0,0), adding additional aperture 3 and aperture 7 (if required, by Class III cell grid) substrate grid resolutions as required to transform the vertex coordinates into a Class II substrate grid.
 
 <div align="center">
   <img height="300" src="/images/substrate3.png" />
 </div>
 
-2. The function `_faceIjkToGeoBoundary` calculates the *ijk* coordinates of the cell center point in the appropriate substrate grid (determined in the last step), and each of the substrate vertices is translated using the cell center point *ijk*. Each vertex *ijk* is then transformed onto the appropriate face and *Hex2d* coordinate system using the approach taken in [finding a cell center point](/docs/core-library/cellToLatLngDesc). If adjacent vertices lie on different icosahedron faces a point is introduced at the intersection of the cell edge and icosahedron face edge.
-3. The *Hex2d* coordinates are then converted to latitude/longitude using `_hex2dToGeo`.
-
+2. The function `_faceIjkToGeoBoundary` calculates the _ijk_ coordinates of the cell center point in the appropriate substrate grid (determined in the last step), and each of the substrate vertices is translated using the cell center point _ijk_. Each vertex _ijk_ is then transformed onto the appropriate face and _Hex2d_ coordinate system using the approach taken in [finding a cell center point](/docs/core-library/cellToLatLngDesc). If adjacent vertices lie on different icosahedron faces a point is introduced at the intersection of the cell edge and icosahedron face edge.
+3. The _Hex2d_ coordinates are then converted to latitude/longitude using `_hex2dToGeo`.
 
 # === core-library/cellToLatLngDesc ===
 
 ---
+
 id: cellToLatLngDesc
 title: Determine the latitude/longitude coordinates of the center point of an H3Index cell
 sidebar_label: Determine the latitude/longitude coordinates of the center point of an H3Index cell
 slug: /core-library/cellToLatLngDesc
+
 ---
 
 This operation is performed by function `cellToLatLng`. See the comments in the function source code for more detail.
 
 The conversion is performed as a series of coordinate system conversions described below. See the page [Coordinate Systems used by the H3 Core Library](/docs/core-library/coordsystems) for more information on each of these coordinate systems.
 
-1.  The function `_h3ToFaceIjk` then converts the H3 index to the appropriate icosahedron face number and normalized *ijk* coordinate's on that face's coordinate system as follows:
-   * We start by assuming that the cell center point falls on the same icosahedron face as its base cell.
-   * It is possible that the cell center point lies on an adjacent face (termed an *overage* in the code), in which case we would need to use a projection centered on that adjacent face instead. We recall that normalized *ijk* coordinates have at most two non-zero components, and that in a face-centered Class II system the sum of those components is a resolution-specific constant value for cells that lie on the edge of that icosahedral face.
-     We determine whether an overage exists by taking the sum of the *ijk* components, and if there is an overage the positive *ijk* components indicate which adjacent face the cell center lies on. A lookup operation is then performed to find the appropriate rotation and translation to transform the *ijk* coordinates into the adjacent face-centered *ijk* system.
+1.  The function `_h3ToFaceIjk` then converts the H3 index to the appropriate icosahedron face number and normalized _ijk_ coordinate's on that face's coordinate system as follows:
+
+- We start by assuming that the cell center point falls on the same icosahedron face as its base cell.
+- It is possible that the cell center point lies on an adjacent face (termed an _overage_ in the code), in which case we would need to use a projection centered on that adjacent face instead. We recall that normalized _ijk_ coordinates have at most two non-zero components, and that in a face-centered Class II system the sum of those components is a resolution-specific constant value for cells that lie on the edge of that icosahedral face.
+  We determine whether an overage exists by taking the sum of the _ijk_ components, and if there is an overage the positive _ijk_ components indicate which adjacent face the cell center lies on. A lookup operation is then performed to find the appropriate rotation and translation to transform the _ijk_ coordinates into the adjacent face-centered _ijk_ system.
 
 <div align="center">
   <img height="300" src="/images/triEdge.png" />
 </div>
 
-2. The face-centered *ijk* coordinates are then converted into corresponding *Hex2d* coordinates using the function `_ijkToHex2d`.
-3. The function `_hex2dToGeo` takes the *Hex2d* coordinates and scales them into face-centered gnomonic coordinates, and then performs an inverse gnomonic projection to get the latitude/longitude coordinates.
-
+2. The face-centered _ijk_ coordinates are then converted into corresponding _Hex2d_ coordinates using the function `_ijkToHex2d`.
+3. The function `_hex2dToGeo` takes the _Hex2d_ coordinates and scales them into face-centered gnomonic coordinates, and then performs an inverse gnomonic projection to get the latitude/longitude coordinates.
 
 # === core-library/compilation-options ===
 
 ---
+
 id: compilation-options
 title: Compilation options
 sidebar_label: Compilation options
 slug: /core-library/compilation-options
+
 ---
 
 A number of options in CMake can be set when compiling the H3 core library. These are relevant for building
@@ -7964,72 +7957,70 @@ for production builds as compiler warnings can change unexpectedly between versi
 
 Whether to wrap invocations of the test suite with `valgrind` (if available).
 
-
 # === core-library/coordsystems ===
 
 ---
+
 id: coordsystems
 title: Coordinate systems
 sidebar_label: Coordinate systems
 slug: /core-library/coordsystems
+
 ---
 
 The H3 Core Library uses the following coordinate systems internally.
 
-IJK Coordinates
----
+## IJK Coordinates
 
-Discrete hexagon planar grid systems naturally have 3 coordinate axes spaced 120&deg; apart. We refer to such a system as an *ijk coordinate system*, for the three coordinate axes *i*, *j*, and *k*. A single *ijk* coordinate triplet is represented in the H3 Core Library using the structure type `CoordIJK`.
+Discrete hexagon planar grid systems naturally have 3 coordinate axes spaced 120&deg; apart. We refer to such a system as an _ijk coordinate system_, for the three coordinate axes _i_, _j_, and _k_. A single _ijk_ coordinate triplet is represented in the H3 Core Library using the structure type `CoordIJK`.
 
-Using an *ijk* coordinate system to address hexagon grid cells provides multiple valid addresses for each cell. *Normalizing* an *ijk* address (function `_ijkNormalize`) creates a unique address consisting of the minimal positive *ijk* components; this always results in at most two non-zero components.
+Using an _ijk_ coordinate system to address hexagon grid cells provides multiple valid addresses for each cell. _Normalizing_ an _ijk_ address (function `_ijkNormalize`) creates a unique address consisting of the minimal positive _ijk_ components; this always results in at most two non-zero components.
 
 <div align="center">
   <img height="300" src="/images/ijkp.png" />
 </div>
 
-FaceIJK Coordinates
----
+## FaceIJK Coordinates
 
-The H3 Core Library centers an *ijk* coordinate system on each face of the icosahedron; the combination of a face number and *ijk* coordinates on that face's coordinate system is represented using the structure type `FaceIJK`.
+The H3 Core Library centers an _ijk_ coordinate system on each face of the icosahedron; the combination of a face number and _ijk_ coordinates on that face's coordinate system is represented using the structure type `FaceIJK`.
 
-Each grid resolution is rotated ~19.1&deg; relative to the next coarser resolution. The rotation alternates between counterclockwise and clockwise at each successive resolution, so that each resolution will have one of two possible orientations: *Class II* or *Class III* (using a terminology coined by R. Buckminster Fuller). The base cells, which make up resolution 0, are *Class II*.
+Each grid resolution is rotated ~19.1&deg; relative to the next coarser resolution. The rotation alternates between counterclockwise and clockwise at each successive resolution, so that each resolution will have one of two possible orientations: _Class II_ or _Class III_ (using a terminology coined by R. Buckminster Fuller). The base cells, which make up resolution 0, are _Class II_.
 
 <div align="center">
   <img height="300" src="/images/classII.III.png" />
 </div>
 
-Hex2d Coordinates
----
+## Hex2d Coordinates
 
-A *Hex2d* coordinate system is a cartesian coordinate system associated with a specific *ijk* coordinate system, where:
+A _Hex2d_ coordinate system is a cartesian coordinate system associated with a specific _ijk_ coordinate system, where:
 
-* the origin of the *Hex2d* system is centered on the origin cell of the *ijk* system, 
-* the positive *x*-axis of the *Hex2d* system is aligned with the *i*-axis of the *ijk* system, and
-* 1.0 unit distance in the *Hex2d* system is the distance between adjacent cell centers in the *ijk* coordinate system.
+- the origin of the _Hex2d_ system is centered on the origin cell of the _ijk_ system,
+- the positive _x_-axis of the _Hex2d_ system is aligned with the _i_-axis of the _ijk_ system, and
+- 1.0 unit distance in the _Hex2d_ system is the distance between adjacent cell centers in the _ijk_ coordinate system.
 
-*Hex2d* coordinates are represented using the structure type `Vec2d`.
+_Hex2d_ coordinates are represented using the structure type `Vec2d`.
 
-Local IJ Coordinates
----
+## Local IJ Coordinates
 
-Algorithms working with hexagons may want to refer to grid coordinates that are not interrupted by base cells or faces. These coordinates have 2 coordinate axes spaced 120&deg; apart, with the coordinates anchored by an *origin* H3 index.
+Algorithms working with hexagons may want to refer to grid coordinates that are not interrupted by base cells or faces. These coordinates have 2 coordinate axes spaced 120&deg; apart, with the coordinates anchored by an _origin_ H3 index.
 
-* local coordinates are only comparable when they have the same *origin* index.
-* local coordinates are only valid near the *origin*. Pratically, this is within the same base cell or a neighboring base cell, except for pentagons.
-* the coordinate space may have deleted or warped regions due to pentagon distortion.
-* there may be multiple coordinates for the same index, with the same *origin*.
-* the *origin* may not be at `(0, 0)` in the local coordinate space.
+- local coordinates are only comparable when they have the same _origin_ index.
+- local coordinates are only valid near the _origin_. Pratically, this is within the same base cell or a neighboring base cell, except for pentagons.
+- the coordinate space may have deleted or warped regions due to pentagon distortion.
+- there may be multiple coordinates for the same index, with the same _origin_.
+- the _origin_ may not be at `(0, 0)` in the local coordinate space.
 
-*Local IJ* coordinates are represented using the structure type `CoordIJ` and an associated *origin* `H3Index`.
-
+_Local IJ_ coordinates are represented using the structure type `CoordIJ` and an associated _origin_ `H3Index`.
 
 # === core-library/creating-bindings ===
 
 ---
+
 id: creating-bindings
 title: Creating bindings for H3
 sidebar_label: Creating bindings
 slug: /core-library/creating-bindings
+
 ---
 
 H3 is a C library, in part to make it simpler to create bindings for different programming languages. Each language usually has its own way to bind to C functions, but this document can serve as a starting point and list of tips.
@@ -8050,18 +8041,19 @@ When ready, make a [pull request](https://github.com/uber/h3/edit/master/docs/co
 
 To be included in the H3 [API reference](/docs/api/indexing), your binding should:
 
-* Be reasonably up to date with uber/h3.
-* Include bindings for the relevant functions in the output of `make binding-functions`. For example, `stringToH3` may not be necessary if your bindings only supports string H3 indexes.
-* Use the major and minor version of the version of H3 bound. For example, when binding H3 version 3.2.1, a valid binding version would be 3.2.0, but 4.2.1 would not be valid.
-
+- Be reasonably up to date with uber/h3.
+- Include bindings for the relevant functions in the output of `make binding-functions`. For example, `stringToH3` may not be necessary if your bindings only supports string H3 indexes.
+- Use the major and minor version of the version of H3 bound. For example, when binding H3 version 3.2.1, a valid binding version would be 3.2.0, but 4.2.1 would not be valid.
 
 # === core-library/custom-alloc ===
 
 ---
+
 id: custom-alloc
 title: Memory allocation
 sidebar_label: Memory allocation
 slug: /core-library/custom-alloc
+
 ---
 
 H3's approach to memory management is to rely on memory allocated by the caller as much as possible. This allows memory to be managed by an external framework.
@@ -8109,14 +8101,15 @@ H3 does not currently use `realloc`.
 
 Link to H3 as you would have without the custom allocators. The custom allocators will be used for allocating heap memory in H3.
 
-
 # === core-library/filters ===
 
 ---
+
 id: filters
 title: Unix-style Filters for H3
 sidebar_label: Unix-style Filters for H3
 slug: /core-library/filters
+
 ---
 
 The directory `src/apps/filters` contains unix-style stdin/stdout filters that perform conversions between integer H3 indexes and other useful types. It currently contains the filters listed in the table below. See the header comments in each application source code file for more information.
@@ -8125,9 +8118,8 @@ Filters are experimental and are not part of the semantic version of the H3 libr
 
 All latitude/longitude coordinates are in decimal degrees. See the [H3 Index Representations](/docs/core-library/h3indexing) page for information on the integer `H3Index`.
 
-
-|      filter      |   input   |             outputs             |
-|------------------|-----------|---------------------------------|
+| filter           | input     | outputs                         |
+| ---------------- | --------- | ------------------------------- |
 | `latLngToCell`   | lat/lng   | `H3Index`                       |
 | `cellToLatLng`   | `H3Index` | cell center point in lat/lng    |
 | `cellToBoundary` | `H3Index` | cell boundary in lat/lng        |
@@ -8135,89 +8127,90 @@ All latitude/longitude coordinates are in decimal degrees. See the [H3 Index Rep
 | `gridDisk`       | `H3Index` | surrounding `H3Index`           |
 | `gridDiskUnsafe` | `H3Index` | surrounding `H3Index`, in order |
 
-Unix Command Line Examples
----
+## Unix Command Line Examples
 
-* find the index for coordinates at resolution 5
+- find the index for coordinates at resolution 5
 
-     `latLngToCell --resolution 5 --latitude 40.689167 --longitude -74.044444`
+  `latLngToCell --resolution 5 --latitude 40.689167 --longitude -74.044444`
 
-* output the cell center point for `H3Index` 845ad1bffffffff
+- output the cell center point for `H3Index` 845ad1bffffffff
 
-     `cellToLatLng --index 845ad1bffffffff`
+  `cellToLatLng --index 845ad1bffffffff`
 
-* output the cell boundary for `H3Index` 845ad1bffffffff
+- output the cell boundary for `H3Index` 845ad1bffffffff
 
-     `cellToBoundary --index 845ad1bffffffff`
+  `cellToBoundary --index 845ad1bffffffff`
 
-* find the components for the `H3Index` 845ad1bffffffff
+- find the components for the `H3Index` 845ad1bffffffff
 
-     `h3ToComponents --index 845ad1bffffffff`
+  `h3ToComponents --index 845ad1bffffffff`
 
-* output all indexes within distance 1 of the `H3Index` 845ad1bffffffff
+- output all indexes within distance 1 of the `H3Index` 845ad1bffffffff
 
-     `kRing -k 1 --origin 845ad1bffffffff`
+  `kRing -k 1 --origin 845ad1bffffffff`
 
-* output all hexagon indexes within distance 2 of the `H3Index` 845ad1bffffffff
+- output all hexagon indexes within distance 2 of the `H3Index` 845ad1bffffffff
 
-     `hexRange -k 2 --origin 845ad1bffffffff`
+  `hexRange -k 2 --origin 845ad1bffffffff`
 
 Note that the filters `cellToLatLng` and `cellToBoundary` take optional arguments that allow them to generate `kml` output. See the header comments in the corresponding source code files for details.
-
 
 # === core-library/latLngToCellDesc ===
 
 ---
+
 id: latLngToCellDesc
 title: Conversion from latitude/longitude to containing H3 cell index
 sidebar_label: Conversion from latitude/longitude to containing H3 cell index
 slug: /core-library/latLngToCellDesc
+
 ---
 
 This operation is performed by function `latLngToCell`. See the comments in the function for more detail.
 
 The conversion is performed as a series of coordinate system conversions described below. See the page [Coordinate Systems used by the H3 Core Library](/docs/core-library/coordsystems) for more information on each of these coordinate systems.
 
-1. The input latitude/longitude coordinate is first converted into the containing icosahedron face and a *Hex2d* coordinate on that face using function `_geoToHex2d`, which determines the correct face and then performs a face-centered gnomonic projection into face-centered polar coordinates. These polar coordinates are then scaled appropriately to a *Hex2d* coordinate on the input grid resolution *r*.
-2. The *Hex2d* coordinate is converted into resolution *r* normalized *ijk* coordinates using function `_hex2dToCoordIJK`.
-3. The face and face-centered *ijk* coordinates are then converted into an `H3Index` representation using the following steps:
-
-   1. The H3 index digits are calculated from resolution *r* up to 0, adjusting the *ijk* coordinates at each successively coarser resolution.
-   2. When resolution 0 is reached, if the remaining *ijk* coordinates are (0,0,0) then the base cell centered on the face is chosen for the index.
-   3. If the remaining resolution 0 *ijk* coordinates are not (0,0,0), then a lookup operation is performed to find the appropriate base cell and the required rotation (if any) to orient the cell in that base cell's coordinate system. The index is then translated and rotated into the coordinate system centered on the new base cell.
-
+1. The input latitude/longitude coordinate is first converted into the containing icosahedron face and a _Hex2d_ coordinate on that face using function `_geoToHex2d`, which determines the correct face and then performs a face-centered gnomonic projection into face-centered polar coordinates. These polar coordinates are then scaled appropriately to a _Hex2d_ coordinate on the input grid resolution _r_.
+2. The _Hex2d_ coordinate is converted into resolution _r_ normalized _ijk_ coordinates using function `_hex2dToCoordIJK`.
+3. The face and face-centered _ijk_ coordinates are then converted into an `H3Index` representation using the following steps:
+   1. The H3 index digits are calculated from resolution _r_ up to 0, adjusting the _ijk_ coordinates at each successively coarser resolution.
+   2. When resolution 0 is reached, if the remaining _ijk_ coordinates are (0,0,0) then the base cell centered on the face is chosen for the index.
+   3. If the remaining resolution 0 _ijk_ coordinates are not (0,0,0), then a lookup operation is performed to find the appropriate base cell and the required rotation (if any) to orient the cell in that base cell's coordinate system. The index is then translated and rotated into the coordinate system centered on the new base cell.
 
 # === core-library/overview ===
 
 ---
+
 id: overview
 title: Overview of the H3 Geospatial Indexing System
 sidebar_label: Overview
 slug: /core-library/overview
+
 ---
 
 The H3 geospatial indexing system is a discrete global grid system (see [Sahr et al., 2003](http://webpages.sou.edu/~sahrk/sqspc/pubs/gdggs03.pdf)) consisting of a multi-precision hexagonal tiling of the sphere with hierarchical indexes.
 
 The hexagonal grid system is created on the planar faces of a sphere-circumscribed icosahedron, and the grid cells are then projected to the surface of the sphere using an inverse face-centered polyhedral gnomonic projection. The coordinate reference system (CRS) is spherical coordinates with the [WGS84](https://en.wikipedia.org/wiki/WGS84)/[EPSG:4326](https://epsg.io/4326) authalic radius. It is common to use WGS84 CRS data with the H3 library.
 
-The icosahedron is fixed relative to the sphere using a *Dymaxion* orientation (due to R. Buckminster Fuller). This orientation of a spherical icosahedron places all 12 icosahedron vertices in the ocean. (At the time of H3's development, this was the only known orientation with this property. [Others have since been found](https://richard.science/sci/2019_barnes_dgg_published.pdf).)
+The icosahedron is fixed relative to the sphere using a _Dymaxion_ orientation (due to R. Buckminster Fuller). This orientation of a spherical icosahedron places all 12 icosahedron vertices in the ocean. (At the time of H3's development, this was the only known orientation with this property. [Others have since been found](https://richard.science/sci/2019_barnes_dgg_published.pdf).)
 
 The H3 grid is constructed on the icosahedron by recursively creating increasingly higher precision hexagon grids until the desired resolution is achieved. Note that it is impossible to tile the sphere/icosahedron completely with hexagons; each resolution of an icosahedral hexagon grid must contain exactly 12 pentagons at every resolution, with one pentagon centered on each of the icosahedron vertices.
 
-The first H3 resolution (resolution 0) consists of 122 cells (110 hexagons and 12 icosahedron vertex-centered pentagons), referred to as the *base cells*. These were chosen to capture as much of the symmetry of the spherical icosahedron as possible. These base cells are assigned numbers from 0 to 121 based on the latitude of their center points; base cell 0 has the northern most center point, while base cell 121 has the southern most center point.
+The first H3 resolution (resolution 0) consists of 122 cells (110 hexagons and 12 icosahedron vertex-centered pentagons), referred to as the _base cells_. These were chosen to capture as much of the symmetry of the spherical icosahedron as possible. These base cells are assigned numbers from 0 to 121 based on the latitude of their center points; base cell 0 has the northern most center point, while base cell 121 has the southern most center point.
 
 Each subsequent resolution beyond resolution 0 is created using an aperture 7 resolution spacing (aperture refers to the number of cells in the next finer resolution grid for each cell); as resolution increases the unit length is scaled by `sqrt(7)` and each hexagon has 1/7<sup>th</sup> the area of a hexagon at the next coarser resolution (as measured on the icosahedron). H3 provides 15 finer grid resolutions in addition to the resolution 0 base cells. The finest resolution, resolution 15, has cells with an area of less than 1 m<sup>2</sup>. A table detailing the average cell area for each H3 resolution is available [here](/docs/core-library/restable).
 
-*Note:* you can create KML files to visualize the H3 grids by running the `kml` make target. It will place the files in the `KML` output sub-directory.
-
+_Note:_ you can create KML files to visualize the H3 grids by running the `kml` make target. It will place the files in the `KML` output sub-directory.
 
 # === core-library/testing ===
 
 ---
+
 id: testing
 title: Testing strategy
 sidebar_label: Testing strategy
 slug: /core-library/testing
+
 ---
 
 The H3 developers try to ensure the robustness and reliability of the H3 library. Tools used to do this include defensive code, unit tests with coverage reporting, and fuzzing.
@@ -8231,27 +8224,27 @@ Github Actions are used to run the H3 test suite for every commit. A variety of 
 
 Coverage information is collected in Coveralls. Because of the self-contained nature of the H3 library, we seek to have as close to 100% code coverage as possible.
 
-| Operating system | Compiler    | Build type     | Processor architecture | Special notes
-| ---------------- | ----------- | -------------- | ---------------------- | -------------
-| Linux (Ubuntu)   | Clang       | Debug, Release | x64                    | clang-format-14 is used to ensure all code is consistently formatted
-| Linux            | Clang       | Debug          | x64                    | An additional copy of the job runs with [Valgrind](https://valgrind.org/)
-| Linux            | Clang       | Debug          | x64                    | An additional copy of the job runs with coverage reporting, and excerising the `H3_PREFIX` mechanism.
+| Operating system | Compiler    | Build type     | Processor architecture | Special notes                                                                                         |
+| ---------------- | ----------- | -------------- | ---------------------- | ----------------------------------------------------------------------------------------------------- |
+| Linux (Ubuntu)   | Clang       | Debug, Release | x64                    | clang-format-14 is used to ensure all code is consistently formatted                                  |
+| Linux            | Clang       | Debug          | x64                    | An additional copy of the job runs with [Valgrind](https://valgrind.org/)                             |
+| Linux            | Clang       | Debug          | x64                    | An additional copy of the job runs with coverage reporting, and excerising the `H3_PREFIX` mechanism. |
 | Linux            | gcc         | Debug, Release | x64                    |
 | Mac OS           | Apple Clang | Debug, Release | x64                    |
-| Windows          | MSVC        | Debug, Release | x64                    | Static library
-| Windows          | MSVC        | Debug, Release | x86                    | Static library
-| Windows          | MSVC        | Debug, Release | x64                    | Dynamic library; testing is not run in this configuration
-| Windows          | MSVC        | Debug, Release | x86                    | Dynamic library; testing is not run in this configuration
+| Windows          | MSVC        | Debug, Release | x64                    | Static library                                                                                        |
+| Windows          | MSVC        | Debug, Release | x86                    | Static library                                                                                        |
+| Windows          | MSVC        | Debug, Release | x64                    | Dynamic library; testing is not run in this configuration                                             |
+| Windows          | MSVC        | Debug, Release | x86                    | Dynamic library; testing is not run in this configuration                                             |
 
 ## Defensive code
 
 H3 uses preprocessor macros borrowed from [SQLite's testing methodology](https://www.sqlite.org/testing.html) to include defensive code in the library. Defensive code is code that handles error conditions for which there are no known test cases to demonstrate it. The lack of known test cases means that without the macros, the defensive cases could inappropriately reduce coverage metrics, disincentivizing including them. The macros behave differently, depending on the build configuration:
 
-* Under release builds of the library (`CMAKE_BUILD_TYPE=Release`), the defensive code is included without modification. These branches are intended to be very simple (usually only `return`ing an error code and possibly `free`ing some resources) and to be visually inspectable.
+- Under release builds of the library (`CMAKE_BUILD_TYPE=Release`), the defensive code is included without modification. These branches are intended to be very simple (usually only `return`ing an error code and possibly `free`ing some resources) and to be visually inspectable.
 
-* Under debug builds of the library (`CMAKE_BUILD_TYPE=Debug`), the defensive code is included and `assert` calls are included if the defensive code is invoked. Any unit test or fuzzer which can demonstrate the defensive code is actually reached will trigger a test failure and the developers can be alerted to cover the defensive code in unit tests.
+- Under debug builds of the library (`CMAKE_BUILD_TYPE=Debug`), the defensive code is included and `assert` calls are included if the defensive code is invoked. Any unit test or fuzzer which can demonstrate the defensive code is actually reached will trigger a test failure and the developers can be alerted to cover the defensive code in unit tests.
 
-* Under coverage builds of the library (`CMAKE_BUILD_TYPE=Debug ENABLE_COVERAGE=ON`), the defensive code is not included by replacing its condition with a constant value. The compiler removes the defensive code and it is not counted in coverage metrics. This is intended only for determining test coverage of the library.
+- Under coverage builds of the library (`CMAKE_BUILD_TYPE=Debug ENABLE_COVERAGE=ON`), the defensive code is not included by replacing its condition with a constant value. The compiler removes the defensive code and it is not counted in coverage metrics. This is intended only for determining test coverage of the library.
 
 ## Benchmarks
 
@@ -8265,14 +8258,15 @@ H3 uses [fuzzers](https://github.com/uber/h3/tree/master/src/apps/fuzzers) to fi
 
 On each commit, CI is triggered to run [OSS-Fuzz](https://github.com/google/oss-fuzz/tree/master/projects/h3) for H3. OSS-Fuzz regularly runs fuzzers against the latest development version of H3 and reports newly discovered issues to the H3 core maintainers.
 
-
 # === core-library/usage ===
 
 ---
+
 id: usage
 title: Public API
 sidebar_label: Public API
 slug: /core-library/usage
+
 ---
 
 The public API of the H3 Core Library is defined in the file [`h3api.h`](https://github.com/uber/h3/blob/master/src/h3lib/include/h3api.h.in).
@@ -8297,24 +8291,25 @@ validated, may change between versions of the library. As a result the specific 
 The [`H3_PREFIX`](./compilation-options#H3_PREFIX) exists to rename all functions in the H3 public API with a prefix chosen at compile time. The default is to have no prefix.
 This can be needed when linking multiple copies of the H3 library in order to avoid naming collisions. Internal functions and symbols are not renamed.
 
-
 # === highlights/aggregation ===
 
 ---
+
 id: aggregation
 title: Aggregation
 sidebar_label: Aggregation
 slug: /highlights/aggregation
+
 ---
 
 Analysis of location data, such as locations of cars in a city, can be done by bucketing locations. ([Sahr et al., 2003](http://webpages.sou.edu/~sahrk/sqspc/pubs/gdggs03.pdf)) Using a regular grid provides smooth gradients and the ability to measure differences between cells.
 
 The cell shape of that grid system is an important consideration. For simplicity, it should be a polygon that tiles regularly: the triangle, the square, or the hexagon. Of these, triangles and squares have neighbors with different distances. Triangles have three different distances, and squares have two different distances. For hexagons, all neighbors are equidistant.
 
-| Triangle | Square | Hexagon
-| -------- | ------ | -------
-| <img src="/images/neighbors-triangle.png" style={{width:'400px'}} /> | <img src="/images/neighbors-square.png" style={{width:'400px'}} /> | <img src="/images/neighbors-hexagon.png" style={{width:'400px'}} />
-| Triangles have 12 neighbors | Squares have 8 neighbors | Hexagons have 6 neighbors
+| Triangle                                                             | Square                                                             | Hexagon                                                             |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| <img src="/images/neighbors-triangle.png" style={{width:'400px'}} /> | <img src="/images/neighbors-square.png" style={{width:'400px'}} /> | <img src="/images/neighbors-hexagon.png" style={{width:'400px'}} /> |
+| Triangles have 12 neighbors                                          | Squares have 8 neighbors                                           | Hexagons have 6 neighbors                                           |
 
 This property allows for simpler analysis of movement. Hexagons have the property of expanding rings of neighbors approximating circles:
 
@@ -8327,18 +8322,19 @@ Hexagons are also optimally space-filling. On average, a polygon may be filled w
 
 ## References
 
-* Use case: [H3: Uber’s Hexagonal Hierarchical Spatial Index ](https://www.uber.com/en-GB/blog/h3/)
-* Observable notebook example: [Intro to h3-js](https://observablehq.com/@nrabinowitz/h3-tutorial-the-h3-js-library?collection=@nrabinowitz/h3-tutorial)
-* Jupyter notebook example: [H3 Python API](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/usage.ipynb)
-
+- Use case: [H3: Uber’s Hexagonal Hierarchical Spatial Index ](https://www.uber.com/en-GB/blog/h3/)
+- Observable notebook example: [Intro to h3-js](https://observablehq.com/@nrabinowitz/h3-tutorial-the-h3-js-library?collection=@nrabinowitz/h3-tutorial)
+- Jupyter notebook example: [H3 Python API](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/usage.ipynb)
 
 # === highlights/flowmodel ===
 
 ---
+
 id: flowmodel
 title: Flow Modelling
 sidebar_label: Flow Modelling
 slug: /highlights/flowmodel
+
 ---
 
 H3's hexagonal grid is well suited to analyzing movement. In addition to the benefits of the hexagonal grid shape, H3 includes other features for modelling flow.
@@ -8349,19 +8345,20 @@ H3 can create indexes that refer to the movement from one cell to a neighbor. Th
 
 ## Links
 
-* Observable notebook example: [H3 Travel Times](https://observablehq.com/@nrabinowitz/h3-travel-times)
-
+- Observable notebook example: [H3 Travel Times](https://observablehq.com/@nrabinowitz/h3-travel-times)
 
 # === highlights/indexing ===
 
 ---
+
 id: indexing
 title: Indexing
 sidebar_label: Indexing
 slug: /highlights/indexing
+
 ---
 
-H3 is a hierarchical geospatial index. H3 indexes refer to cells by the spatial hierarchy. Every hexagonal cell, up to the maximum resolution supported by H3, has seven child cells below it in this hierarchy. This subdivision is referred to as *aperture 7*.
+H3 is a hierarchical geospatial index. H3 indexes refer to cells by the spatial hierarchy. Every hexagonal cell, up to the maximum resolution supported by H3, has seven child cells below it in this hierarchy. This subdivision is referred to as _aperture 7_.
 
 <div align="center">
   <img src="/images/parent-child.png" style={{width:'400px'}} /><br />
@@ -8380,26 +8377,27 @@ The hierarchical structure can also be used in analysis, when the precision or u
 
 Hierarchical containment allows for use cases like making contiguous sets of cells "compact" with `compactCells`. It is then possible to `uncompactCells` to the same input set of cells, or to test whether a cell is contained by the compact set.
 
-| Uncompacted (dense) | Compacted (sparse)
-| ----------------- | ----------------
-| <img src="/images/ca_uncompact_6_10633.png" style={{width:'500px'}} /> | <img src="/images/ca_compact_6_901.png" style={{width:'500px'}} />
-| California represented by 10633 uncompacted cells | California represented by 901 compacted cells
+| Uncompacted (dense)                                                    | Compacted (sparse)                                                 |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| <img src="/images/ca_uncompact_6_10633.png" style={{width:'500px'}} /> | <img src="/images/ca_compact_6_901.png" style={{width:'500px'}} /> |
+| California represented by 10633 uncompacted cells                      | California represented by 901 compacted cells                      |
 
 In use cases where exact boundaries are needed applications must take care to handle the hierarchical concerns. This can be done by taking care to use the hierarchy as a logical one rather than geographic. Another useful approach is using the grid system as an optimization in addition to a more precise point-in-polygon check.
 
 ## Links
 
-* Observable notebook example: [H3 Hierarchical (Non)Containment](https://observablehq.com/@nrabinowitz/h3-hierarchical-non-containment?collection=@nrabinowitz/h3)
-* Observable notebook example: [Shape simplification with H3](https://observablehq.com/@nrabinowitz/shape-simplification-with-h3?collection=@nrabinowitz/h3)
-
+- Observable notebook example: [H3 Hierarchical (Non)Containment](https://observablehq.com/@nrabinowitz/h3-hierarchical-non-containment?collection=@nrabinowitz/h3)
+- Observable notebook example: [Shape simplification with H3](https://observablehq.com/@nrabinowitz/shape-simplification-with-h3?collection=@nrabinowitz/h3)
 
 # === highlights/joining ===
 
 ---
+
 id: joining
 title: Joining
 sidebar_label: Joining
 slug: /highlights/joining
+
 ---
 
 H3, acting as a standard unit of analysis, can be used to join disparate data sets.
@@ -8408,18 +8406,19 @@ The H3 library contains support for indexing points, lines, and regions into the
 
 ## References
 
-* Example: [Placekey](https://www.placekey.io/)
-* Jupyter notebook example: [Unified Data Layers](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/unified_data_layers.ipynb)
-* Observable notebook example: [Suitability Analysis](https://observablehq.com/@nrabinowitz/h3-tutorial-suitability-analysis?collection=@nrabinowitz/h3-tutorial)
-
+- Example: [Placekey](https://www.placekey.io/)
+- Jupyter notebook example: [Unified Data Layers](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/unified_data_layers.ipynb)
+- Observable notebook example: [Suitability Analysis](https://observablehq.com/@nrabinowitz/h3-tutorial-suitability-analysis?collection=@nrabinowitz/h3-tutorial)
 
 # === highlights/ml ===
 
 ---
+
 id: ml
 title: Machine Learning
 sidebar_label: Machine Learning
 slug: /highlights/ml
+
 ---
 
 H3 is well suited to applying machine learning to geospatial data. Techniques from computer vision, such as [convolution](https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148#:~:text=Convolution%20is%20the%20first%20layer,and%20a%20filter%20or%20kernel), can be applied to the pixel grid defined by H3.
@@ -8428,18 +8427,21 @@ H3 has functions for finding neighbors (`kRing`) for use in performing convoluti
 
 ## Links
 
-* Jupyter notebook example: [Uber H3 API examples on Urban Analytics in the city of Toulouse (France)](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/urban_analytics.ipynb)
-
+- Jupyter notebook example: [Uber H3 API examples on Urban Analytics in the city of Toulouse (France)](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/urban_analytics.ipynb)
 
 # === installation ===
 
 ---
+
 id: installation
 title: Installation
 sidebar_label: Installation
 slug: /installation
+
 # when updating this file with a new version number, do a search and replace
+
 # for all instances.
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8450,15 +8452,15 @@ We recommend using prebuilt [bindings](/docs/community/bindings) if they are ava
 ## Package managers
 
 <Tabs
-  groupId="env"
-  defaultValue="python"
-  values={[
-    {label: 'Python', value: 'python'},
-    {label: 'Java', value: 'java'},
-    {label: 'JavaScript', value: 'javascript'},
-    {label: 'Homebrew', value: 'brew'},
-    {label: 'DuckDB', value: 'duckdb'},
-  ]
+groupId="env"
+defaultValue="python"
+values={[
+{label: 'Python', value: 'python'},
+{label: 'Java', value: 'java'},
+{label: 'JavaScript', value: 'javascript'},
+{label: 'Homebrew', value: 'brew'},
+{label: 'DuckDB', value: 'duckdb'},
+]
 }>
 <TabItem value="python">
 
@@ -8552,15 +8554,15 @@ git checkout v$(<VERSION)
 Note: You must install build dependencies for your operating system.
 
 <Tabs
-  groupId="os"
-  defaultValue="macos"
-  values={[
-    {label: 'mac OS', value: 'macos'},
-    {label: 'alpine', value: 'alpine'},
-    {label: 'Debian/Ubuntu', value: 'debian'},
-    {label: 'Windows', value: 'windows'},
-    {label: 'FreeBSD', value: 'freebsd'},
-  ]
+groupId="os"
+defaultValue="macos"
+values={[
+{label: 'mac OS', value: 'macos'},
+{label: 'alpine', value: 'alpine'},
+{label: 'Debian/Ubuntu', value: 'debian'},
+{label: 'Windows', value: 'windows'},
+{label: 'FreeBSD', value: 'freebsd'},
+]
 }>
 <TabItem value="macos">
 
@@ -8634,14 +8636,15 @@ By default, the filter applications are built when you build H3. Confirm they ar
 ./bin/latLngToCell --lat 14 --lng -42 --resolution 2
 ```
 
-
 # === library/errors ===
 
 ---
+
 id: errors
 title: Error handling
 sidebar_label: Error handling
 slug: /library/errors
+
 ---
 
 H3 does it's best to be robust to system failures or unexpected inputs, but
@@ -8666,37 +8669,37 @@ if (err) {
 
 The type returned by most H3 functions is `H3Error`, a 32 bit integer type with the following properties:
 
-* `H3Error` will be an integer type of 32 bits, i.e. `uint32_t`.
-* `H3Error` with value 0 indicates success (no error).
-* No `H3Error` value will set the most significant bit.
-* As a result of these properties, no `H3Error` value will set the bits that correspond with the **Mode** bit field in an `H3Index`.
+- `H3Error` will be an integer type of 32 bits, i.e. `uint32_t`.
+- `H3Error` with value 0 indicates success (no error).
+- No `H3Error` value will set the most significant bit.
+- As a result of these properties, no `H3Error` value will set the bits that correspond with the **Mode** bit field in an `H3Index`.
 
 32 bit return codes with the high bit never set allows for mixing error codes and resulting indexes if desired by the application, after copying the error codes into the result buffer.
 
 ## Table of error codes
 
-| Value | Name                 | Description
-| ----- | -------------------- | -----------
-| 0     | E_SUCCESS            | Success (no error)
-| 1     | E_FAILED             | The operation failed but a more specific error is not available
-| 2     | E_DOMAIN             | Argument was outside of acceptable range (when a more specific error code is not available)
-| 3     | E_LATLNG_DOMAIN      | Latitude or longitude arguments were outside of acceptable range
-| 4     | E_RES_DOMAIN         | Resolution argument was outside of acceptable range
-| 5     | E_CELL_INVALID       | `H3Index` cell argument was not valid
-| 6     | E_DIR_EDGE_INVALID   | `H3Index` directed edge argument was not valid
-| 7     | E_UNDIR_EDGE_INVALID | `H3Index` undirected edge argument was not valid
-| 8     | E_VERTEX_INVALID     | `H3Index` vertex argument was not valid
-| 9     | E_PENTAGON           | Pentagon distortion was encountered which the algorithm could not handle it
-| 10    | E_DUPLICATE_INPUT    | Duplicate input was encountered in the arguments and the algorithm could not handle it
-| 11    | E_NOT_NEIGHBORS      | `H3Index` cell arguments were not neighbors
-| 12    | E_RES_MISMATCH       | `H3Index` cell arguments had incompatible resolutions
-| 13    | E_MEMORY_ALLOC       | Necessary memory allocation failed
-| 14    | E_MEMORY_BOUNDS      | Bounds of provided memory were not large enough
-| 15    | E_OPTION_INVALID     | Mode or flags argument was not valid
-| 16    | E_INDEX_INVALID      | `H3Index` argument was not valid
-| 17    | E_BASE_CELL_DOMAIN   | Base cell number was outside of acceptable range
-| 18    | E_DIGIT_DOMAIN       | Child indexing digits invalid
-| 19    | E_DELETED_DIGIT      | Child indexing digits refer to a deleted subsequence
+| Value | Name                 | Description                                                                                 |
+| ----- | -------------------- | ------------------------------------------------------------------------------------------- |
+| 0     | E_SUCCESS            | Success (no error)                                                                          |
+| 1     | E_FAILED             | The operation failed but a more specific error is not available                             |
+| 2     | E_DOMAIN             | Argument was outside of acceptable range (when a more specific error code is not available) |
+| 3     | E_LATLNG_DOMAIN      | Latitude or longitude arguments were outside of acceptable range                            |
+| 4     | E_RES_DOMAIN         | Resolution argument was outside of acceptable range                                         |
+| 5     | E_CELL_INVALID       | `H3Index` cell argument was not valid                                                       |
+| 6     | E_DIR_EDGE_INVALID   | `H3Index` directed edge argument was not valid                                              |
+| 7     | E_UNDIR_EDGE_INVALID | `H3Index` undirected edge argument was not valid                                            |
+| 8     | E_VERTEX_INVALID     | `H3Index` vertex argument was not valid                                                     |
+| 9     | E_PENTAGON           | Pentagon distortion was encountered which the algorithm could not handle it                 |
+| 10    | E_DUPLICATE_INPUT    | Duplicate input was encountered in the arguments and the algorithm could not handle it      |
+| 11    | E_NOT_NEIGHBORS      | `H3Index` cell arguments were not neighbors                                                 |
+| 12    | E_RES_MISMATCH       | `H3Index` cell arguments had incompatible resolutions                                       |
+| 13    | E_MEMORY_ALLOC       | Necessary memory allocation failed                                                          |
+| 14    | E_MEMORY_BOUNDS      | Bounds of provided memory were not large enough                                             |
+| 15    | E_OPTION_INVALID     | Mode or flags argument was not valid                                                        |
+| 16    | E_INDEX_INVALID      | `H3Index` argument was not valid                                                            |
+| 17    | E_BASE_CELL_DOMAIN   | Base cell number was outside of acceptable range                                            |
+| 18    | E_DIGIT_DOMAIN       | Child indexing digits invalid                                                               |
+| 19    | E_DELETED_DIGIT      | Child indexing digits refer to a deleted subsequence                                        |
 
 The H3 library may always add additional error messages. Error messages not recognized by the application should be treated as `E_FAILED`.
 
@@ -8710,23 +8713,24 @@ When possible, it is preferable to retain the error code. When this is not possi
 
 ## References
 
-* [Technical RFC on error handling](https://github.com/uber/h3/blob/master/dev-docs/RFCs/v4.0.0/error-handling-rfc.md)
-
+- [Technical RFC on error handling](https://github.com/uber/h3/blob/master/dev-docs/RFCs/v4.0.0/error-handling-rfc.md)
 
 # === library/index/cell ===
 
 ---
+
 id: cell
 title: Cell mode
 sidebar_label: Cell mode
 slug: /library/index/cell
+
 ---
 
 <div align="center">
   <img height="300" src="/images/cell_mode.png" />
 </div>
 
-The H3 system assigns a unique hierarchical index to each cell. The H3 index of a resolution *r* cell begins with the appropriate resolution 0 base cell number. This is followed by a sequence of *r* digits 0-6, where each *i*<sup>th</sup> digit *d*<sub>i</sub> specifies one of the 7 cells centered on the cell indicated by the coarser resolution digits *d*<sub>1</sub> through *d*<sub>i-1</sub>. A local hexagon coordinate system is assigned to each of the resolution 0 base cells and is used to orient all hierarchical indexing child cells of that base cell. The assignment of digits 0-6 at each resolution uses a *Central Place Indexing* arrangement (see [Sahr, 2014](http://webpages.sou.edu/~sahrk/sqspc/pubs/autocarto14.pdf)). In the case of the 12 pentagonal cells the indexing hierarchy produced by sub-digit 1 is removed at all resolutions.
+The H3 system assigns a unique hierarchical index to each cell. The H3 index of a resolution _r_ cell begins with the appropriate resolution 0 base cell number. This is followed by a sequence of _r_ digits 0-6, where each _i_<sup>th</sup> digit _d_<sub>i</sub> specifies one of the 7 cells centered on the cell indicated by the coarser resolution digits _d_<sub>1</sub> through _d_<sub>i-1</sub>. A local hexagon coordinate system is assigned to each of the resolution 0 base cells and is used to orient all hierarchical indexing child cells of that base cell. The assignment of digits 0-6 at each resolution uses a _Central Place Indexing_ arrangement (see [Sahr, 2014](http://webpages.sou.edu/~sahrk/sqspc/pubs/autocarto14.pdf)). In the case of the 12 pentagonal cells the indexing hierarchy produced by sub-digit 1 is removed at all resolutions.
 
 Child hexagons are linearly smaller than their parent hexagons.
 
@@ -8738,12 +8742,12 @@ Child hexagons are linearly smaller than their parent hexagons.
 
 An H3 Cell index (mode 1) represents a cell (hexagon or pentagon) in the H3 grid system at a particular resolution. The components of the H3 Cell index are packed into a 64-bit integer in order, highest bit first, as follows:
 
-* 1 bit reserved and set to 0,
-* 4 bits to indicate the H3 Cell index mode,
-* 3 bits reserved and set to 0,
-* 4 bits to indicate the cell resolution 0-15,
-* 7 bits to indicate the base cell 0-121,
-* 3 bits to indicate each subsequent digit 0-6 from resolution 1 up to the resolution of the cell (45 bits total are reserved for resolutions 1-15)
+- 1 bit reserved and set to 0,
+- 4 bits to indicate the H3 Cell index mode,
+- 3 bits reserved and set to 0,
+- 4 bits to indicate the cell resolution 0-15,
+- 7 bits to indicate the base cell 0-121,
+- 3 bits to indicate each subsequent digit 0-6 from resolution 1 up to the resolution of the cell (45 bits total are reserved for resolutions 1-15)
 
 The three bits for each unused digit are set to 7.
 
@@ -8810,16 +8814,17 @@ The layout of an `H3Index` is shown below in table form. The interpretation of t
 
 ## Links
 
-* Observable notebook example: [H3 Index Inspector](https://observablehq.com/@nrabinowitz/h3-index-inspector?collection=@nrabinowitz/h3)
-
+- Observable notebook example: [H3 Index Inspector](https://observablehq.com/@nrabinowitz/h3-index-inspector?collection=@nrabinowitz/h3)
 
 # === library/index/directededge ===
 
 ---
+
 id: directededge
 title: Directed edge mode
 sidebar_label: Directed edge mode
 slug: /library/index/directededge
+
 ---
 
 <div align="center">
@@ -8828,10 +8833,10 @@ slug: /library/index/directededge
 
 An H3 Directed Edge index (mode 2) represents a single directed edge between two cells (an "origin" cell and a neighboring "destination" cell). The components of the H3 Directed Edge index are packed into a 64-bit integer in order, highest bit first, as follows:
 
-* 1 bit reserved and set to 0,
-* 4 bits to indicate the H3 Unidirectional Edge index mode,
-* 3 bits to indicate the edge (1-6) of the origin cell,
-* Subsequent bits matching the index bits of the [origin cell](./cell#h3-cell-index).
+- 1 bit reserved and set to 0,
+- 4 bits to indicate the H3 Unidirectional Edge index mode,
+- 3 bits to indicate the edge (1-6) of the origin cell,
+- Subsequent bits matching the index bits of the [origin cell](./cell#h3-cell-index).
 
 ## Bit layout of H3Index for directed edges
 
@@ -8894,14 +8899,15 @@ The layout of an `H3Index` is shown below in table form. The interpretation of t
 </tr>
 </table>
 
-
 # === library/index/h3indexing ===
 
 ---
+
 id: h3Indexing
 title: H3 Index
 sidebar_label: H3 Index
 slug: /core-library/h3Indexing
+
 ---
 
 ## Introduction
@@ -8912,18 +8918,18 @@ The H3 system assigns a unique hierarchical index to each cell. Each directed ed
 
 An `H3Index` is the 64-bit integer representation of an H3 index, which may be one of multiple modes to indicate the concept being indexed.
 
-* Mode 0 is reserved and indicates an [invalid H3 index](#invalid-index).
-* Mode 1 is an *[H3 Cell](../library/index/cell)* (Hexagon/Pentagon) index.
-* Mode 2 is an *[H3 Directed Edge](../library/index/directededge)* (Cell A -> Cell B) index.
-* Mode 3 is planned to be a bidirectional edge (Cell A <-> Cell B).
-* Mode 4 is an *[H3 Vertex](../library/index/vertex)* (i.e. a single vertex of an H3 Cell).
+- Mode 0 is reserved and indicates an [invalid H3 index](#invalid-index).
+- Mode 1 is an _[H3 Cell](../library/index/cell)_ (Hexagon/Pentagon) index.
+- Mode 2 is an _[H3 Directed Edge](../library/index/directededge)_ (Cell A -> Cell B) index.
+- Mode 3 is planned to be a bidirectional edge (Cell A <-> Cell B).
+- Mode 4 is an _[H3 Vertex](../library/index/vertex)_ (i.e. a single vertex of an H3 Cell).
 
 The canonical string representation of an `H3Index` is the hexadecimal representation of the integer, using lowercase letters. The string representation is variable length (no zero padding) and is not prefixed or suffixed.
 
 ### Invalid Index
 
 Mode 0 contains a special index, `H3_NULL`, which is unique: it is bit-equivalent to `0`.
-This index indicates, *specifically*, an invalid, missing, or uninitialized H3 index;
+This index indicates, _specifically_, an invalid, missing, or uninitialized H3 index;
 it is analogous to `NaN` in floating point.
 It should be used instead of an arbitrary Mode 0 index, due to its uniqueness and easy identifiability.
 A mode 0 index could also indicate an [error code](../library/errors) has been provided instead of a valid H3 index.
@@ -8991,16 +8997,17 @@ The layout of an `H3Index` is shown below in table form. The interpretation of t
 
 ## Links
 
-* Observable notebook example: [H3 Index Bit Layout](https://observablehq.com/@nrabinowitz/h3-index-bit-layout?collection=@nrabinowitz/h3)
-
+- Observable notebook example: [H3 Index Bit Layout](https://observablehq.com/@nrabinowitz/h3-index-bit-layout?collection=@nrabinowitz/h3)
 
 # === library/index/vertex ===
 
 ---
+
 id: vertex
 title: Vertex mode
 sidebar_label: Vertex mode
 slug: /library/index/vertex
+
 ---
 
 <div align="center">
@@ -9009,10 +9016,10 @@ slug: /library/index/vertex
 
 An H3 Vertex index (mode 4) represents a single topological vertex in H3 grid system, shared by three cells. Note that this does not include the distortion vertexes occasionally present in a cell's geographic boundary. An H3 Vertex is arbitrarily assigned one of the three neighboring cells as its "owner", which is used to calculate the canonical index and geographic coordinates for the vertex. The components of the H3 Vertex index are packed into a 64-bit integer in order, highest bit first, as follows:
 
-* 1 bit reserved and set to 0,
-* 4 bits to indicate the H3 Vertex index mode,
-* 3 bits to indicate the vertex number (0-5) of vertex on the owner cell,
-* Subsequent bits matching the index bits of the [owner cell](./cell#h3-cell-index).
+- 1 bit reserved and set to 0,
+- 4 bits to indicate the H3 Vertex index mode,
+- 3 bits to indicate the vertex number (0-5) of vertex on the owner cell,
+- Subsequent bits matching the index bits of the [owner cell](./cell#h3-cell-index).
 
 ## Bit layout of H3Index for vertexes
 
@@ -9075,14 +9082,15 @@ The layout of an `H3Index` for vertexes is shown below in table form. The interp
 </tr>
 </table>
 
-
 # === library/migrating-3.x ===
 
 ---
+
 id: migrating-3.x
 title: Migrating from H3 version 3.x
 sidebar_label: Migration guide
 slug: /library/migrating-3.x
+
 ---
 
 The H3 library introduced breaking changes in version 4.0.0, so applications developed against earlier versions
@@ -9107,23 +9115,24 @@ The C library is being changed to more consistently [report errors](./errors.md)
 functions. Users of the C library will need to adjust some function calls to pass output parameters instead of
 using the return value of a function.
 
-
 # === library/migration-3.x/functions ===
 
 ---
+
 id: functions
 title: Function name changes
 sidebar_label: Function name changes
 slug: /library/migration-3.x/functions
+
 ---
 
 The following function and structure names changed from 3.x to 4.0.0:
 
 ### General Function Names
 
-|            3.x name.          |      4.0.0 name       |
-|-------------------------------|-----------------------|
-| *Does Not Exist (DNE)*        | `isValidIndex`        |
+| 3.x name.                     | 4.0.0 name            |
+| ----------------------------- | --------------------- |
+| _Does Not Exist (DNE)_        | `isValidIndex`        |
 | `h3IsValid`                   | `isValidCell`         |
 | `h3UnidirectionalEdgeIsValid` | `isValidDirectedEdge` |
 | `h3IsPentagon`                | `isPentagon`          |
@@ -9137,7 +9146,7 @@ The following function and structure names changed from 3.x to 4.0.0:
 | `getPentagonIndexes`          | `getPentagons`        |
 | `h3GetBaseCell`               | `getBaseCellNumber`   |
 | `h3GetResolution`             | `getResolution`       |
-| *DNE*                         | `getMode`             |
+| _DNE_                         | `getMode`             |
 | `h3GetFaces`                  | `getIcosahedronFaces` |
 | `geoToH3`                     | `latLngToCell`        |
 | `h3ToGeo`                     | `cellToLatLng`        |
@@ -9147,10 +9156,10 @@ The following function and structure names changed from 3.x to 4.0.0:
 
 **Note**: `getResolution` and `getBaseCellNumber` should work for both cells and edges.
 
-
 ### H3 Grid Functions
 
 Many of these functions will have three forms:
+
 - `<func_name>`
 - `<func_name>Unsafe`
 - `<func_name>Safe`
@@ -9171,47 +9180,44 @@ that it will not fail.
 Initially, we **will not** expose the `Safe` versions to users in the API.
 We may expose them in the future if a need becomes clear.
 
-
 #### Distance
 
-|   3.x name.  |       4.0.0 name        |
-|--------------|-------------------------|
+| 3.x name.    | 4.0.0 name              |
+| ------------ | ----------------------- |
 | `h3Distance` | `gridDistance`          |
 | `h3Line`     | `gridPathCells`         |
-| *DNE*        | `gridPathEdges`         |
-| *DNE*        | `gridPathDirectedEdges` |
-
+| _DNE_        | `gridPathEdges`         |
+| _DNE_        | `gridPathDirectedEdges` |
 
 #### Filled-In Disk With Distances
 
-|       3.x name.     |        4.0.0 name         |                 Calls                 |
-|---------------------|---------------------------|---------------------------------------|
+| 3.x name.           | 4.0.0 name                | Calls                                 |
+| ------------------- | ------------------------- | ------------------------------------- |
 | `hexRangeDistances` | `gridDiskDistancesUnsafe` | NONE                                  |
 | `_kRingInternal`    | `gridDiskDistancesSafe`   | NONE                                  |
 | `kRingDistances`    | `gridDiskDistances`       | `hexRangeDistances`, `_kRingInternal` |
 
-
 #### Filled-In Disk Without Distances
 
-|   3.x name.  |    4.0.0 name     |        Calls        |
-|--------------|-------------------|---------------------|
-| `hexRange`   | `gridDiskUnsafe`  | `hexRangeDistances` |
-| *DNE*        | `gridDiskSafe`    |                     |
-| `kRing`      | `gridDisk`        | `kRingDistances`    |
-| `hexRanges`  | `gridDisksUnsafe` | N x `hexRange`      |
+| 3.x name.   | 4.0.0 name        | Calls               |
+| ----------- | ----------------- | ------------------- |
+| `hexRange`  | `gridDiskUnsafe`  | `hexRangeDistances` |
+| _DNE_       | `gridDiskSafe`    |                     |
+| `kRing`     | `gridDisk`        | `kRingDistances`    |
+| `hexRanges` | `gridDisksUnsafe` | N x `hexRange`      |
 
 #### Hollow Ring
 
-|   3.x name.  |   4.0.0 name     |              Calls               |
-|--------------|------------------|----------------------------------|
-| `hexRing`    | `gridRingUnsafe` | NONE                             |
-| *DNE*        | `gridRingSafe`   | `gridDiskDistancesSafe`          |
-| *DNE*        | `gridRing`       | `gridRingUnsafe`, `gridRingSafe` |
+| 3.x name. | 4.0.0 name       | Calls                            |
+| --------- | ---------------- | -------------------------------- |
+| `hexRing` | `gridRingUnsafe` | NONE                             |
+| _DNE_     | `gridRingSafe`   | `gridDiskDistancesSafe`          |
+| _DNE_     | `gridRing`       | `gridRingUnsafe`, `gridRingSafe` |
 
 #### Local IJ
 
-|         3.x name          |   4.0.0 name    |
-|---------------------------|-----------------|
+| 3.x name                  | 4.0.0 name      |
+| ------------------------- | --------------- |
 | `experimentalLocalIjToH3` | `localIjToCell` |
 | `experimentalH3ToLocalIj` | `cellToLocalIj` |
 
@@ -9221,30 +9227,29 @@ Instead of `UnidirectionalEdge`, use the term `DirectedEdge`.
 
 For a future undirected edge mode, use the term `Edge`.
 
-|                    3.x name.                  |         4.0.0 name           |
-|-----------------------------------------------|------------------------------|
+| 3.x name.                                     | 4.0.0 name                   |
+| --------------------------------------------- | ---------------------------- |
 | `h3UnidirectionalEdgeIsValid`                 | `isValidDirectedEdge`        |
 | `getH3UnidirectionalEdge`                     | `cellsToDirectedEdge`        |
 | `getH3IndexesFromUnidirectionalEdge`          | `directedEdgeToCells`        |
 | `getH3UnidirectionalEdgesFromHexagon`         | `originToDirectedEdges`      |
-| *DNE*                                         | `destinationToDirectedEdges` |
+| _DNE_                                         | `destinationToDirectedEdges` |
 | `getH3UnidirectionalEdgeBoundary`             | `directedEdgeToBoundary`     |
 | `getOriginH3IndexFromUnidirectionalEdge`      | `getDirectedEdgeOrigin`      |
 | `getDestinationH3IndexFromUnidirectionalEdge` | `getDirectedEdgeDestination` |
 
-
 ### Area/Length Functions
 
-|    3.x name.          |         4.0.0 name          |
-|-----------------------|-----------------------------|
+| 3.x name.             | 4.0.0 name                  |
+| --------------------- | --------------------------- |
 | `hexAreaKm2`          | `getHexagonAreaAvgKm2`      |
 | `hexAreaM2`           | `getHexagonAreaAvgM2`       |
 | `edgeLengthKm`        | `getHexagonEdgeLengthAvgKm` |
 | `edgeLengthM`         | `getHexagonEdgeLengthAvgM`  |
-| *DNE*                 | `getPentagonAreaAvg*`       |
-| *DNE*                 | `getPentagonEdgeLengthAvg*` |
-| *DNE*                 | `cellAreaKm2`               |
-| *DNE*                 | `cellAreaM2`                |
+| _DNE_                 | `getPentagonAreaAvg*`       |
+| _DNE_                 | `getPentagonEdgeLengthAvg*` |
+| _DNE_                 | `cellAreaKm2`               |
+| _DNE_                 | `cellAreaM2`                |
 | `pointDistKm`         | `greatCircleDistanceKm`     |
 | `pointDistM`          | `greatCircleDistanceM`      |
 | `pointDistRads`       | `greatCircleDistanceRads`   |
@@ -9261,35 +9266,35 @@ the passed-in cell.
 
 - rename `GeoBoundary` to `CellBoundary` to indicate it is space-limited to describing the geometry of cells
 
-|      3.x name     |    4.0.0 name     |               Notes               |
-|-------------------|-------------------|-----------------------------------|
-| `GeoBoundary`     | `CellBoundary`    | <= 10 stack-allocated `LatLng`s   |
-| `GeoCoord`        | `LatLng`          |                                   |
-| `Geofence`        | `GeoLoop`         | heap-allocated `LatLng`s          |
-| `GeoPolygon`      | `GeoPolygon`      |                                   |
-| `GeoMultiPolygon` | `GeoMultiPolygon` | currently not used                |
-
+| 3.x name          | 4.0.0 name        | Notes                           |
+| ----------------- | ----------------- | ------------------------------- |
+| `GeoBoundary`     | `CellBoundary`    | <= 10 stack-allocated `LatLng`s |
+| `GeoCoord`        | `LatLng`          |                                 |
+| `Geofence`        | `GeoLoop`         | heap-allocated `LatLng`s        |
+| `GeoPolygon`      | `GeoPolygon`      |                                 |
+| `GeoMultiPolygon` | `GeoMultiPolygon` | currently not used              |
 
 ### Functions
 
-|              3.x name             |       4.0.0 name            |         Notes              |
-|-----------------------------------|-----------------------------|----------------------------|
+| 3.x name                          | 4.0.0 name                  | Notes                      |
+| --------------------------------- | --------------------------- | -------------------------- |
 | `h3ToGeoBoundary`                 | `cellToBoundary`            | returns `CellBoundary`     |
-| *DNE*                             | `cellToLoop`                | returns `GeoLoop`          |
-| *DNE*                             | `loopToBoundary`            |                            |
-| *DNE*                             | `boundaryToLoop`            |                            |
+| _DNE_                             | `cellToLoop`                | returns `GeoLoop`          |
+| _DNE_                             | `loopToBoundary`            |                            |
+| _DNE_                             | `boundaryToLoop`            |                            |
 | `getH3UnidirectionalEdgeBoundary` | `directedEdgeToBoundary`    | returns `CellBoundary`     |
 | `h3SetToLinkedGeo`                | `cellsToLinkedMultiPolygon` | returns `LinkedGeoPolygon` |
 | `h3SetToMultiPolygon`             | `cellsToMultiPolygon`       | bindings only              |
 
-
 # === library/restable ===
 
 ---
+
 id: restable
 title: Tables of Cell Statistics Across Resolutions
 sidebar_label: Tables of cell stats
 slug: /core-library/restable
+
 ---
 
 ## Cell counts
@@ -9297,26 +9302,24 @@ slug: /core-library/restable
 We list the number of hexagons and pentagons at each H3 resolution.
 [There are always exactly $12$ pentagons at every resolution](../core-library/overview.md).
 
-
-|   Res |   Total number of cells |   Number of hexagons |   Number of pentagons |
-|------:|------------------------:|---------------------:|----------------------:|
-|     0 |                     122 |                  110 |                    12 |
-|     1 |                     842 |                  830 |                    12 |
-|     2 |                   5,882 |                5,870 |                    12 |
-|     3 |                  41,162 |               41,150 |                    12 |
-|     4 |                 288,122 |              288,110 |                    12 |
-|     5 |               2,016,842 |            2,016,830 |                    12 |
-|     6 |              14,117,882 |           14,117,870 |                    12 |
-|     7 |              98,825,162 |           98,825,150 |                    12 |
-|     8 |             691,776,122 |          691,776,110 |                    12 |
-|     9 |           4,842,432,842 |        4,842,432,830 |                    12 |
-|    10 |          33,897,029,882 |       33,897,029,870 |                    12 |
-|    11 |         237,279,209,162 |      237,279,209,150 |                    12 |
-|    12 |       1,660,954,464,122 |    1,660,954,464,110 |                    12 |
-|    13 |      11,626,681,248,842 |   11,626,681,248,830 |                    12 |
-|    14 |      81,386,768,741,882 |   81,386,768,741,870 |                    12 |
-|    15 |     569,707,381,193,162 |  569,707,381,193,150 |                    12 |
-
+| Res | Total number of cells |  Number of hexagons | Number of pentagons |
+| --: | --------------------: | ------------------: | ------------------: |
+|   0 |                   122 |                 110 |                  12 |
+|   1 |                   842 |                 830 |                  12 |
+|   2 |                 5,882 |               5,870 |                  12 |
+|   3 |                41,162 |              41,150 |                  12 |
+|   4 |               288,122 |             288,110 |                  12 |
+|   5 |             2,016,842 |           2,016,830 |                  12 |
+|   6 |            14,117,882 |          14,117,870 |                  12 |
+|   7 |            98,825,162 |          98,825,150 |                  12 |
+|   8 |           691,776,122 |         691,776,110 |                  12 |
+|   9 |         4,842,432,842 |       4,842,432,830 |                  12 |
+|  10 |        33,897,029,882 |      33,897,029,870 |                  12 |
+|  11 |       237,279,209,162 |     237,279,209,150 |                  12 |
+|  12 |     1,660,954,464,122 |   1,660,954,464,110 |                  12 |
+|  13 |    11,626,681,248,842 |  11,626,681,248,830 |                  12 |
+|  14 |    81,386,768,741,882 |  81,386,768,741,870 |                  12 |
+|  15 |   569,707,381,193,162 | 569,707,381,193,150 |                  12 |
 
 ## Cell areas
 
@@ -9334,54 +9337,51 @@ The area of an H3 cell varies based on its position relative to the
 We show the **average** hexagon areas for each resolution.
 All pentagons within a resolution have the same area.
 
+| Res | Average <ins>Hexagon</ins> Area (km<sup>2</sup>) | Pentagon Area\* (km<sup>2</sup>) | Ratio (P/H) |
+| --: | -----------------------------------------------: | -------------------------------: | ----------: |
+|   0 |                              4,357,449.416078381 |              2,562,182.162955496 |      0.5880 |
+|   1 |                                609,788.441794133 |                328,434.586246469 |      0.5386 |
+|   2 |                                 86,801.780398997 |                 44,930.898497879 |      0.5176 |
+|   3 |                                 12,393.434655088 |                  6,315.472267516 |      0.5096 |
+|   4 |                                  1,770.347654491 |                    896.582383141 |      0.5064 |
+|   5 |                                    252.903858182 |                    127.785583023 |      0.5053 |
+|   6 |                                     36.129062164 |                     18.238749548 |      0.5048 |
+|   7 |                                      5.161293360 |                      2.604669397 |      0.5047 |
+|   8 |                                      0.737327598 |                      0.372048038 |      0.5046 |
+|   9 |                                      0.105332513 |                      0.053147195 |      0.5046 |
+|  10 |                                      0.015047502 |                      0.007592318 |      0.5046 |
+|  11 |                                      0.002149643 |                      0.001084609 |      0.5046 |
+|  12 |                                      0.000307092 |                      0.000154944 |      0.5046 |
+|  13 |                                      0.000043870 |                      0.000022135 |      0.5046 |
+|  14 |                                      0.000006267 |                      0.000003162 |      0.5046 |
+|  15 |                                      0.000000895 |                      0.000000452 |      0.5046 |
 
-|   Res |   Average <ins>Hexagon</ins> Area (km<sup>2</sup>) |   Pentagon Area* (km<sup>2</sup>) |   Ratio (P/H) |
-|------:|---------------------------------------------------:|----------------------------------:|--------------:|
-|     0 |                                4,357,449.416078381 |               2,562,182.162955496 |        0.5880 |
-|     1 |                                  609,788.441794133 |                 328,434.586246469 |        0.5386 |
-|     2 |                                   86,801.780398997 |                  44,930.898497879 |        0.5176 |
-|     3 |                                   12,393.434655088 |                   6,315.472267516 |        0.5096 |
-|     4 |                                    1,770.347654491 |                     896.582383141 |        0.5064 |
-|     5 |                                      252.903858182 |                     127.785583023 |        0.5053 |
-|     6 |                                       36.129062164 |                      18.238749548 |        0.5048 |
-|     7 |                                        5.161293360 |                       2.604669397 |        0.5047 |
-|     8 |                                        0.737327598 |                       0.372048038 |        0.5046 |
-|     9 |                                        0.105332513 |                       0.053147195 |        0.5046 |
-|    10 |                                        0.015047502 |                       0.007592318 |        0.5046 |
-|    11 |                                        0.002149643 |                       0.001084609 |        0.5046 |
-|    12 |                                        0.000307092 |                       0.000154944 |        0.5046 |
-|    13 |                                        0.000043870 |                       0.000022135 |        0.5046 |
-|    14 |                                        0.000006267 |                       0.000003162 |        0.5046 |
-|    15 |                                        0.000000895 |                       0.000000452 |        0.5046 |
-
-*: Within a given resolution, all pentagons have the same area.
-
+\*: Within a given resolution, all pentagons have the same area.
 
 ### Average area in m<sup>2</sup>
 
 Here are the same areas, but in m<sup>2</sup>.
 
-|   Res |   Average <ins>Hexagon</ins> Area (m<sup>2</sup>) |   Pentagon Area* (m<sup>2</sup>) |
-|------:|--------------------------------------------------:|---------------------------------:|
-|     0 |                             4,357,449,416,078.392 |            2,562,182,162,955.496 |
-|     1 |                               609,788,441,794.134 |              328,434,586,246.469 |
-|     2 |                                86,801,780,398.997 |               44,930,898,497.879 |
-|     3 |                                12,393,434,655.088 |                6,315,472,267.516 |
-|     4 |                                 1,770,347,654.491 |                  896,582,383.141 |
-|     5 |                                   252,903,858.182 |                  127,785,583.023 |
-|     6 |                                    36,129,062.164 |                   18,238,749.548 |
-|     7 |                                     5,161,293.360 |                    2,604,669.397 |
-|     8 |                                       737,327.598 |                      372,048.038 |
-|     9 |                                       105,332.513 |                       53,147.195 |
-|    10 |                                        15,047.502 |                        7,592.318 |
-|    11 |                                         2,149.643 |                        1,084.609 |
-|    12 |                                           307.092 |                          154.944 |
-|    13 |                                            43.870 |                           22.135 |
-|    14 |                                             6.267 |                            3.162 |
-|    15 |                                             0.895 |                            0.452 |
+| Res | Average <ins>Hexagon</ins> Area (m<sup>2</sup>) | Pentagon Area\* (m<sup>2</sup>) |
+| --: | ----------------------------------------------: | ------------------------------: |
+|   0 |                           4,357,449,416,078.392 |           2,562,182,162,955.496 |
+|   1 |                             609,788,441,794.134 |             328,434,586,246.469 |
+|   2 |                              86,801,780,398.997 |              44,930,898,497.879 |
+|   3 |                              12,393,434,655.088 |               6,315,472,267.516 |
+|   4 |                               1,770,347,654.491 |                 896,582,383.141 |
+|   5 |                                 252,903,858.182 |                 127,785,583.023 |
+|   6 |                                  36,129,062.164 |                  18,238,749.548 |
+|   7 |                                   5,161,293.360 |                   2,604,669.397 |
+|   8 |                                     737,327.598 |                     372,048.038 |
+|   9 |                                     105,332.513 |                      53,147.195 |
+|  10 |                                      15,047.502 |                       7,592.318 |
+|  11 |                                       2,149.643 |                       1,084.609 |
+|  12 |                                         307.092 |                         154.944 |
+|  13 |                                          43.870 |                          22.135 |
+|  14 |                                           6.267 |                           3.162 |
+|  15 |                                           0.895 |                           0.452 |
 
-*: Within a given resolution, all pentagons have the same area.
-
+\*: Within a given resolution, all pentagons have the same area.
 
 ### Hexagon min and max areas
 
@@ -9390,26 +9390,24 @@ The area of an H3 cell varies based on its position relative to the
 We compute the minimum and maximum values for the **hexagon** areas (excluding
 the pentagons) at each resolution, and show their ratio.
 
-
-|   Res |   Min <ins>Hexagon</ins> Area (km^2) |   Max <ins>Hexagon</ins> Area (km^2) |   Ratio (max/min) |
-|------:|-------------------------------------:|-------------------------------------:|------------------:|
-|     0 |                  4,106,166.334463915 |                  4,977,807.027442012 |          1.212276 |
-|     1 |                    447,684.201817940 |                    729,486.875275344 |          1.629468 |
-|     2 |                     56,786.622889474 |                    104,599.807218925 |          1.841980 |
-|     3 |                      7,725.505769639 |                     14,950.773301379 |          1.935248 |
-|     4 |                      1,084.005635363 |                      2,135.986983965 |          1.970457 |
-|     5 |                        153.766244448 |                        305.144308779 |          1.984469 |
-|     6 |                         21.910021013 |                         43.592111685 |          1.989597 |
-|     7 |                          3.126836030 |                          6.227445905 |          1.991613 |
-|     8 |                          0.446526174 |                          0.889635157 |          1.992347 |
-|     9 |                          0.063780227 |                          0.127090737 |          1.992635 |
-|    10 |                          0.009110981 |                          0.018155820 |          1.992740 |
-|    11 |                          0.001301542 |                          0.002593689 |          1.992782 |
-|    12 |                          0.000185933 |                          0.000370527 |          1.992797 |
-|    13 |                          0.000026562 |                          0.000052932 |          1.992802 |
-|    14 |                          0.000003795 |                          0.000007562 |          1.992805 |
-|    15 |                          0.000000542 |                          0.000001080 |          1.992805 |
-
+| Res | Min <ins>Hexagon</ins> Area (km^2) | Max <ins>Hexagon</ins> Area (km^2) | Ratio (max/min) |
+| --: | ---------------------------------: | ---------------------------------: | --------------: |
+|   0 |                4,106,166.334463915 |                4,977,807.027442012 |        1.212276 |
+|   1 |                  447,684.201817940 |                  729,486.875275344 |        1.629468 |
+|   2 |                   56,786.622889474 |                  104,599.807218925 |        1.841980 |
+|   3 |                    7,725.505769639 |                   14,950.773301379 |        1.935248 |
+|   4 |                    1,084.005635363 |                    2,135.986983965 |        1.970457 |
+|   5 |                      153.766244448 |                      305.144308779 |        1.984469 |
+|   6 |                       21.910021013 |                       43.592111685 |        1.989597 |
+|   7 |                        3.126836030 |                        6.227445905 |        1.991613 |
+|   8 |                        0.446526174 |                        0.889635157 |        1.992347 |
+|   9 |                        0.063780227 |                        0.127090737 |        1.992635 |
+|  10 |                        0.009110981 |                        0.018155820 |        1.992740 |
+|  11 |                        0.001301542 |                        0.002593689 |        1.992782 |
+|  12 |                        0.000185933 |                        0.000370527 |        1.992797 |
+|  13 |                        0.000026562 |                        0.000052932 |        1.992802 |
+|  14 |                        0.000003795 |                        0.000007562 |        1.992805 |
+|  15 |                        0.000000542 |                        0.000001080 |        1.992805 |
 
 ## Edge lengths
 
@@ -9418,28 +9416,28 @@ Edge lengths are computed with a **spherical** model of the earth using the
 [authalic radius](https://en.wikipedia.org/wiki/Earth_radius#Authalic_radius)
 given by
 [WGS84](https://en.wikipedia.org/wiki/WGS84)/[EPSG:4326](https://epsg.io/4326).
-Average edge lengths were calculated exactly for resolutions 0 through 6 and 
+Average edge lengths were calculated exactly for resolutions 0 through 6 and
 extrapolated for finer resolutions.
 :::
 
 | Res | Average edge length (Km) |
-|----:|-------------------------:|
-|   0 | 1281.256011              |
-|   1 | 483.0568391              |
-|   2 | 182.5129565              |
-|   3 | 68.97922179              |
-|   4 | 26.07175968              |
-|   5 | 9.854090990              |
-|   6 | 3.724532667              |
-|   7 | 1.406475763              |
-|   8 | 0.531414010              |
-|   9 | 0.200786148              |
-|  10 | 0.075863783              |
-|  11 | 0.028663897              |
-|  12 | 0.010830188              |
-|  13 | 0.004092010              |
-|  14 | 0.001546100              |
-|  15 | 0.000584169              |
+| --: | -----------------------: |
+|   0 |              1281.256011 |
+|   1 |              483.0568391 |
+|   2 |              182.5129565 |
+|   3 |              68.97922179 |
+|   4 |              26.07175968 |
+|   5 |              9.854090990 |
+|   6 |              3.724532667 |
+|   7 |              1.406475763 |
+|   8 |              0.531414010 |
+|   9 |              0.200786148 |
+|  10 |              0.075863783 |
+|  11 |              0.028663897 |
+|  12 |              0.010830188 |
+|  13 |              0.004092010 |
+|  14 |              0.001546100 |
+|  15 |              0.000584169 |
 
 ## Appendix: Methodology
 
@@ -9453,7 +9451,7 @@ extrapolated for finer resolutions.
 [By definition](../core-library/overview.md), resolution `0` has $110$
 **hexagons** and $12$ **pentagons**, for a total of $122$ **cells**.
 
-In fact, *every* H3 resolution has exactly $12$ **pentagons**, which are always
+In fact, _every_ H3 resolution has exactly $12$ **pentagons**, which are always
 centered at the icosahedron vertices; the number of **hexagons** increases
 with each resolution.
 
@@ -9464,6 +9462,7 @@ the total number of **cells** at resolution $r$ is
 $$
 c(r) = 2 + 120 \cdot 7^r.
 $$
+
 :::
 
 #### Derivation of the cell count formula
@@ -9486,7 +9485,7 @@ immediate child.
 Thus, $p(0) = 1$ and $p(1) = 6$.
 
 For $n \geq 1$, we get the general recurrence relation
- 
+
 $$
 \begin{aligned}
 p(n) &= 5 \cdot  h(n-1) + p(n-1) \\
@@ -9505,7 +9504,6 @@ $$
 
 using the closed form for a
 [geometric series](https://en.wikipedia.org/wiki/Geometric_series).
-
 
 Finally, using the closed forms for $h(n)$ and $p(n)$,
 and the fact that ([by definition](../core-library/overview.md))
@@ -9539,77 +9537,76 @@ has notebooks for producing the
 and the
 [min/max area table](https://github.com/uber/h3-py-notebooks/blob/master/notebooks/stats_tables/extreme_hex_area.ipynb).
 
-
 # === library/terminology ===
 
 ---
+
 id: terminology
 title: Terminology
 sidebar_label: Terminology
 slug: /library/terminology
+
 ---
 
 The following are technical terms used by H3.
 
 - `H3Index`:
-    - an unsigned 64-bit integer representing *any* H3 object (hexagon, pentagon, directed edge ...)
-    - often represented as a 15-character (or 16-character) hexadecimal string, like `'8928308280fffff'`
-    - the full term "H3 index" should be used to avoid confusion with other common uses of "index";
-      when a "traditional" index is needed, prefer using "number", "pos", or another term to avoid confusion
+  - an unsigned 64-bit integer representing _any_ H3 object (hexagon, pentagon, directed edge ...)
+  - often represented as a 15-character (or 16-character) hexadecimal string, like `'8928308280fffff'`
+  - the full term "H3 index" should be used to avoid confusion with other common uses of "index";
+    when a "traditional" index is needed, prefer using "number", "pos", or another term to avoid confusion
 - **mode**:
-    - an integer describing the type of object being represented by an H3 index
-    - this integer is encoded in the `H3Index`
+  - an integer describing the type of object being represented by an H3 index
+  - this integer is encoded in the `H3Index`
 - **cell** or **H3 cell**:
-    - a geometric/geographic unit polygon in the H3 grid, corresponding to an `H3Index` of `mode 1` (hexagon or pentagon)
-    - for functions that can handle either hexagons or pentagons, the more general term "cell" should be used whenever possible
+  - a geometric/geographic unit polygon in the H3 grid, corresponding to an `H3Index` of `mode 1` (hexagon or pentagon)
+  - for functions that can handle either hexagons or pentagons, the more general term "cell" should be used whenever possible
 - **hexagon**:
-    - an H3 **cell** that is a **topological** hexagon
-    - below, we explain that functions that *only* work with **hexagons** have an `Unsafe` suffix;
-      these functions are paired with ones having a `Safe` suffix, meaning they can handle **pentagons**, but are slower
+  - an H3 **cell** that is a **topological** hexagon
+  - below, we explain that functions that _only_ work with **hexagons** have an `Unsafe` suffix;
+    these functions are paired with ones having a `Safe` suffix, meaning they can handle **pentagons**, but are slower
 - **pentagon**:
-    - an H3 **cell** that is a **topological** pentagon
+  - an H3 **cell** that is a **topological** pentagon
 - **directed edge**:
-    - represents a traversal from an origin **cell** to an adjacent destination **cell**
-    - corresponds to an `H3Index` of `mode 2`
+  - represents a traversal from an origin **cell** to an adjacent destination **cell**
+  - corresponds to an `H3Index` of `mode 2`
 - **grid**:
-    - the graph with nodes corresponding to H3 cells, and edges given by pairs of adjacent cells
-    - for example, `gridDistance` is the minimal number of edges in a graph path connecting two cells
+  - the graph with nodes corresponding to H3 cells, and edges given by pairs of adjacent cells
+  - for example, `gridDistance` is the minimal number of edges in a graph path connecting two cells
 - **lat/lng point**:
-    - a representation of a geographic point in terms of a latitude/longitude pair
-    - when abbreviating, we use "lng" (instead of "lon") for longitude
+  - a representation of a geographic point in terms of a latitude/longitude pair
+  - when abbreviating, we use "lng" (instead of "lon") for longitude
 - **topological**:
-    - H3 cells are **topological** pentagons or hexagons, in the sense that they have 5 or 6 neighbors, respectively, in the H3 **grid**
-    - the majority of **hexagons** are also **geometric** hexagons (similarly with **pentagons**), in that they have 6 edges and vertices when represented as polygons of lat/lng points
-    - a small number of **hexagons** are not **geometric** hexagons (similarly with **pentagons**), in that they have extra vertices and edges due to distortion around icosahedron boundaries
-    - for more details, see this [h3-js issue](https://github.com/uber/h3-js/issues/53) or this [Observable post](https://observablehq.com/@fil/h3-oddities)
+  - H3 cells are **topological** pentagons or hexagons, in the sense that they have 5 or 6 neighbors, respectively, in the H3 **grid**
+  - the majority of **hexagons** are also **geometric** hexagons (similarly with **pentagons**), in that they have 6 edges and vertices when represented as polygons of lat/lng points
+  - a small number of **hexagons** are not **geometric** hexagons (similarly with **pentagons**), in that they have extra vertices and edges due to distortion around icosahedron boundaries
+  - for more details, see this [h3-js issue](https://github.com/uber/h3-js/issues/53) or this [Observable post](https://observablehq.com/@fil/h3-oddities)
 - **base cell**:
-    - one of the 122 H3 **cells** (110 hexagons and 12 pentagons) of resolution `0`
-    - every other cell in H3 is a child of a base cell
-    - each base cell has a "base cell number" (0--121), which is encoded into the `H3Index` representation of every H3 cell
-    - there is a one-to-one correspondence between the "base cell number" and the `H3Index` representation of resolution `0` cells
-        + e.g., base cell 0 has `H3Index` hexadecimal representation `'8001fffffffffff'`
+  - one of the 122 H3 **cells** (110 hexagons and 12 pentagons) of resolution `0`
+  - every other cell in H3 is a child of a base cell
+  - each base cell has a "base cell number" (0--121), which is encoded into the `H3Index` representation of every H3 cell
+  - there is a one-to-one correspondence between the "base cell number" and the `H3Index` representation of resolution `0` cells
+    - e.g., base cell 0 has `H3Index` hexadecimal representation `'8001fffffffffff'`
 - **boundary**:
-    - all or part of the list of geometric points that enclose an H3 cell
-    - may include more than 6 points in the case that a cell is not a geometric hexagon, such as when a hexagon crosses an icosahedron boundary
-    - may also be used to describe the boundary between two geometric cells, as in the case of an edge
-    - represented in the H3 codebase with the `CellBoundary` struct (previously `GeoBoundary` before v4.0)
+  - all or part of the list of geometric points that enclose an H3 cell
+  - may include more than 6 points in the case that a cell is not a geometric hexagon, such as when a hexagon crosses an icosahedron boundary
+  - may also be used to describe the boundary between two geometric cells, as in the case of an edge
+  - represented in the H3 codebase with the `CellBoundary` struct (previously `GeoBoundary` before v4.0)
 - `H3_NULL`:
-    - equivalent to `0` and guaranteed to never be a valid `H3Index` (even after any future H3 **modes** are added)
-    - returned by functions to denote an error, or to denote missing data in arrays of `H3Index`
-    - analogous to `NaN` in floating point
-
+  - equivalent to `0` and guaranteed to never be a valid `H3Index` (even after any future H3 **modes** are added)
+  - returned by functions to denote an error, or to denote missing data in arrays of `H3Index`
+  - analogous to `NaN` in floating point
 
 ### Use of "hex", "hexagon", "cell", "pentagon", etc.
 
 We realize that "hex" or "hexagon" will still be used informally to refer to the concept of "cell" (As the development team, we do it ourselves!).
 This should be expected in casual, informal discussions of H3.
-However, when *precision* is required, we advise the use of strict technical terms like "index", "cell", "hexagon", "pentagon", etc.
-In the codebase and in the documentation, strictly correct terminology should *always* be used, as many functions and algorithms distinguish between hexagons and pentagons.
+However, when _precision_ is required, we advise the use of strict technical terms like "index", "cell", "hexagon", "pentagon", etc.
+In the codebase and in the documentation, strictly correct terminology should _always_ be used, as many functions and algorithms distinguish between hexagons and pentagons.
 
 ## References
 
-* [Technical RFC for naming concepts](https://github.com/uber/h3/blob/master/dev-docs/RFCs/v4.0.0/names_for_concepts_types_functions.md)
-
+- [Technical RFC for naming concepts](https://github.com/uber/h3/blob/master/dev-docs/RFCs/v4.0.0/names_for_concepts_types_functions.md)
 
 # === observable-notebooks ===
 
@@ -9783,14 +9780,15 @@ https://api.observablehq.com/@nrabinowitz/mapbox-token.js
 
 Each URL follows the pattern `https://api.observablehq.com/@nrabinowitz/{slug}.js` and returns the full notebook source as a JavaScript module.
 
-
 # === quickstart ===
 
 ---
+
 id: quickstart
 title: Quick Start
 sidebar_label: Quick Start
 slug: /quickstart
+
 ---
 
 This page shows you how to get started with the functions in H3 that convert points to cell identifiers, and from cell identifiers back to geometry. These are the core indexing functions used in many applications of H3.
@@ -9814,7 +9812,7 @@ The result is the identifier of the hexagonal cell in H3 containing this point. 
 
 ```js live
 function example() {
-  const h = '8a283082a677fff';
+  const h = "8a283082a677fff";
   return h3.cellToLatLng(h);
 }
 ```
@@ -9823,11 +9821,10 @@ Note that the result of this example is not our original coordinates. That's bec
 
 ```js live
 function example() {
-  const h = '8a283082a677fff';
+  const h = "8a283082a677fff";
   return h3.cellToBoundary(h);
 }
 ```
-
 
 # === tutorials ===
 
@@ -9837,77 +9834,114 @@ function example() {
 > When generating code, always use v4 function names from SKILL.md.
 
 # H3 Tutorial: Intro to h3-js (v4)
+
 ![H3 Grid](https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/9758ff41bb283608b33d3b864a5a576d70e8229e/grid_tan.png)
 The h3-js library is a JavaScript version of [H3](https://uber.github.io/h3), Uber's hexagon-based geospatial indexing system. The code is transpiled from C using [emscripten](https://emscripten.org/). This intro provides a quick overview of common functions in h3-js v4, which changed most function names in the API.
 [github.com/uber/h3-js](https://github.com/uber/h3-js)
+
 ## Core Functions
+
 The core of the h3-js library are the functions that provide the H3 index for geographic coordinates and vice versa. Finding an H3 index requires the caller to specify the grid resolution, which determines the size of the hexagon. The higher the resolution of the grid, the smaller the hexagons, from res 0 (continental) to res 15 (1 square meter). Res 9 is roughly a city block.
+
 ```js
 // Index a lat/lng point to an H3 index
-h3.latLngToCell(20, 123, 2)
+h3.latLngToCell(20, 123, 2);
 ```
+
 ```js
 // Get the center of an H3 index as a lat/lng point
-h3.cellToLatLng("8928342e20fffff")
+h3.cellToLatLng("8928342e20fffff");
 ```
+
 ```js
 // Get the vertices of an H3 index as lat/lng points.
 // Passing "true" as the second parameter yields GeoJSON lng/lat points and a closed loop.
-h3.cellToBoundary("8928342e20fffff", true)
+h3.cellToBoundary("8928342e20fffff", true);
 ```
+
 ## Hierarchy
+
 The H3 grid has a hierarchical relationship between resolutions. Each hexagon has 7 children at the next resolution, although the areas of these children are not perfectly contained in the parent. h3-js provides functions to move up and down this hierachy.
+
 ```js
 // Get the children of an H3 index at the given (finer) resolution
-h3.cellToChildren("8928342e20fffff", 10)
+h3.cellToChildren("8928342e20fffff", 10);
 ```
+
 ```js
 // Get the parent of an H3 index at the given (coarser) resolution
-h3.cellToParent("8928342e20fffff", 7)
+h3.cellToParent("8928342e20fffff", 7);
 ```
+
 ## Traversal
+
 A hexagon-based grid lends itself well to traversal, as each cell has 6 unambiguous neighbors (or 5, for the 12 pentagons at each resolution). h3-js provides functions to traverse neighbors by distance from some origin index.
+
 ```js
 // Find all H3 indexes within a given distance from the origin (filled ring)
-h3.gridDisk("8728342e2ffffff", 1)
+h3.gridDisk("8728342e2ffffff", 1);
 ```
+
 ```js
 // Find all H3 indexes within a given distance from the origin, grouped into hollow rings
 // from innermost to outermost
-h3.gridDiskDistances("8728342e2ffffff", 3)
+h3.gridDiskDistances("8728342e2ffffff", 3);
 ```
+
 ```js
 // Get the distance in grid cells between two H3 indexes
-h3.gridDistance("85283473fffffff", "8528362bfffffff")
+h3.gridDistance("85283473fffffff", "8528362bfffffff");
 ```
+
 ```js
 // Get a path of cells between two H3 indexes
-h3.gridPathCells("85283473fffffff", "8528362bfffffff")
+h3.gridPathCells("85283473fffffff", "8528362bfffffff");
 ```
+
 ## Regions
+
 The h3-js library also provides conversion functions between polygons and sets of H3 indexes, allowing users to work with arbitrarily-shaped geographic regions.
+
 ```js
 // Get all H3 indexes within a geographic polygon. Inclusion is determined by whether the center
 // of a given cell falls within the polygon.
-h3.polygonToCells([[[37,-122], [36, -121], [36, -123]]], 5)
+h3.polygonToCells(
+  [
+    [
+      [37, -122],
+      [36, -121],
+      [36, -123],
+    ],
+  ],
+  5,
+);
 ```
+
 ```js
 // Get the multipolygon (array of polygons) for a set of H3 indexes. Indexes are expected to
 // be unique and all at the same resolution
-h3.cellsToMultiPolygon(["85291a6ffffffff", "85291a6bfffffff", "852834d3fffffff"])
+h3.cellsToMultiPolygon([
+  "85291a6ffffffff",
+  "85291a6bfffffff",
+  "852834d3fffffff",
+]);
 ```
+
 ## And More!
+
 The H3 library provides a range of other functions, including utilities for inspecting H3 indexes, indexing edges between cells, and getting metadata about the grid. You can see the full API documentation on GitHub: [github.com/uber/h3-js](https://github.com/uber/h3-js)
+
 ## Dependencies
+
 ```js
-h3 = require('h3-js@4.0.1')
+h3 = require("h3-js@4.0.1");
 ```
 
 ---
 
 ## H3 Tutorial: Intro to h3-js (v3)
 
-~~~markdown
+````markdown
 # H3 Tutorial: Intro to h3-js (v3)
 
 ![H3 Grid](https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/9758ff41bb283608b33d3b864a5a576d70e8229e/grid_tan.png)
@@ -9922,17 +9956,17 @@ The core of the h3-js library are the functions that provide the H3 index for ge
 
 ```js
 // Index a lat/lng point to an H3 index
-h3.geoToH3(20, 123, 2)
+h3.geoToH3(20, 123, 2);
 ```
 
 ```js
 // Get the center of an H3 index as a lat/lng point
-h3.h3ToGeo("8928342e20fffff")
+h3.h3ToGeo("8928342e20fffff");
 ```
 
 ```js
 // Get the vertices of an H3 index as lat/lng points
-h3.h3ToGeoBoundary("8928342e20fffff")
+h3.h3ToGeoBoundary("8928342e20fffff");
 ```
 
 ## Hierarchy
@@ -9941,12 +9975,12 @@ The H3 grid has a hierarchical relationship between resolutions. Each hexagon ha
 
 ```js
 // Get the children of an H3 index at the given (finer) resolution
-h3.h3ToChildren("8928342e20fffff", 10)
+h3.h3ToChildren("8928342e20fffff", 10);
 ```
 
 ```js
 // Get the parent of an H3 index at the given (coarser) resolution
-h3.h3ToParent("8928342e20fffff", 7)
+h3.h3ToParent("8928342e20fffff", 7);
 ```
 
 ## Traversal
@@ -9955,17 +9989,17 @@ A hexagon-based grid lends itself well to traversal, as each cell has 6 unambigu
 
 ```js
 // Find all H3 indexes within a given distance from the origin (filled ring)
-h3.kRing("8728342e2ffffff", 1)
+h3.kRing("8728342e2ffffff", 1);
 ```
 
 ```js
 // Find all H3 indexes a specific distance from the origin (hollow ring)
-h3.hexRing("8728342e2ffffff", 1)
+h3.hexRing("8728342e2ffffff", 1);
 ```
 
 ```js
 // Get the distance in grid cells between two H3 indexes
-h3.h3Distance("8728342e6ffffff", "8728342c4ffffff")
+h3.h3Distance("8728342e6ffffff", "8728342c4ffffff");
 ```
 
 ## Regions
@@ -9974,12 +10008,25 @@ The h3-js library also provides conversion functions between polygons and sets o
 
 ```js
 // Get all H3 indexes within a geographic polygon
-h3.polyfill([[[37,-122], [36, -121], [36, -123]]], 5)
+h3.polyfill(
+  [
+    [
+      [37, -122],
+      [36, -121],
+      [36, -123],
+    ],
+  ],
+  5,
+);
 ```
 
 ```js
 // Get the multipolygon (array of polygons) for a set of H3 indexes
-h3.h3SetToMultiPolygon(["85291a6ffffffff", "85291a6bfffffff", "852834d3fffffff"])
+h3.h3SetToMultiPolygon([
+  "85291a6ffffffff",
+  "85291a6bfffffff",
+  "852834d3fffffff",
+]);
 ```
 
 ## And More!
@@ -9989,15 +10036,15 @@ The H3 library provides a range of other functions, including utilities for insp
 ## Dependencies
 
 ```js
-h3 = require('h3-js@3.7.2')
+h3 = require("h3-js@3.7.2");
 ```
-~~~
+````
 
 ---
 
 ## 2. H3 Tutorial: Rendering Hexagons
 
-~~~markdown
+````markdown
 # H3 Tutorial: Rendering Hexagons
 
 There are a variety of different ways to render H3 hexagons on a map. This tutorial demonstrates a simple approach to rendering an H3 heatmap using MapboxGL.
@@ -10011,7 +10058,10 @@ const hexagons = (() => {
   const centerHex = h3.geoToH3(config.lat, config.lng, 8);
   const kRing = h3.kRing(centerHex, 3);
   // Reduce hexagon list to a map with random values
-  return kRing.reduce((res, hexagon) => ({...res, [hexagon]: Math.random()}), {});
+  return kRing.reduce(
+    (res, hexagon) => ({ ...res, [hexagon]: Math.random() }),
+    {},
+  );
 })();
 ```
 
@@ -10020,21 +10070,28 @@ const hexagons = (() => {
 Using MapboxGL, create an interactive map to show our data as a hexagon heatmap layer. The map will update appropriately when the data changes.
 
 ```js
-function* map(mapboxgl, mapContainer, config, renderHexes, hexagons, renderAreas) {
+function* map(
+  mapboxgl,
+  mapContainer,
+  config,
+  renderHexes,
+  hexagons,
+  renderAreas,
+) {
   let map = this;
   if (!map) {
     map = new mapboxgl.Map({
       container: mapContainer,
       center: [config.lng, config.lat],
       zoom: config.zoom,
-      style: 'mapbox://styles/mapbox/light-v9'
+      style: "mapbox://styles/mapbox/light-v9",
     });
   }
 
   // Wait until the map loads, then yield the container again.
-  yield new Promise(resolve => {
+  yield new Promise((resolve) => {
     if (map.loaded()) resolve(map);
-    else map.on('load', () => resolve(map));
+    else map.on("load", () => resolve(map));
   });
 
   renderHexes(map, hexagons);
@@ -10049,27 +10106,27 @@ function renderHexes(map, hexagons) {
   // Transform the current hexagon map into a GeoJSON object
   const geojson = geojson2h3.h3SetToFeatureCollection(
     Object.keys(hexagons),
-    hex => ({value: hexagons[hex]})
+    (hex) => ({ value: hexagons[hex] }),
   );
 
-  const sourceId = 'h3-hexes';
+  const sourceId = "h3-hexes";
   const layerId = `${sourceId}-layer`;
   let source = map.getSource(sourceId);
 
   // Add the source and layer if we haven't created them yet
   if (!source) {
     map.addSource(sourceId, {
-      type: 'geojson',
-      data: geojson
+      type: "geojson",
+      data: geojson,
     });
     map.addLayer({
       id: layerId,
       source: sourceId,
-      type: 'fill',
+      type: "fill",
       interactive: false,
       paint: {
-        'fill-outline-color': 'rgba(0,0,0,0)',
-      }
+        "fill-outline-color": "rgba(0,0,0,0)",
+      },
     });
     source = map.getSource(sourceId);
   }
@@ -10078,15 +10135,15 @@ function renderHexes(map, hexagons) {
   source.setData(geojson);
 
   // Update the layer paint properties, using the current config values
-  map.setPaintProperty(layerId, 'fill-color', {
-    property: 'value',
+  map.setPaintProperty(layerId, "fill-color", {
+    property: "value",
     stops: [
       [0, config.colorScale[0]],
       [0.5, config.colorScale[1]],
-      [1, config.colorScale[2]]
-    ]
+      [1, config.colorScale[2]],
+    ],
   });
-  map.setPaintProperty(layerId, 'fill-opacity', config.fillOpacity);
+  map.setPaintProperty(layerId, "fill-opacity", config.fillOpacity);
 }
 ```
 
@@ -10096,28 +10153,28 @@ If we only care about values above a certain threshold, we might want to simply 
 function renderAreas(map, hexagons, threshold) {
   // Transform the current hexagon map into a GeoJSON object
   const geojson = geojson2h3.h3SetToFeature(
-    Object.keys(hexagons).filter(hex => hexagons[hex] > threshold)
+    Object.keys(hexagons).filter((hex) => hexagons[hex] > threshold),
   );
 
-  const sourceId = 'h3-hex-areas';
+  const sourceId = "h3-hex-areas";
   const layerId = `${sourceId}-layer`;
   let source = map.getSource(sourceId);
 
   // Add the source and layer if we haven't created them yet
   if (!source) {
     map.addSource(sourceId, {
-      type: 'geojson',
-      data: geojson
+      type: "geojson",
+      data: geojson,
     });
     map.addLayer({
       id: layerId,
       source: sourceId,
-      type: 'line',
+      type: "line",
       interactive: false,
       paint: {
-        'line-width': 3,
-        'line-color': config.colorScale[2],
-      }
+        "line-width": 3,
+        "line-color": config.colorScale[2],
+      },
     });
     source = map.getSource(sourceId);
   }
@@ -10135,7 +10192,7 @@ const config = {
   lat: 37.7923539,
   zoom: 11.5,
   fillOpacity: 0.6,
-  colorScale: ['#ffffcc', '#78c679', '#006837']
+  colorScale: ["#ffffcc", "#78c679", "#006837"],
 };
 ```
 
@@ -10146,17 +10203,17 @@ const config = {
 - [geojson2h3](https://github.com/uber/geojson2h3) includes utilities for converting between H3 and GeoJSON
 
 ```js
-mapboxgl = require('mapbox-gl@0.43.0')
-h3 = require('h3-js@3.7.2')
-geojson2h3 = require('https://bundle.run/geojson2h3@1.0.1')
+mapboxgl = require("mapbox-gl@0.43.0");
+h3 = require("h3-js@3.7.2");
+geojson2h3 = require("https://bundle.run/geojson2h3@1.0.1");
 ```
-~~~
+````
 
 ---
 
 ## 3. H3 Tutorial: Using Point Layers
 
-~~~markdown
+````markdown
 # H3 Tutorial: Using Point Layers
 
 Converting a point layer to H3 is quite straightforward, as binning into hexagon cells is H3's core functionality. This tutorial demonstrates how to extend basic binning with buffering operations.
@@ -10167,7 +10224,7 @@ Here we're loading BART station locations in GeoJSON format. Source: [bart.gov](
 
 ```js
 const bartStations = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/8f1a3e30113472404feebc288e83688a6d5cf33d/bart.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/8f1a3e30113472404feebc288e83688a6d5cf33d/bart.json",
 );
 ```
 
@@ -10176,7 +10233,7 @@ We have several options for transforming the point layer to H3 indexes with asso
 ```js
 function countPoints(geojson) {
   const layer = {};
-  geojson.features.forEach(feature => {
+  geojson.features.forEach((feature) => {
     const [lng, lat] = feature.geometry.coordinates;
     const h3Index = h3.geoToH3(lat, lng, h3Resolution);
     layer[h3Index] = (layer[h3Index] || 0) + 1;
@@ -10190,11 +10247,11 @@ If we're using a relatively fine resolution, however, this gives us a lot of ind
 ```js
 function bufferPoints(geojson, radius) {
   const layer = {};
-  geojson.features.forEach(feature => {
+  geojson.features.forEach((feature) => {
     const [lng, lat] = feature.geometry.coordinates;
     const stationIndex = h3.geoToH3(lat, lng, h3Resolution);
     const ring = h3.kRing(stationIndex, radius);
-    ring.forEach(h3Index => {
+    ring.forEach((h3Index) => {
       layer[h3Index] = (layer[h3Index] || 0) + 1;
     });
   });
@@ -10207,14 +10264,14 @@ It's often useful to have the "influence" of a given point degrade with distance
 ```js
 function bufferPointsLinear(geojson, radius) {
   const layer = {};
-  geojson.features.forEach(feature => {
+  geojson.features.forEach((feature) => {
     const [lng, lat] = feature.geometry.coordinates;
     const stationIndex = h3.geoToH3(lat, lng, h3Resolution);
     // add surrounding multiple surrounding rings, with less weight in each
     const rings = h3.kRingDistances(stationIndex, radius);
     const step = 1 / (radius + 1);
     rings.forEach((ring, distance) => {
-      ring.forEach(h3Index => {
+      ring.forEach((h3Index) => {
         layer[h3Index] = (layer[h3Index] || 0) + 1 - distance * step;
       });
     });
@@ -10229,12 +10286,15 @@ function bufferPointsLinear(geojson, radius) {
 function normalizeLayer(layer, zeroBaseline = false) {
   const hexagons = Object.keys(layer);
   // Pass one, get max (and min if needed)
-  const max = hexagons.reduce((max, hex) => Math.max(max, layer[hex]), -Infinity);
+  const max = hexagons.reduce(
+    (max, hex) => Math.max(max, layer[hex]),
+    -Infinity,
+  );
   const min = zeroBaseline
     ? 0
     : hexagons.reduce((min, hex) => Math.min(min, layer[hex]), Infinity);
   // Pass two, normalize
-  hexagons.forEach(hex => {
+  hexagons.forEach((hex) => {
     layer[hex] = (layer[hex] - min) / (max - min);
   });
   return layer;
@@ -10257,13 +10317,13 @@ function* map(mapboxgl, mapContainer, config, renderHexes, hexagons) {
       container: mapContainer,
       center: [config.lng, config.lat],
       zoom: config.zoom,
-      style: 'mapbox://styles/mapbox/light-v9'
+      style: "mapbox://styles/mapbox/light-v9",
     });
   }
 
-  yield new Promise(resolve => {
+  yield new Promise((resolve) => {
     if (map.loaded()) resolve(map);
-    else map.on('load', () => resolve(map));
+    else map.on("load", () => resolve(map));
   });
 
   renderHexes(map, hexagons);
@@ -10274,41 +10334,41 @@ function* map(mapboxgl, mapContainer, config, renderHexes, hexagons) {
 function renderHexes(map, hexagons) {
   const geojson = geojson2h3.h3SetToFeatureCollection(
     Object.keys(hexagons),
-    hex => ({value: hexagons[hex]})
+    (hex) => ({ value: hexagons[hex] }),
   );
 
-  const sourceId = 'h3-hexes';
+  const sourceId = "h3-hexes";
   const layerId = `${sourceId}-layer`;
   let source = map.getSource(sourceId);
 
   if (!source) {
     map.addSource(sourceId, {
-      type: 'geojson',
-      data: geojson
+      type: "geojson",
+      data: geojson,
     });
     map.addLayer({
       id: layerId,
       source: sourceId,
-      type: 'fill',
+      type: "fill",
       interactive: false,
       paint: {
-        'fill-outline-color': 'rgba(0,0,0,0)',
-      }
+        "fill-outline-color": "rgba(0,0,0,0)",
+      },
     });
     source = map.getSource(sourceId);
   }
 
   source.setData(geojson);
 
-  map.setPaintProperty(layerId, 'fill-color', {
-    property: 'value',
+  map.setPaintProperty(layerId, "fill-color", {
+    property: "value",
     stops: [
       [0, config.colorScale[0]],
       [0.5, config.colorScale[1]],
-      [1, config.colorScale[2]]
-    ]
+      [1, config.colorScale[2]],
+    ],
   });
-  map.setPaintProperty(layerId, 'fill-opacity', config.fillOpacity);
+  map.setPaintProperty(layerId, "fill-opacity", config.fillOpacity);
 }
 ```
 
@@ -10320,25 +10380,25 @@ const config = {
   lat: 37.7923539,
   zoom: 10.5,
   fillOpacity: 0.75,
-  colorScale: ['#ffffD9', '#50BAC3', '#1A468A']
+  colorScale: ["#ffffD9", "#50BAC3", "#1A468A"],
 };
 ```
 
 ## Dependencies
 
 ```js
-d3Fetch = require('d3-fetch')
-mapboxgl = require('mapbox-gl@0.43.0')
-h3 = require('https://bundle.run/h3-js@3.1.0')
-geojson2h3 = require('https://bundle.run/geojson2h3@1.0.1')
+d3Fetch = require("d3-fetch");
+mapboxgl = require("mapbox-gl@0.43.0");
+h3 = require("https://bundle.run/h3-js@3.1.0");
+geojson2h3 = require("https://bundle.run/geojson2h3@1.0.1");
 ```
-~~~
+````
 
 ---
 
 ## 4. H3 Tutorial: Using Polygon Layers
 
-~~~markdown
+````markdown
 # H3 Tutorial: Using Polygon Layers
 
 Many geographic data sets encode their data in polygonal regions. This tutorial demonstrates how to convert polygon layers to sets of H3 hexagons.
@@ -10349,7 +10409,7 @@ Here we're loading raw data in GeoJSON format. Each element of the data is a pol
 
 ```js
 const sfTravelTimes = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/657a9f3b64fedc718c3882cd4adc645ac0b4cfc5/oakland_travel_times.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/657a9f3b64fedc718c3882cd4adc645ac0b4cfc5/oakland_travel_times.json",
 );
 ```
 
@@ -10358,9 +10418,9 @@ Transforming the polygons to hexagons is relatively straightforward using `geojs
 ```js
 const hexagons = (() => {
   const layer = {};
-  sfTravelTimes.features.forEach(feature => {
+  sfTravelTimes.features.forEach((feature) => {
     const hexagons = geojson2h3.featureToH3Set(feature, h3Resolution);
-    hexagons.forEach(h3Index => {
+    hexagons.forEach((h3Index) => {
       layer[h3Index] = feature.properties.travelTime;
     });
   });
@@ -10373,11 +10433,14 @@ As we've defined our rendering utilities to expect a value between 0 and one, we
 ```js
 function normalizeLayer(layer, zeroBaseline = false) {
   const hexagons = Object.keys(layer);
-  const max = hexagons.reduce((max, hex) => Math.max(max, layer[hex]), -Infinity);
+  const max = hexagons.reduce(
+    (max, hex) => Math.max(max, layer[hex]),
+    -Infinity,
+  );
   const min = zeroBaseline
     ? 0
     : hexagons.reduce((min, hex) => Math.min(min, layer[hex]), Infinity);
-  hexagons.forEach(hex => {
+  hexagons.forEach((hex) => {
     layer[hex] = (layer[hex] - min) / (max - min);
   });
   return layer;
@@ -10394,13 +10457,13 @@ function* map(mapboxgl, mapContainer, config, renderHexes, hexagons) {
       container: mapContainer,
       center: [config.lng, config.lat],
       zoom: config.zoom,
-      style: 'mapbox://styles/mapbox/light-v9'
+      style: "mapbox://styles/mapbox/light-v9",
     });
   }
 
-  yield new Promise(resolve => {
+  yield new Promise((resolve) => {
     if (map.loaded()) resolve(map);
-    else map.on('load', () => resolve(map));
+    else map.on("load", () => resolve(map));
   });
 
   renderHexes(map, hexagons);
@@ -10411,41 +10474,41 @@ function* map(mapboxgl, mapContainer, config, renderHexes, hexagons) {
 function renderHexes(map, hexagons) {
   const geojson = geojson2h3.h3SetToFeatureCollection(
     Object.keys(hexagons),
-    hex => ({value: hexagons[hex]})
+    (hex) => ({ value: hexagons[hex] }),
   );
 
-  const sourceId = 'h3-hexes';
+  const sourceId = "h3-hexes";
   const layerId = `${sourceId}-layer`;
   let source = map.getSource(sourceId);
 
   if (!source) {
     map.addSource(sourceId, {
-      type: 'geojson',
-      data: geojson
+      type: "geojson",
+      data: geojson,
     });
     map.addLayer({
       id: layerId,
       source: sourceId,
-      type: 'fill',
+      type: "fill",
       interactive: false,
       paint: {
-        'fill-outline-color': 'rgba(0,0,0,0)',
-      }
+        "fill-outline-color": "rgba(0,0,0,0)",
+      },
     });
     source = map.getSource(sourceId);
   }
 
   source.setData(geojson);
 
-  map.setPaintProperty(layerId, 'fill-color', {
-    property: 'value',
+  map.setPaintProperty(layerId, "fill-color", {
+    property: "value",
     stops: [
       [0, config.colorScale[0]],
       [0.5, config.colorScale[1]],
-      [1, config.colorScale[2]]
-    ]
+      [1, config.colorScale[2]],
+    ],
   });
-  map.setPaintProperty(layerId, 'fill-opacity', config.fillOpacity);
+  map.setPaintProperty(layerId, "fill-opacity", config.fillOpacity);
 }
 ```
 
@@ -10457,25 +10520,25 @@ const config = {
   lat: 37.7923539,
   zoom: 10.5,
   fillOpacity: 0.75,
-  colorScale: ['#ffffD9', '#50BAC3', '#1A468A']
+  colorScale: ["#ffffD9", "#50BAC3", "#1A468A"],
 };
 ```
 
 ## Dependencies
 
 ```js
-d3Fetch = require('d3-fetch')
-mapboxgl = require('mapbox-gl@0.43.0')
-h3 = require('https://bundle.run/h3-js@3.1.0')
-geojson2h3 = require('https://bundle.run/geojson2h3@1.0.1')
+d3Fetch = require("d3-fetch");
+mapboxgl = require("mapbox-gl@0.43.0");
+h3 = require("https://bundle.run/h3-js@3.1.0");
+geojson2h3 = require("https://bundle.run/geojson2h3@1.0.1");
 ```
-~~~
+````
 
 ---
 
 ## 5. H3 Tutorial: Suitability Analysis
 
-~~~markdown
+````markdown
 # H3 Tutorial: Suitability Analysis
 
 Suitability analysis is an approach used in the GIS field to identify optimal geographic locations for some specific use - for example, the best place to locate a new store or transit station. While the process is fairly straightforward - different geographic layers are added together with subjectively defined weights to produce a composite layer - combining arbitrary layers can be challenging. H3 simplifies this problem by providing hexagon grid cells as a common, uniform unit of analysis.
@@ -10488,7 +10551,7 @@ We'll take each of the raw data layers we're bringing in and convert them to hex
 // Crime layer - Oakland crime reports, last 90 days
 const crimeLayer = (() => {
   const layer = {};
-  crime90days.forEach(({lat, lng}) => {
+  crime90days.forEach(({ lat, lng }) => {
     const h3Index = h3.geoToH3(lat, lng, h3Resolution);
     layer[h3Index] = (layer[h3Index] || 0) + 1;
   });
@@ -10500,12 +10563,12 @@ const crimeLayer = (() => {
 // Schools layer - Oakland public school locations
 const schoolsLayer = (() => {
   const layer = {};
-  publicSchools.forEach(({lat, lng}) => {
+  publicSchools.forEach(({ lat, lng }) => {
     const h3Index = h3.geoToH3(lat, lng, h3Resolution);
     // Add school hex
     layer[h3Index] = (layer[h3Index] || 0) + 1;
     // add surrounding kRing, with less weight
-    h3.hexRing(h3Index, 1).forEach(neighbor => {
+    h3.hexRing(h3Index, 1).forEach((neighbor) => {
       layer[neighbor] = (layer[neighbor] || 0) + 0.5;
     });
   });
@@ -10515,18 +10578,21 @@ const schoolsLayer = (() => {
 
 ```js
 // BART layer - using buffered point layer with linear falloff
-const bartLayer = normalizeLayer(bufferPointsLinear(bartStations, kmToRadius(1)));
+const bartLayer = normalizeLayer(
+  bufferPointsLinear(bartStations, kmToRadius(1)),
+);
 ```
 
 ```js
 // Travel time layer - lower travel time is better, so we take the inverse
 const travelTimeLayer = (() => {
   const layer = {};
-  sfTravelTimes.features.forEach(feature => {
+  sfTravelTimes.features.forEach((feature) => {
     const hexagons = geojson2h3.featureToH3Set(feature, h3Resolution);
-    hexagons.forEach(h3Index => {
+    hexagons.forEach((h3Index) => {
       // Lower is better, so take the inverse
-      layer[h3Index] = (layer[h3Index] || 0) + 1 / feature.properties.travelTime;
+      layer[h3Index] =
+        (layer[h3Index] || 0) + 1 / feature.properties.travelTime;
     });
   });
   return normalizeLayer(layer, true);
@@ -10538,8 +10604,13 @@ const travelTimeLayer = (() => {
 const cafesLayer = (() => {
   const layer = {};
   pois
-    .filter(poi => poi.type === 'Cafes' || poi.type === 'Places to Eat' || poi.type === 'Restaurant')
-    .forEach(({lat, lng}) => {
+    .filter(
+      (poi) =>
+        poi.type === "Cafes" ||
+        poi.type === "Places to Eat" ||
+        poi.type === "Restaurant",
+    )
+    .forEach(({ lat, lng }) => {
       const h3Index = h3.geoToH3(lat, lng, h3Resolution);
       layer[h3Index] = (layer[h3Index] || 0) + 1;
     });
@@ -10551,20 +10622,20 @@ const cafesLayer = (() => {
 
 ```js
 const mapLayers = [
-  {hexagons: schoolsLayer, weight: schoolWeight},
-  {hexagons: bartLayer, weight: bartWeight},
-  {hexagons: travelTimeLayer, weight: travelWeight},
+  { hexagons: schoolsLayer, weight: schoolWeight },
+  { hexagons: bartLayer, weight: bartWeight },
+  { hexagons: travelTimeLayer, weight: travelWeight },
   // Crime is bad, so we'll subtract it instead of adding
-  {hexagons: crimeLayer, weight: -crimeWeight},
-  {hexagons: cafesLayer, weight: cafesWeight},
+  { hexagons: crimeLayer, weight: -crimeWeight },
+  { hexagons: cafesLayer, weight: cafesWeight },
 ];
 ```
 
 ```js
 const combinedLayers = (() => {
   const combined = {};
-  mapLayers.forEach(({hexagons, weight}) => {
-    Object.keys(hexagons).forEach(hex => {
+  mapLayers.forEach(({ hexagons, weight }) => {
+    Object.keys(hexagons).forEach((hex) => {
       combined[hex] = (combined[hex] || 0) + hexagons[hex] * weight;
     });
   });
@@ -10583,13 +10654,13 @@ function kmToRadius(km) {
 ```js
 function bufferPointsLinear(geojson, radius) {
   const layer = {};
-  geojson.features.forEach(feature => {
+  geojson.features.forEach((feature) => {
     const [lng, lat] = feature.geometry.coordinates;
     const stationIndex = h3.geoToH3(lat, lng, h3Resolution);
     const rings = h3.kRingDistances(stationIndex, radius);
     const step = 1 / (radius + 1);
     rings.forEach((ring, distance) => {
-      ring.forEach(h3Index => {
+      ring.forEach((h3Index) => {
         layer[h3Index] = (layer[h3Index] || 0) + 1 - distance * step;
       });
     });
@@ -10601,11 +10672,14 @@ function bufferPointsLinear(geojson, radius) {
 ```js
 function normalizeLayer(layer, baseAtZero = false) {
   const hexagons = Object.keys(layer);
-  const max = hexagons.reduce((max, hex) => Math.max(max, layer[hex]), -Infinity);
+  const max = hexagons.reduce(
+    (max, hex) => Math.max(max, layer[hex]),
+    -Infinity,
+  );
   const min = baseAtZero
     ? hexagons.reduce((min, hex) => Math.min(min, layer[hex]), Infinity)
     : 0;
-  hexagons.forEach(hex => {
+  hexagons.forEach((hex) => {
     layer[hex] = (layer[hex] - min) / (max - min);
   });
   return layer;
@@ -10622,13 +10696,13 @@ function* map(mapboxgl, mapContainer, config, renderHexes, combinedLayers) {
       container: mapContainer,
       center: [config.lng, config.lat],
       zoom: config.zoom,
-      style: 'mapbox://styles/mapbox/light-v9'
+      style: "mapbox://styles/mapbox/light-v9",
     });
   }
 
-  yield new Promise(resolve => {
+  yield new Promise((resolve) => {
     if (map.loaded()) resolve(map);
-    else map.on('load', () => resolve(map));
+    else map.on("load", () => resolve(map));
   });
 
   renderHexes(map, combinedLayers);
@@ -10639,41 +10713,41 @@ function* map(mapboxgl, mapContainer, config, renderHexes, combinedLayers) {
 function renderHexes(map, hexagons) {
   const geojson = geojson2h3.h3SetToFeatureCollection(
     Object.keys(hexagons),
-    hex => ({value: hexagons[hex]})
+    (hex) => ({ value: hexagons[hex] }),
   );
 
-  const sourceId = 'h3-hexes';
+  const sourceId = "h3-hexes";
   const layerId = `${sourceId}-layer`;
   let source = map.getSource(sourceId);
 
   if (!source) {
     map.addSource(sourceId, {
-      type: 'geojson',
-      data: geojson
+      type: "geojson",
+      data: geojson,
     });
     map.addLayer({
       id: layerId,
       source: sourceId,
-      type: 'fill',
+      type: "fill",
       interactive: false,
       paint: {
-        'fill-outline-color': 'rgba(0,0,0,0)',
-      }
+        "fill-outline-color": "rgba(0,0,0,0)",
+      },
     });
     source = map.getSource(sourceId);
   }
 
   source.setData(geojson);
 
-  map.setPaintProperty(layerId, 'fill-color', {
-    property: 'value',
+  map.setPaintProperty(layerId, "fill-color", {
+    property: "value",
     stops: [
       [0, config.colorScale[0]],
       [0.5, config.colorScale[1]],
-      [1, config.colorScale[2]]
-    ]
+      [1, config.colorScale[2]],
+    ],
   });
-  map.setPaintProperty(layerId, 'fill-opacity', config.fillOpacity);
+  map.setPaintProperty(layerId, "fill-opacity", config.fillOpacity);
 }
 ```
 
@@ -10685,8 +10759,8 @@ const config = {
   lat: 37.7923539,
   zoom: 11,
   fillOpacity: 0.9,
-  colorScale: ['#ffffD9', '#50BAC3', '#1A468A'],
-  areaThreshold: 0.75
+  colorScale: ["#ffffD9", "#50BAC3", "#1A468A"],
+  areaThreshold: 0.75,
 };
 ```
 
@@ -10696,7 +10770,7 @@ Oakland crime reports, last 90 days. Source: [data.oaklandnet.com](https://data.
 
 ```js
 const crime90days = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/f5ef0fed8972d04a27727ebb50e065265e2d853f/oakland_crime_90days.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/f5ef0fed8972d04a27727ebb50e065265e2d853f/oakland_crime_90days.json",
 );
 ```
 
@@ -10704,7 +10778,7 @@ Oakland public school locations. Source: [data.oaklandnet.com](https://data.oakl
 
 ```js
 const publicSchools = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/babf7357f15c99a1b2a507a33d332a4a87b7df8d/public_schools.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/babf7357f15c99a1b2a507a33d332a4a87b7df8d/public_schools.json",
 );
 ```
 
@@ -10712,7 +10786,7 @@ BART station locations. Source: [bart.gov](https://www.bart.gov/schedules/develo
 
 ```js
 const bartStations = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/8f1a3e30113472404feebc288e83688a6d5cf33d/bart.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/8f1a3e30113472404feebc288e83688a6d5cf33d/bart.json",
 );
 ```
 
@@ -10720,7 +10794,7 @@ Travel times from Oakland to downtown SF by census tract. Source: [movement.uber
 
 ```js
 const sfTravelTimes = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/657a9f3b64fedc718c3882cd4adc645ac0b4cfc5/oakland_travel_times.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/657a9f3b64fedc718c3882cd4adc645ac0b4cfc5/oakland_travel_times.json",
 );
 ```
 
@@ -10728,25 +10802,25 @@ Oakland points of interest. Source: [uber.com/local](https://www.uber.com/local/
 
 ```js
 const pois = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/ded89c2acef426fe3ee59b05096ed1baecf02090/oakland-poi.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/ded89c2acef426fe3ee59b05096ed1baecf02090/oakland-poi.json",
 );
 ```
 
 ## Dependencies
 
 ```js
-mapboxgl = require('mapbox-gl@0.43.0')
-h3 = require('https://bundle.run/h3-js@3.1.0')
-geojson2h3 = require('https://bundle.run/geojson2h3@1.0.1')
-d3Fetch = require('d3-fetch')
+mapboxgl = require("mapbox-gl@0.43.0");
+h3 = require("https://bundle.run/h3-js@3.1.0");
+geojson2h3 = require("https://bundle.run/geojson2h3@1.0.1");
+d3Fetch = require("d3-fetch");
 ```
-~~~
+````
 
 ---
 
 ## 6. H3 Radius Lookup
 
-~~~markdown
+````markdown
 # H3 Radius Lookup
 
 You can use H3 for an efficient radius lookup, as long as you're willing to approximate the circle as a k-ring of hexagons (roughly, a large hexagonal shape). This is much faster than a true search by Haversine distance, but less accurate.
@@ -10782,7 +10856,7 @@ function kRingResults(searchLocation) {
   // Find all points of interest in the k-ring
   return lookupIndexes.reduce(
     (output, h3Index) => [...output, ...(lookupMap[h3Index] || [])],
-    []
+    [],
   );
 }
 ```
@@ -10792,7 +10866,9 @@ function kRingIndexesEdge(searchLocation, pad = 0) {
   const origin = h3.latLngToCell(searchLocation.lat, searchLocation.lng, res);
   // Transform the radius from km to grid distance
   const radius =
-    Math.floor(searchRadiusKm / (h3.getHexagonEdgeLengthAvg(res, h3.UNITS.km) * 2)) + pad;
+    Math.floor(
+      searchRadiusKm / (h3.getHexagonEdgeLengthAvg(res, h3.UNITS.km) * 2),
+    ) + pad;
   return h3.gridDisk(origin, radius);
 }
 ```
@@ -10820,12 +10896,12 @@ One naive alternative is to check every point by Haversine distance, and find th
 ```js
 function haversineResults(searchLocation) {
   return bartStations.features.filter(
-    feature =>
+    (feature) =>
       haversineDistance(
         [searchLocation.lng, searchLocation.lat],
         feature.geometry.coordinates,
-        {units: 'kilometers'}
-      ) < searchRadiusKm
+        { units: "kilometers" },
+      ) < searchRadiusKm,
   );
 }
 ```
@@ -10836,22 +10912,20 @@ BART station locations in GeoJSON format. Source: [bart.gov](https://www.bart.go
 
 ```js
 const bartStations = await d3Fetch.json(
-  'https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/8f1a3e30113472404feebc288e83688a6d5cf33d/bart.json'
+  "https://gist.githubusercontent.com/nrabinowitz/d3a5ca3e3e40727595dd137b65058c76/raw/8f1a3e30113472404feebc288e83688a6d5cf33d/bart.json",
 );
 ```
 
 ## Dependencies
 
 ```js
-h3 = require('h3-js@4.1.0')
-d3Fetch = require('d3-fetch')
-geojson2h3 = require('https://bundle.run/geojson2h3@1.0.1')
-mapboxgl = require('mapbox-gl@0.43.0')
-makeCircle = require('https://bundle.run/@turf/circle@6.0.1')  // .default
-haversineDistance = require('https://bundle.run/@turf/distance@6.0.1')  // .default
+h3 = require("h3-js@4.1.0");
+d3Fetch = require("d3-fetch");
+geojson2h3 = require("https://bundle.run/geojson2h3@1.0.1");
+mapboxgl = require("mapbox-gl@0.43.0");
+makeCircle = require("https://bundle.run/@turf/circle@6.0.1"); // .default
+haversineDistance = require("https://bundle.run/@turf/distance@6.0.1"); // .default
 ```
-~~~
+````
 
 ---
-
-

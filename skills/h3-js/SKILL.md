@@ -1,6 +1,6 @@
 ---
 name: h3-js
-description: Use when working with H3 hexagonal geospatial indexing, h3-js, hex cells, spatial analysis, resolution selection, GeoJSON conversion, polygon-to-cells, or any Uber H3 API usage in JavaScript.
+description: Index points into a hexagonal grid
 argument-hint: [function or topic]
 ---
 
@@ -13,8 +13,8 @@ npm install h3-js
 ```
 
 ```js
-import * as h3 from 'h3-js'; // ESM
-const h3 = require('h3-js'); // CJS
+import * as h3 from "h3-js"; // ESM
+const h3 = require("h3-js"); // CJS
 ```
 
 ## When to Use H3
@@ -27,13 +27,13 @@ const h3 = require('h3-js'); // CJS
 
 ## H3 vs Alternatives
 
-| System | Cell Shape | Hierarchy | Identifiers | Key Tradeoff |
-|--------|-----------|-----------|-------------|--------------|
-| **H3** | Hexagon | Aperture 7, approximate containment | 64-bit int | Equidistant neighbors; approximate subdivision |
-| **S2** | Square | Aperture 4, exact containment | 64-bit int | Exact subdivision; non-equidistant neighbors |
-| **Geohash** | Rectangle | Exact containment | Variable-length string | Simple encoding; severe area distortion at poles |
-| **Hexbin** | Hexagon | None | Projection-specific | Cheap to compute; no hierarchy, not portable |
-| **Admin boundaries** | Irregular | None | Names/codes | Human-meaningful; incomparable sizes, change over time |
+| System               | Cell Shape | Hierarchy                           | Identifiers            | Key Tradeoff                                           |
+| -------------------- | ---------- | ----------------------------------- | ---------------------- | ------------------------------------------------------ |
+| **H3**               | Hexagon    | Aperture 7, approximate containment | 64-bit int             | Equidistant neighbors; approximate subdivision         |
+| **S2**               | Square     | Aperture 4, exact containment       | 64-bit int             | Exact subdivision; non-equidistant neighbors           |
+| **Geohash**          | Rectangle  | Exact containment                   | Variable-length string | Simple encoding; severe area distortion at poles       |
+| **Hexbin**           | Hexagon    | None                                | Projection-specific    | Cheap to compute; no hierarchy, not portable           |
+| **Admin boundaries** | Irregular  | None                                | Names/codes            | Human-meaningful; incomparable sizes, change over time |
 
 ## Concepts
 
@@ -90,16 +90,16 @@ Common causes: invalid cell/edge/vertex, incompatible resolutions, cells too far
 
 Each finer resolution has ~7x more cells. Total cells at resolution r: `2 + 120 * 7^r`.
 
-| Res | Avg Hex Area   | Avg Edge Length | Total Cells   | Typical Use Case |
-|-----|----------------|-----------------|---------------|------------------|
-| 0   | 4,357,449 km2  | 1,281 km        | 122           | Continental      |
-| 3   | 12,393 km2     | 69 km           | 41,162        | Country / state  |
-| 5   | 253 km2        | 9.9 km          | 2,016,842     | Metro area       |
-| 7   | 5.16 km2       | 1.4 km          | 98,825,162    | Neighborhood     |
-| 9   | 0.105 km2      | 201 m           | 4.8 billion   | City block       |
-| 11  | 0.00215 km2    | 28.7 m          | 237 billion   | Building         |
-| 13  | 43.9 m2        | 4.1 m           | 11.6 trillion | Room             |
-| 15  | 0.9 m2         | 0.58 m          | 569 trillion  | Sub-meter        |
+| Res | Avg Hex Area  | Avg Edge Length | Total Cells   | Typical Use Case |
+| --- | ------------- | --------------- | ------------- | ---------------- |
+| 0   | 4,357,449 km2 | 1,281 km        | 122           | Continental      |
+| 3   | 12,393 km2    | 69 km           | 41,162        | Country / state  |
+| 5   | 253 km2       | 9.9 km          | 2,016,842     | Metro area       |
+| 7   | 5.16 km2      | 1.4 km          | 98,825,162    | Neighborhood     |
+| 9   | 0.105 km2     | 201 m           | 4.8 billion   | City block       |
+| 11  | 0.00215 km2   | 28.7 m          | 237 billion   | Building         |
+| 13  | 43.9 m2       | 4.1 m           | 11.6 trillion | Room             |
+| 15  | 0.9 m2        | 0.58 m          | 569 trillion  | Sub-meter        |
 
 ## Common Patterns
 
@@ -157,7 +157,7 @@ Reduce storage for large cell sets. All input cells must share the same resoluti
 
 ```js
 const cells = h3.polygonToCells(polygon, 9);
-const compact = h3.compactCells(cells);       // mixed-resolution, fewer cells
+const compact = h3.compactCells(cells); // mixed-resolution, fewer cells
 const restored = h3.uncompactCells(compact, 9); // back to uniform res 9
 ```
 
@@ -175,10 +175,10 @@ h3-js defaults to **lat/lng** (`[37.77, -122.41]`). GeoJSON requires **lng/lat**
 function cellToFeature(cell, properties = {}) {
   const boundary = h3.cellToBoundary(cell, true); // true = GeoJSON [lng, lat] order
   return {
-    type: 'Feature',
+    type: "Feature",
     properties: { h3index: cell, ...properties },
     geometry: {
-      type: 'Polygon',
+      type: "Polygon",
       coordinates: [[...boundary, boundary[0]]], // close the ring
     },
   };
@@ -192,8 +192,8 @@ One polygon feature per cell — useful for choropleth styling.
 ```js
 function cellsToFeatureCollection(cells, getProperties = () => ({})) {
   return {
-    type: 'FeatureCollection',
-    features: cells.map(cell => cellToFeature(cell, getProperties(cell))),
+    type: "FeatureCollection",
+    features: cells.map((cell) => cellToFeature(cell, getProperties(cell))),
   };
 }
 ```
@@ -206,9 +206,9 @@ function cellsToFeatureCollection(cells, getProperties = () => ({})) {
 function cellsToOutlineFeature(cells) {
   const coordinates = h3.cellsToMultiPolygon(cells, true); // true = GeoJSON order
   return {
-    type: 'Feature',
+    type: "Feature",
     properties: {},
-    geometry: { type: 'MultiPolygon', coordinates },
+    geometry: { type: "MultiPolygon", coordinates },
   };
 }
 ```
@@ -232,12 +232,18 @@ function featureToCells(feature, res) {
 ```js
 // Include cells that overlap the polygon boundary at all (fuller coverage)
 h3.polygonToCellsExperimental(
-  coords, res, h3.POLYGON_TO_CELLS_FLAGS.containment_overlapping, true
+  coords,
+  res,
+  h3.POLYGON_TO_CELLS_FLAGS.containment_overlapping,
+  true,
 );
 
 // Include only cells fully contained within the polygon (stricter)
 h3.polygonToCellsExperimental(
-  coords, res, h3.POLYGON_TO_CELLS_FLAGS.containment_full, true
+  coords,
+  res,
+  h3.POLYGON_TO_CELLS_FLAGS.containment_full,
+  true,
 );
 ```
 
@@ -250,13 +256,15 @@ npm install geojson2h3
 ```
 
 ```js
-import geojson2h3 from 'geojson2h3';
+import geojson2h3 from "geojson2h3";
 
 // GeoJSON Feature → cell set
 const cells = geojson2h3.featureToH3Set(geojsonFeature, res);
 
 // Cell set → GeoJSON FeatureCollection (one Feature per cell)
-const fc = geojson2h3.h3SetToFeatureCollection(cells, cell => ({ value: data[cell] }));
+const fc = geojson2h3.h3SetToFeatureCollection(cells, (cell) => ({
+  value: data[cell],
+}));
 
 // Cell set → single merged GeoJSON Feature (outline)
 const outline = geojson2h3.h3SetToFeature(cells);
@@ -275,36 +283,36 @@ h3.cellToBoundary(cell, formatAsGeoJson?) // → [[lat, lng], ...] (vertices)
 ### Inspection
 
 ```js
-h3.getResolution(cell)        // → number (0-15)
-h3.isValidCell(cell)           // → boolean
-h3.isPentagon(cell)            // → boolean
-h3.isResClassIII(cell)         // → boolean
-h3.getBaseCellNumber(cell)     // → number (0-121)
-h3.getIcosahedronFaces(cell)   // → [faceNum, ...]
+h3.getResolution(cell); // → number (0-15)
+h3.isValidCell(cell); // → boolean
+h3.isPentagon(cell); // → boolean
+h3.isResClassIII(cell); // → boolean
+h3.getBaseCellNumber(cell); // → number (0-121)
+h3.getIcosahedronFaces(cell); // → [faceNum, ...]
 ```
 
 ### Hierarchy
 
 ```js
-h3.cellToParent(cell, parentRes)                    // → cell
-h3.cellToChildren(cell, childRes)                   // → [cell, ...]
-h3.cellToCenterChild(cell, childRes)                // → cell
-h3.compactCells(cells)                              // → mixed-resolution compact set
-h3.uncompactCells(cells, res)                       // → uniform-resolution expanded set
-h3.cellToChildPos(child, parentRes)                 // → position index
-h3.childPosToCell(childPos, parent, childRes)       // → cell
+h3.cellToParent(cell, parentRes); // → cell
+h3.cellToChildren(cell, childRes); // → [cell, ...]
+h3.cellToCenterChild(cell, childRes); // → cell
+h3.compactCells(cells); // → mixed-resolution compact set
+h3.uncompactCells(cells, res); // → uniform-resolution expanded set
+h3.cellToChildPos(child, parentRes); // → position index
+h3.childPosToCell(childPos, parent, childRes); // → cell
 ```
 
 ### Traversal
 
 ```js
-h3.gridDisk(origin, k)              // filled disk within k steps (safe near pentagons)
-h3.gridDiskDistances(origin, k)     // disk grouped by distance → [[ring0], [ring1], ...]
-h3.gridRing(origin, k)              // hollow ring at exactly k steps (may throw near pentagons)
-h3.gridDistance(a, b)                // grid distance (same resolution; may fail across pentagons)
-h3.gridPathCells(start, end)         // path of cells (inclusive; may fail across pentagons)
-h3.cellToLocalIj(origin, cell)       // → {i, j} (experimental; local to origin)
-h3.localIjToCell(origin, {i, j})     // → cell (experimental)
+h3.gridDisk(origin, k); // filled disk within k steps (safe near pentagons)
+h3.gridDiskDistances(origin, k); // disk grouped by distance → [[ring0], [ring1], ...]
+h3.gridRing(origin, k); // hollow ring at exactly k steps (may throw near pentagons)
+h3.gridDistance(a, b); // grid distance (same resolution; may fail across pentagons)
+h3.gridPathCells(start, end); // path of cells (inclusive; may fail across pentagons)
+h3.cellToLocalIj(origin, cell); // → {i, j} (experimental; local to origin)
+h3.localIjToCell(origin, { i, j }); // → cell (experimental)
 ```
 
 ### Regions
@@ -320,37 +328,37 @@ h3.polygonToCellsExperimental(polygon, res, flags, isGeoJson?)
 ### Directed Edges
 
 ```js
-h3.areNeighborCells(a, b)                // → boolean
-h3.cellsToDirectedEdge(origin, dest)     // → edge index
-h3.getDirectedEdgeOrigin(edge)           // → cell
-h3.getDirectedEdgeDestination(edge)      // → cell
-h3.directedEdgeToCells(edge)             // → [origin, dest]
-h3.originToDirectedEdges(cell)           // → [edge, ...] (all 6 or 5 edges)
-h3.directedEdgeToBoundary(edge)          // → [[lat, lng], ...]
+h3.areNeighborCells(a, b); // → boolean
+h3.cellsToDirectedEdge(origin, dest); // → edge index
+h3.getDirectedEdgeOrigin(edge); // → cell
+h3.getDirectedEdgeDestination(edge); // → cell
+h3.directedEdgeToCells(edge); // → [origin, dest]
+h3.originToDirectedEdges(cell); // → [edge, ...] (all 6 or 5 edges)
+h3.directedEdgeToBoundary(edge); // → [[lat, lng], ...]
 ```
 
 ### Vertexes
 
 ```js
-h3.cellToVertex(cell, vertexNum)   // → vertex index (0-5 hex, 0-4 pentagon)
-h3.cellToVertexes(cell)            // → [vertex, ...]
-h3.vertexToLatLng(vertex)          // → [lat, lng]
-h3.isValidVertex(vertex)           // → boolean
+h3.cellToVertex(cell, vertexNum); // → vertex index (0-5 hex, 0-4 pentagon)
+h3.cellToVertexes(cell); // → [vertex, ...]
+h3.vertexToLatLng(vertex); // → [lat, lng]
+h3.isValidVertex(vertex); // → boolean
 ```
 
 ### Metrics & Utilities
 
 ```js
-h3.getHexagonAreaAvg(res, h3.UNITS.km2)              // average hex area at resolution
-h3.getHexagonEdgeLengthAvg(res, h3.UNITS.km)         // average edge length at resolution
-h3.cellArea(cell, h3.UNITS.km2)                       // exact area of a specific cell
-h3.edgeLength(edge, h3.UNITS.km)                      // exact length of a specific edge
-h3.getNumCells(res)                                   // total cell count at resolution
-h3.greatCircleDistance(point1, point2, h3.UNITS.km)   // haversine distance ([lat,lng] points)
-h3.getRes0Cells()                                     // all 122 base cells
-h3.getPentagons(res)                                  // 12 pentagons at resolution
-h3.degsToRads(degrees)
-h3.radsToDegs(radians)
+h3.getHexagonAreaAvg(res, h3.UNITS.km2); // average hex area at resolution
+h3.getHexagonEdgeLengthAvg(res, h3.UNITS.km); // average edge length at resolution
+h3.cellArea(cell, h3.UNITS.km2); // exact area of a specific cell
+h3.edgeLength(edge, h3.UNITS.km); // exact length of a specific edge
+h3.getNumCells(res); // total cell count at resolution
+h3.greatCircleDistance(point1, point2, h3.UNITS.km); // haversine distance ([lat,lng] points)
+h3.getRes0Cells(); // all 122 base cells
+h3.getPentagons(res); // 12 pentagons at resolution
+h3.degsToRads(degrees);
+h3.radsToDegs(radians);
 ```
 
 Units: `h3.UNITS.km2`, `h3.UNITS.m2`, `h3.UNITS.rads2`, `h3.UNITS.km`, `h3.UNITS.m`, `h3.UNITS.rads`
@@ -359,21 +367,21 @@ Units: `h3.UNITS.km2`, `h3.UNITS.m2`, `h3.UNITS.rads2`, `h3.UNITS.km`, `h3.UNITS
 
 Function names changed in v4. The grid itself is unchanged — indexes from v3 are valid in v4.
 
-| v3 | v4 |
-|----|----|
-| `geoToH3` | `latLngToCell` |
-| `h3ToGeo` | `cellToLatLng` |
-| `h3ToGeoBoundary` | `cellToBoundary` |
-| `kRing` | `gridDisk` |
-| `hexRing` | `gridRing` |
-| `h3Distance` | `gridDistance` |
-| `h3ToParent` | `cellToParent` |
-| `h3ToChildren` | `cellToChildren` |
-| `polyfill` | `polygonToCells` |
-| `h3SetToMultiPolygon` | `cellsToMultiPolygon` |
-| `compact` | `compactCells` |
-| `uncompact` | `uncompactCells` |
-| `h3IndexesAreNeighbors` | `areNeighborCells` |
+| v3                      | v4                    |
+| ----------------------- | --------------------- |
+| `geoToH3`               | `latLngToCell`        |
+| `h3ToGeo`               | `cellToLatLng`        |
+| `h3ToGeoBoundary`       | `cellToBoundary`      |
+| `kRing`                 | `gridDisk`            |
+| `hexRing`               | `gridRing`            |
+| `h3Distance`            | `gridDistance`        |
+| `h3ToParent`            | `cellToParent`        |
+| `h3ToChildren`          | `cellToChildren`      |
+| `polyfill`              | `polygonToCells`      |
+| `h3SetToMultiPolygon`   | `cellsToMultiPolygon` |
+| `compact`               | `compactCells`        |
+| `uncompact`             | `uncompactCells`      |
+| `h3IndexesAreNeighbors` | `areNeighborCells`    |
 
 See [reference.md](reference.md) for the complete function name mapping.
 
