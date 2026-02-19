@@ -1,0 +1,1 @@
+<!-- TODO: OpenCode installation instructions -->
